@@ -1,0 +1,2723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CoomuceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="idCiudad" />
+    </Key>
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+    <Property Name="idDepartamento" Type="tinyint" Nullable="false" />
+    <Property Name="codigoCiudad" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="nombreCiudad" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConfiguracionCuerpoCorreo">
+    <Key>
+      <PropertyRef Name="idConfiguracionCuerpoCorreo" />
+    </Key>
+    <Property Name="idConfiguracionCuerpoCorreo" Type="tinyint" Nullable="false" />
+    <Property Name="tipoConfiguracionCuerpoCorreo" Type="tinyint" Nullable="false" />
+    <Property Name="tituloConfiguracionCuerpoCorreo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mensajeConfiguracionCuerpoCorreo" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConfiguracionGeneral">
+    <Key>
+      <PropertyRef Name="idConfiguracionGeneral" />
+    </Key>
+    <Property Name="idConfiguracionGeneral" Type="tinyint" Nullable="false" />
+    <Property Name="tiempoInactividadConfiguracionGeneral" Type="tinyint" Nullable="false" />
+    <Property Name="salarioConfiguracionGeneral" Type="money" />
+    <Property Name="emailSalienteConfiguracionGeneral" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pswEmailConfiguracionGeneral" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ccConfiguracionGeneral" Type="varchar" MaxLength="50" />
+    <Property Name="csConfiguracionGeneral" Type="varchar" MaxLength="50" />
+    <Property Name="hostConfiguracionGeneral" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="portConfiguracionGeneral" Type="tinyint" Nullable="false" />
+    <Property Name="sslConfiguracionGeneral" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="idDepartamento" />
+    </Key>
+    <Property Name="idDepartamento" Type="tinyint" Nullable="false" />
+    <Property Name="codigoDepartamento" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreDepartamento" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idMenu" Type="smallint" Nullable="false" />
+    <Property Name="idPadreMenu" Type="smallint" />
+    <Property Name="nombreMenu" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ordenMenu" Type="tinyint" Nullable="false" />
+    <Property Name="iconoMenu" Type="varchar" MaxLength="30" />
+    <Property Name="idVista" Type="smallint" />
+  </EntityType>
+  <EntityType Name="RolMenu">
+    <Key>
+      <PropertyRef Name="idRol" />
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idRol" Type="tinyint" Nullable="false" />
+    <Property Name="idMenu" Type="smallint" Nullable="false" />
+    <Property Name="habilitadoRolMenu" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vista">
+    <Key>
+      <PropertyRef Name="idVista" />
+    </Key>
+    <Property Name="idVista" Type="smallint" Nullable="false" />
+    <Property Name="nombreVista" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idDomVista" Type="varchar" MaxLength="50" />
+    <Property Name="rutaVista" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="AsistenciaGeneral">
+    <Key>
+      <PropertyRef Name="idAsistenciaGeneral" />
+    </Key>
+    <Property Name="idAsistenciaGeneral" Type="int" Nullable="false" />
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+    <Property Name="idGruposFocales" Type="tinyint" Nullable="false" />
+    <Property Name="temaAsistenciaGeneral" Type="varchar" MaxLength="200" />
+    <Property Name="idModulo" Type="smallint" Nullable="false" />
+    <Property Name="formadorAsistenciaGeneral" Type="varchar" MaxLength="50" />
+    <Property Name="fechaAsistenciaGeneral" Type="date" Nullable="false" />
+    <Property Name="idUsuario" Type="int" />
+  </EntityType>
+  <EntityType Name="EncuestaCategoria">
+    <Key>
+      <PropertyRef Name="idEncuestaCategoria" />
+    </Key>
+    <Property Name="idEncuestaCategoria" Type="tinyint" Nullable="false" />
+    <Property Name="idDomVista" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="codigoEncuestaCategoria" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreEncuestaCategoria" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ordenEncuestaCategoria" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaEps">
+    <Key>
+      <PropertyRef Name="idEncuestaEps" />
+    </Key>
+    <Property Name="idEncuestaEps" Type="int" Nullable="false" />
+    <Property Name="fechaHoraEncuestaEps" Type="datetime" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="idIps" Type="int" Nullable="false" />
+    <Property Name="observacionEncuestaEps" Type="varchar" MaxLength="500" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaEpsRespLiteral">
+    <Key>
+      <PropertyRef Name="idEncuestaEps" />
+      <PropertyRef Name="idEncuestaLiteral" />
+    </Key>
+    <Property Name="idEncuestaEps" Type="int" Nullable="false" />
+    <Property Name="idEncuestaLiteral" Type="smallint" Nullable="false" />
+    <Property Name="valorEncuestaEpsRespLiteral" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaEpsRespPregunta">
+    <Key>
+      <PropertyRef Name="idEncuestaEps" />
+      <PropertyRef Name="idEncuestaPregunta" />
+    </Key>
+    <Property Name="idEncuestaEps" Type="int" Nullable="false" />
+    <Property Name="idEncuestaPregunta" Type="smallint" Nullable="false" />
+    <Property Name="valorEncuestaEpsRespPregunta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaIps">
+    <Key>
+      <PropertyRef Name="idEncuestaIps" />
+    </Key>
+    <Property Name="idEncuestaIps" Type="int" Nullable="false" />
+    <Property Name="fechaHoraEncuestaIps" Type="datetime" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="idIps" Type="int" Nullable="false" />
+    <Property Name="observacionEncuestaIps" Type="varchar" MaxLength="500" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaIpsRespLiteral">
+    <Key>
+      <PropertyRef Name="idEncuestaIps" />
+      <PropertyRef Name="idEncuestaLiteral" />
+    </Key>
+    <Property Name="idEncuestaIps" Type="int" Nullable="false" />
+    <Property Name="idEncuestaLiteral" Type="smallint" Nullable="false" />
+    <Property Name="valorEncuestaIpsRespLiteral" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaIpsRespPregunta">
+    <Key>
+      <PropertyRef Name="idEncuestaIps" />
+      <PropertyRef Name="idEncuestaPregunta" />
+    </Key>
+    <Property Name="idEncuestaIps" Type="int" Nullable="false" />
+    <Property Name="idEncuestaPregunta" Type="smallint" Nullable="false" />
+    <Property Name="valorEncuestaIpsRespPregunta" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaLiteral">
+    <Key>
+      <PropertyRef Name="idEncuestaLiteral" />
+    </Key>
+    <Property Name="idEncuestaLiteral" Type="smallint" Nullable="false" />
+    <Property Name="idEncuestaPregunta" Type="smallint" Nullable="false" />
+    <Property Name="liteEncuestaLiteral" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="textoEncuestaLiteral" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="valorEncuestaLiteral" Type="tinyint" />
+    <Property Name="checkedEncuestaLiteral" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EncuestaPregunta">
+    <Key>
+      <PropertyRef Name="idEncuestaPregunta" />
+    </Key>
+    <Property Name="idEncuestaPregunta" Type="smallint" Nullable="false" />
+    <Property Name="idEncuestaCategoria" Type="tinyint" Nullable="false" />
+    <Property Name="codigoEncuestaPregunta" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="textoEncuestaPregunta" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="tipoPreEncuestaPregunta" Type="tinyint" Nullable="false" />
+    <Property Name="valorEncuestaPregunta" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Fuan">
+    <Key>
+      <PropertyRef Name="idFuan" />
+    </Key>
+    <Property Name="idFuan" Type="int" Nullable="false" />
+    <Property Name="fechaRadicacionFuan" Type="date" Nullable="false" />
+    <Property Name="idTipoTramite" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoAfiliacion" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoRegimen" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoAfiliado" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoCotizante" Type="tinyint" Nullable="false" />
+    <Property Name="codigoCotizanteFuan" Type="varchar" MaxLength="20" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuanAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="idFuan" Type="int" />
+    <Property Name="tipoFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="primerApellidoFuanAfiliado" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="segundoApellidoFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="primerNombreFuanAfiliado" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="segundoNombreFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="idTipoIdentificacion" Type="tinyint" Nullable="false" />
+    <Property Name="identificacionFuanAfiliado" Type="varchar" MaxLength="20" />
+    <Property Name="idTipoSexo" Type="tinyint" Nullable="false" />
+    <Property Name="fechaNacimientoFuanAfiliado" Type="date" Nullable="false" />
+    <Property Name="idTipoEtnia" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoDiscapacidad" Type="tinyint" />
+    <Property Name="idCondicionDiscapacidad" Type="tinyint" />
+    <Property Name="puntajeSisbenFuanAfiliado" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="numCarnetFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="idGrupoPoblacional" Type="tinyint" />
+    <Property Name="arlFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="pensionFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="ibcFuanAfiliado" Type="money" />
+    <Property Name="direccionFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="telefonoFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="celularFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="emailFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="idCiudad" Type="smallint" />
+    <Property Name="idTipoZona" Type="tinyint" Nullable="false" />
+    <Property Name="barrioFuanAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="primerApellidoConyugueFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="segundoApellidoConyugueFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="primerNombreConyugueFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="segundoNombreConyugueFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="idTipoIdentificacionConyugue" Type="tinyint" />
+    <Property Name="identificacionConyugueFuanAfiliado" Type="varchar" MaxLength="20" />
+    <Property Name="idTipoSexoConyugue" Type="tinyint" />
+    <Property Name="fechaNacimientoConyugueFuanAfiliado" Type="date" />
+    <Property Name="upcFuanAfiliado" Type="money" />
+    <Property Name="firmaFuanAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="cabezafamilia" Type="int" />
+    <Property Name="grupofamiliar" Type="int" />
+  </EntityType>
+  <EntityType Name="FuanAnexos">
+    <Key>
+      <PropertyRef Name="idFuan" />
+    </Key>
+    <Property Name="idFuan" Type="int" Nullable="false" />
+    <Property Name="anexo56FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo56CNFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56RCFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56TIFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56CCFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56PAFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56CEFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56CDFuanAnexos" Type="tinyint" />
+    <Property Name="anexo56CSFuanAnexos" Type="tinyint" />
+    <Property Name="anexo57FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo58FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo59FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo60FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo61FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo62FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo63FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo64FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="anexo65FuanAnexos" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuanBeneficiariosAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanBeneficiariosAfiliado" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanBeneficiariosAfiliado" Type="int" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="primerApellidoFuanBeneficiariosAfiliado" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="segundoApellidoFuanBeneficiariosAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="primerNombreFuanBeneficiariosAfiliado" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="segundoNombreFuanBeneficiariosAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="idTipoIdentificacion" Type="tinyint" Nullable="false" />
+    <Property Name="identificacionFuanBeneficiariosAfiliado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="idTipoSexo" Type="tinyint" Nullable="false" />
+    <Property Name="fechaNacimientoFuanBeneficiariosAfiliado" Type="date" />
+    <Property Name="idTipoParentesco" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoEtnia" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoDiscapacidad" Type="tinyint" />
+    <Property Name="idCondicionDiscapacidad" Type="tinyint" />
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+    <Property Name="idTipoZona" Type="tinyint" Nullable="false" />
+    <Property Name="telefonoFuanBeneficiariosAfiliado" Type="varchar" MaxLength="20" />
+    <Property Name="upcFuanBeneficiariosAfiliado" Type="money" />
+  </EntityType>
+  <EntityType Name="FuanDeclaracionAutorizacion">
+    <Key>
+      <PropertyRef Name="idFuan" />
+      <PropertyRef Name="idDeclaracionAutorizacion" />
+    </Key>
+    <Property Name="idFuan" Type="int" Nullable="false" />
+    <Property Name="idDeclaracionAutorizacion" Type="tinyint" Nullable="false" />
+    <Property Name="valorFuanDeclaracionAutorizacion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuanEmpleadorAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanEmpleadorAfiliado" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanEmpleadorAfiliado" Type="int" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="nombreFuanEmpleadorAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="idTipoIdentificacion" Type="tinyint" Nullable="false" />
+    <Property Name="identificacionFuanEmpleadorAfiliado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tipoPagadorFuanEmpleadorAfiliado" Type="varchar" MaxLength="20" />
+    <Property Name="direccionFuanEmpleadorAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="telefonoFuanEmpleadorAfiliado" Type="varchar" MaxLength="20" />
+    <Property Name="emailFuanEmpleadorAfiliado" Type="varchar" MaxLength="50" />
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuanEntidadTerritorial">
+    <Key>
+      <PropertyRef Name="idFuan" />
+    </Key>
+    <Property Name="idFuan" Type="int" Nullable="false" />
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+    <Property Name="numFichaSisbenFuanEntidadTerritorial" Type="varchar" MaxLength="20" />
+    <Property Name="puntajeSisbenFuanEntidadTerritorial" Type="varchar" MaxLength="20" />
+    <Property Name="nivelSisbenFuanEntidadTerritorial" Type="varchar" MaxLength="20" />
+    <Property Name="fechaRadicacionFuanEntidadTerritorial" Type="date" Nullable="false" />
+    <Property Name="fechaValidacionFuanEntidadTerritorial" Type="date" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="observacionFuanEntidadTerritorial" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="FuanIpsPrimariaAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanIpsPrimariaAfiliado" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanIpsPrimariaAfiliado" Type="int" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="tipoFuanIpsPrimariaAfiliado" Type="varchar" MaxLength="2" />
+    <Property Name="nombreFuanIpsPrimariaAfiliado" Type="varchar" MaxLength="100" />
+    <Property Name="codigoFuanIpsPrimariaAfiliado" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="FuanReporteNovedad">
+    <Key>
+      <PropertyRef Name="idFuanReporteNovedad" />
+    </Key>
+    <Property Name="idFuanReporteNovedad" Type="int" Nullable="false" />
+    <Property Name="fechaFuanReporteNovedad" Type="date" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="antesFuanReporteNovedad" Type="xml" />
+    <Property Name="despuesFuanReporteNovedad" Type="xml" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuanTipoNovedad">
+    <Key>
+      <PropertyRef Name="idFuanReporteNovedad" />
+      <PropertyRef Name="idTipoNovedad" />
+    </Key>
+    <Property Name="idFuanReporteNovedad" Type="int" Nullable="false" />
+    <Property Name="idTipoNovedad" Type="tinyint" Nullable="false" />
+    <Property Name="selFuanTipoNovedad" Type="bit" Nullable="false" />
+    <Property Name="valorFuanTipoNovedad" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HistorialUltimosFormatos">
+    <Key>
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="fechaUltHistoria" Type="date" />
+    <Property Name="fechaUltFicha" Type="date" />
+  </EntityType>
+  <EntityType Name="IfppirRespuestaFactor">
+    <Key>
+      <PropertyRef Name="idInfoIfppir" />
+      <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+    </Key>
+    <Property Name="idInfoIfppir" Type="int" Nullable="false" />
+    <Property Name="idPreguntasSubFactorRiesgo" Type="smallint" Nullable="false" />
+    <Property Name="respuestaSiIfppirRespuestaFactor" Type="bit" Nullable="false" />
+    <Property Name="respuestaNoIfppirRespuestaFactor" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InfoHfdfr">
+    <Key>
+      <PropertyRef Name="idInfoHfdfr" />
+    </Key>
+    <Property Name="idInfoHfdfr" Type="int" Nullable="false" />
+    <Property Name="tipoDiligenciamientoHfdfr" Type="varchar" MaxLength="50" />
+    <Property Name="fechaVisitaHfdfr" Type="date" Nullable="false" />
+    <Property Name="horaInicioHfdfr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="horaFinHfdfr" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+    <Property Name="veredaInfoHfdfr" Type="varchar" MaxLength="50" />
+    <Property Name="barrioInfoHfdfr" Type="varchar" MaxLength="50" />
+    <Property Name="telefonoInfoHfdfr" Type="varchar" MaxLength="50" />
+    <Property Name="historiaInfoHfdfr" Type="xml" Nullable="false" />
+    <Property Name="archivoAudioHfdfr" Type="varchar" MaxLength="100" />
+    <Property Name="firmaHfdfr" Type="varchar" MaxLength="200" />
+    <Property Name="idUsuario" Type="int" />
+    <Property Name="fechaInfoHfdfr" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InfoIfppir">
+    <Key>
+      <PropertyRef Name="idInfoIfppir" />
+    </Key>
+    <Property Name="idInfoIfppir" Type="int" Nullable="false" />
+    <Property Name="fechaInfoIfppir" Type="datetime" />
+    <Property Name="tipoDiligenciamientoIfppir" Type="varchar" MaxLength="50" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="numCarneIfppir" Type="varchar" MaxLength="20" />
+    <Property Name="ipsPrimariaIfppir" Type="varchar" MaxLength="50" />
+    <Property Name="razaIfppir" Type="varchar" MaxLength="50" />
+    <Property Name="escolaridadIfppir" Type="varchar" MaxLength="50" />
+    <Property Name="familiarCercanoIfppir" Type="varchar" MaxLength="100" />
+    <Property Name="telefonoFamiliarIfppir" Type="varchar" MaxLength="20" />
+    <Property Name="gestanteIfppir" Type="bit" Nullable="false" />
+    <Property Name="fechaAplicacionIfppir" Type="datetime" Nullable="false" />
+    <Property Name="pesoIfppir" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="tallaIfppir" Type="smallint" />
+    <Property Name="masaCorporalIfppir" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="perimetroAbdominalIfppir" Type="smallint" />
+    <Property Name="sistolicaIfppir" Type="smallint" />
+    <Property Name="diastolicaIfppir" Type="smallint" />
+    <Property Name="furIfppir" Type="datetime" />
+    <Property Name="fppIfppir" Type="datetime" />
+    <Property Name="colesterolTotalIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="colesterolLdlIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="colesterolHdlIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="glicemiaIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="gIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="pIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="cIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="aIfppir" Type="varchar" MaxLength="10" />
+    <Property Name="nacidoVivoIfppir" Type="varchar" MaxLength="3" />
+    <Property Name="observacionIfppir" Type="varchar" MaxLength="2000" />
+    <Property Name="archivoAudioIfppir" Type="varchar" MaxLength="100" />
+    <Property Name="firmaIfppir" Type="varchar" MaxLength="200" />
+    <Property Name="idUsuario" Type="int" />
+  </EntityType>
+  <EntityType Name="InfoPurisu">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="int" Nullable="false" />
+    <Property Name="idCiudad" Type="smallint" Nullable="false" />
+    <Property Name="fechaAtencionPurisu" Type="datetime" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="archivoAudioInfoPurisu" Type="varchar" MaxLength="200" />
+    <Property Name="tipoDiligenciamientoInfoPurisu" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ListaAsistenciaGeneral">
+    <Key>
+      <PropertyRef Name="idAsistenciaGeneral" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idAsistenciaGeneral" Type="int" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="areaEntidadListaAsistenciaGeneral" Type="varchar" MaxLength="50" />
+    <Property Name="firmaListaAsistenciaGeneral" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Purisu">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+      <PropertyRef Name="idPurisu" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="int" Nullable="false" />
+    <Property Name="idPurisu" Type="int" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="int" Nullable="false" />
+    <Property Name="numCarnePurisu" Type="varchar" MaxLength="20" />
+    <Property Name="idTipoVisitaDomiciliaria" Type="tinyint" />
+    <Property Name="usisPurisu" Type="bit" Nullable="false" />
+    <Property Name="ipsPrimariaPurisu" Type="bit" Nullable="false" />
+    <Property Name="telefonicaPurisu" Type="bit" Nullable="false" />
+    <Property Name="cauPurisu" Type="bit" Nullable="false" />
+    <Property Name="actividadExtramuralPurisu" Type="bit" Nullable="false" />
+    <Property Name="idProgramaResolucion412" Type="tinyint" />
+    <Property Name="idGrupoInteres" Type="tinyint" />
+    <Property Name="idSeguimientoProgramasIntervencionRiesgo" Type="tinyint" />
+    <Property Name="numAutorizacionPurisu" Type="varchar" MaxLength="20" />
+    <Property Name="idGruposFocales" Type="tinyint" />
+    <Property Name="idEje" Type="tinyint" />
+    <Property Name="idUnidad" Type="smallint" />
+    <Property Name="idModulo" Type="smallint" />
+    <Property Name="idEje1" Type="tinyint" />
+    <Property Name="idUnidad1" Type="smallint" />
+    <Property Name="idModulo1" Type="smallint" />
+    <Property Name="firmaPurisu" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PurisuMotivoConsulta">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+      <PropertyRef Name="idPurisu" />
+      <PropertyRef Name="idMotivoConsulta" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="int" Nullable="false" />
+    <Property Name="idPurisu" Type="int" Nullable="false" />
+    <Property Name="idMotivoConsulta" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurisuMotivoContacto">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+      <PropertyRef Name="idPurisu" />
+      <PropertyRef Name="idMotivoContacto" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="int" Nullable="false" />
+    <Property Name="idPurisu" Type="int" Nullable="false" />
+    <Property Name="idMotivoContacto" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurisuPiezasInformativas">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+      <PropertyRef Name="idPurisu" />
+      <PropertyRef Name="idPiezasInformativas" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="int" Nullable="false" />
+    <Property Name="idPurisu" Type="int" Nullable="false" />
+    <Property Name="idPiezasInformativas" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CicloVital">
+    <Key>
+      <PropertyRef Name="idCicloVital" />
+    </Key>
+    <Property Name="idCicloVital" Type="tinyint" Nullable="false" />
+    <Property Name="edadMinCicloVital" Type="tinyint" Nullable="false" />
+    <Property Name="edadMaxCicloVital" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CicloVitalGestante">
+    <Key>
+      <PropertyRef Name="idCicloVitalGestante" />
+    </Key>
+    <Property Name="idCicloVitalGestante" Type="tinyint" Nullable="false" />
+    <Property Name="idPreguntasSubFactorRiesgo" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CicloVitalPreguntasSubFactorRiesgo">
+    <Key>
+      <PropertyRef Name="idCicloVital" />
+      <PropertyRef Name="idTipoSexo" />
+      <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+    </Key>
+    <Property Name="idCicloVital" Type="tinyint" Nullable="false" />
+    <Property Name="idTipoSexo" Type="tinyint" Nullable="false" />
+    <Property Name="idPreguntasSubFactorRiesgo" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CondicionDiscapacidad">
+    <Key>
+      <PropertyRef Name="idCondicionDiscapacidad" />
+    </Key>
+    <Property Name="idCondicionDiscapacidad" Type="tinyint" Nullable="false" />
+    <Property Name="codigoCondicionDiscapacidad" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreCondicionDiscapacidad" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CondicionVivienda">
+    <Key>
+      <PropertyRef Name="idCondicionVivienda" />
+    </Key>
+    <Property Name="idCondicionVivienda" Type="tinyint" Nullable="false" />
+    <Property Name="nombreCondicionVivienda" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeclaracionAutorizacion">
+    <Key>
+      <PropertyRef Name="idDeclaracionAutorizacion" />
+    </Key>
+    <Property Name="idDeclaracionAutorizacion" Type="tinyint" Nullable="false" />
+    <Property Name="codigoDeclaracionAutorizacion" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descripcionDeclaracionAutorizacion" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisposicionBasura">
+    <Key>
+      <PropertyRef Name="idDisposicionBasura" />
+    </Key>
+    <Property Name="idDisposicionBasura" Type="tinyint" Nullable="false" />
+    <Property Name="codigoDisposicionBasura" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreDisposicionBasura" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisposicionExcreta">
+    <Key>
+      <PropertyRef Name="idDisposicionExcreta" />
+    </Key>
+    <Property Name="idDisposicionExcreta" Type="tinyint" Nullable="false" />
+    <Property Name="codigoDisposicionExcreta" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreDisposicionExcreta" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Eje">
+    <Key>
+      <PropertyRef Name="idEje" />
+    </Key>
+    <Property Name="idEje" Type="tinyint" Nullable="false" />
+    <Property Name="codigoEje" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreEje" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FactorRiesgo">
+    <Key>
+      <PropertyRef Name="idFactorRiesgo" />
+    </Key>
+    <Property Name="idFactorRiesgo" Type="tinyint" Nullable="false" />
+    <Property Name="codigoFactorRiesgo" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreFactorRiesgo" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GrupoInteres">
+    <Key>
+      <PropertyRef Name="idGrupoInteres" />
+    </Key>
+    <Property Name="idGrupoInteres" Type="tinyint" Nullable="false" />
+    <Property Name="codigoGrupoInteres" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descripcionGrupoInteres" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GrupoPoblacional">
+    <Key>
+      <PropertyRef Name="idGrupoPoblacional" />
+    </Key>
+    <Property Name="idGrupoPoblacional" Type="tinyint" Nullable="false" />
+    <Property Name="codigoGrupoPoblacional" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreGrupoPoblacional" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GruposFocales">
+    <Key>
+      <PropertyRef Name="idGruposFocales" />
+    </Key>
+    <Property Name="idGruposFocales" Type="tinyint" Nullable="false" />
+    <Property Name="codigoGruposFocales" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="nombreGruposFocales" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ips">
+    <Key>
+      <PropertyRef Name="idIps" />
+    </Key>
+    <Property Name="idIps" Type="int" Nullable="false" />
+    <Property Name="codigoIps" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="razonIps" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="idTipoIdentificacion" Type="tinyint" Nullable="false" />
+    <Property Name="identificacionIps" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="direccionIps" Type="varchar" MaxLength="150" />
+    <Property Name="telefonoIps" Type="varchar" MaxLength="20" />
+    <Property Name="idCiudad" Type="smallint" />
+    <Property Name="representanteIps" Type="varchar" MaxLength="100" />
+    <Property Name="nivelIps" Type="varchar" MaxLength="3" />
+    <Property Name="contactoIps" Type="varchar" MaxLength="100" />
+    <Property Name="emailIps" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="idModulo" />
+    </Key>
+    <Property Name="idUnidad" Type="smallint" Nullable="false" />
+    <Property Name="idModulo" Type="smallint" Nullable="false" />
+    <Property Name="codigoModulo" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="nombreModulo" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MotivoConsulta">
+    <Key>
+      <PropertyRef Name="idMotivoConsulta" />
+    </Key>
+    <Property Name="idMotivoConsulta" Type="tinyint" Nullable="false" />
+    <Property Name="codigoMotivoConsulta" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descripcionMotivoConsulta" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MotivoContacto">
+    <Key>
+      <PropertyRef Name="idMotivoContacto" />
+    </Key>
+    <Property Name="idMotivoContacto" Type="tinyint" Nullable="false" />
+    <Property Name="codigoMotivoContacto" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descripcionMotivoContacto" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MotivoTraslado">
+    <Key>
+      <PropertyRef Name="idMotivoTraslado" />
+    </Key>
+    <Property Name="idMotivoTraslado" Type="tinyint" Nullable="false" />
+    <Property Name="codigoMotivoTraslado" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descripcionMotivoTraslado" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NivelEducativo">
+    <Key>
+      <PropertyRef Name="idNivelEducativo" />
+    </Key>
+    <Property Name="idNivelEducativo" Type="tinyint" Nullable="false" />
+    <Property Name="codigoNivelEducativo" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreNivelEducativo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PiezasInformativas">
+    <Key>
+      <PropertyRef Name="idPiezasInformativas" />
+    </Key>
+    <Property Name="idPiezasInformativas" Type="tinyint" Nullable="false" />
+    <Property Name="codigoPiezasInformativas" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="descripcionPiezasInformativas" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PreguntasSubFactorRiesgo">
+    <Key>
+      <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+    </Key>
+    <Property Name="idPreguntasSubFactorRiesgo" Type="smallint" Nullable="false" />
+    <Property Name="idSubFactorRiesgo" Type="tinyint" Nullable="false" />
+    <Property Name="codigoPreguntasSubFactorRiesgo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descripcionPreguntasSubFactorRiesgo" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Procedencia">
+    <Key>
+      <PropertyRef Name="idProcedencia" />
+    </Key>
+    <Property Name="idProcedencia" Type="tinyint" Nullable="false" />
+    <Property Name="codigoProcedencia" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreProcedencia" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProgramaResolucion412">
+    <Key>
+      <PropertyRef Name="idProgramaResolucion412" />
+    </Key>
+    <Property Name="idProgramaResolucion412" Type="tinyint" Nullable="false" />
+    <Property Name="codigoProgramaResolucion412" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="descripcionProgramaResolucion412" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SeguimientoProgramasIntervencionRiesgo">
+    <Key>
+      <PropertyRef Name="idSeguimientoProgramasIntervencionRiesgo" />
+    </Key>
+    <Property Name="idSeguimientoProgramasIntervencionRiesgo" Type="tinyint" Nullable="false" />
+    <Property Name="codigoSeguimientoProgramasIntervencionRiesgo" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreSeguimientoProgramasIntervencionRiesgo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubFactorRiesgo">
+    <Key>
+      <PropertyRef Name="idSubFactorRiesgo" />
+    </Key>
+    <Property Name="idSubFactorRiesgo" Type="tinyint" Nullable="false" />
+    <Property Name="idFactorRiesgo" Type="tinyint" Nullable="false" />
+    <Property Name="codigoSubFactorRiesgo" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="nombreSubFactorRiesgo" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tenencia">
+    <Key>
+      <PropertyRef Name="idTenencia" />
+    </Key>
+    <Property Name="idTenencia" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTenencia" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTenencia" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoAfiliacion">
+    <Key>
+      <PropertyRef Name="idTipoAfiliacion" />
+    </Key>
+    <Property Name="idTipoAfiliacion" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoAfiliacion" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoAfiliacion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoAfiliado">
+    <Key>
+      <PropertyRef Name="idTipoAfiliado" />
+    </Key>
+    <Property Name="idTipoAfiliado" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoAfiliado" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoAfiliado" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoAnimal">
+    <Key>
+      <PropertyRef Name="idTipoAnimal" />
+    </Key>
+    <Property Name="idTipoAnimal" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoAnimal" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoAnimal" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoCombustible">
+    <Key>
+      <PropertyRef Name="idTipoCombustible" />
+    </Key>
+    <Property Name="idTipoCombustible" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoCombustible" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoCombustible" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoCotizante">
+    <Key>
+      <PropertyRef Name="idTipoCotizante" />
+    </Key>
+    <Property Name="idTipoCotizante" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoCotizante" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoCotizante" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoDiscapacidad">
+    <Key>
+      <PropertyRef Name="idTipoDiscapacidad" />
+    </Key>
+    <Property Name="idTipoDiscapacidad" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoDiscapacidad" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoDiscapacidad" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoEtnia">
+    <Key>
+      <PropertyRef Name="idTipoEtnia" />
+    </Key>
+    <Property Name="idTipoEtnia" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoEtnia" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoEtnia" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacion">
+    <Key>
+      <PropertyRef Name="idTipoIdentificacion" />
+    </Key>
+    <Property Name="idTipoIdentificacion" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoIdentificacion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombreTipoIdentificacion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoNovedad">
+    <Key>
+      <PropertyRef Name="idTipoNovedad" />
+    </Key>
+    <Property Name="idTipoNovedad" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoNovedad" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoNovedad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="tipoValorCampoTipoNovedad" Type="varchar" MaxLength="50" />
+    <Property Name="valorCampoTipoNovedad" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TipoParentesco">
+    <Key>
+      <PropertyRef Name="idTipoParentesco" />
+    </Key>
+    <Property Name="idTipoParentesco" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoParentesco" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoParentesco" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="descripcionTipoParentesco" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TipoRegimen">
+    <Key>
+      <PropertyRef Name="idTipoRegimen" />
+    </Key>
+    <Property Name="idTipoRegimen" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoRegimen" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoRegimen" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoSexo">
+    <Key>
+      <PropertyRef Name="idTipoSexo" />
+    </Key>
+    <Property Name="idTipoSexo" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoSexo" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoSexo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoTramite">
+    <Key>
+      <PropertyRef Name="idTipoTramite" />
+    </Key>
+    <Property Name="idTipoTramite" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoTramite" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoTramite" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoVisitaDomiciliaria">
+    <Key>
+      <PropertyRef Name="idTipoVisitaDomiciliaria" />
+    </Key>
+    <Property Name="idTipoVisitaDomiciliaria" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoVisitaDomiciliaria" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoVisitaDomiciliaria" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoVivienda">
+    <Key>
+      <PropertyRef Name="idTipoVivienda" />
+    </Key>
+    <Property Name="idTipoVivienda" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoVivienda" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTipoVivienda" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoZona">
+    <Key>
+      <PropertyRef Name="idTipoZona" />
+    </Key>
+    <Property Name="idTipoZona" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTipoZona" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombreTipoZona" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TratamientoAgua">
+    <Key>
+      <PropertyRef Name="idTratamientoAgua" />
+    </Key>
+    <Property Name="idTratamientoAgua" Type="tinyint" Nullable="false" />
+    <Property Name="codigoTratamientoAgua" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreTratamientoAgua" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Unidad">
+    <Key>
+      <PropertyRef Name="idUnidad" />
+    </Key>
+    <Property Name="idEje" Type="tinyint" Nullable="false" />
+    <Property Name="idUnidad" Type="smallint" Nullable="false" />
+    <Property Name="codigoUnidad" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nombreUnidad" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="idRol" />
+    </Key>
+    <Property Name="idRol" Type="tinyint" Nullable="false" />
+    <Property Name="nombreRol" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="idTipoIdentificacion" Type="tinyint" Nullable="false" />
+    <Property Name="identificacionUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="primerApellidoUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="segundoApellidoUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="primerNombreUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="segundoNombreUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="emailUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="celularUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="idRol" Type="tinyint" Nullable="false" />
+    <Property Name="loginUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="passwordUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="passwordHashUsuario" Type="nvarchar" MaxLength="128" />
+    <Property Name="passwordSaltUsuario" Type="nvarchar" MaxLength="128" />
+    <Property Name="esTemporalUsuario" Type="bit" Nullable="false" />
+    <Property Name="estaHabilitadoUsuario" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AsistenciaGeneral_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="AsistenciaGeneral" Type="Self.AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsistenciaGeneral_GruposFocales">
+    <End Role="GruposFocales" Type="Self.GruposFocales" Multiplicity="1" />
+    <End Role="AsistenciaGeneral" Type="Self.AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GruposFocales">
+        <PropertyRef Name="idGruposFocales" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idGruposFocales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsistenciaGeneral_Modulo">
+    <End Role="Modulo" Type="Self.Modulo" Multiplicity="1" />
+    <End Role="AsistenciaGeneral" Type="Self.AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="idModulo" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsistenciaGeneral_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="AsistenciaGeneral" Type="Self.AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalGestante_PreguntasSubFactorRiesgo">
+    <End Role="PreguntasSubFactorRiesgo" Type="Self.PreguntasSubFactorRiesgo" Multiplicity="1" />
+    <End Role="CicloVitalGestante" Type="Self.CicloVitalGestante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="CicloVitalGestante">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital">
+    <End Role="CicloVital" Type="Self.CicloVital" Multiplicity="1" />
+    <End Role="CicloVitalPreguntasSubFactorRiesgo" Type="Self.CicloVitalPreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CicloVital">
+        <PropertyRef Name="idCicloVital" />
+      </Principal>
+      <Dependent Role="CicloVitalPreguntasSubFactorRiesgo">
+        <PropertyRef Name="idCicloVital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo">
+    <End Role="PreguntasSubFactorRiesgo" Type="Self.PreguntasSubFactorRiesgo" Multiplicity="1" />
+    <End Role="CicloVitalPreguntasSubFactorRiesgo" Type="Self.CicloVitalPreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="CicloVitalPreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo">
+    <End Role="TipoSexo" Type="Self.TipoSexo" Multiplicity="1" />
+    <End Role="CicloVitalPreguntasSubFactorRiesgo" Type="Self.CicloVitalPreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="CicloVitalPreguntasSubFactorRiesgo">
+        <PropertyRef Name="idTipoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ciudad_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEps_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="EncuestaEps" Type="Self.EncuestaEps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="EncuestaEps">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEps_Ips">
+    <End Role="Ips" Type="Self.Ips" Multiplicity="1" />
+    <End Role="EncuestaEps" Type="Self.EncuestaEps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ips">
+        <PropertyRef Name="idIps" />
+      </Principal>
+      <Dependent Role="EncuestaEps">
+        <PropertyRef Name="idIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEps_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="EncuestaEps" Type="Self.EncuestaEps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EncuestaEps">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespLiteral_EncuestaEps">
+    <End Role="EncuestaEps" Type="Self.EncuestaEps" Multiplicity="1" />
+    <End Role="EncuestaEpsRespLiteral" Type="Self.EncuestaEpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaEps">
+        <PropertyRef Name="idEncuestaEps" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespLiteral">
+        <PropertyRef Name="idEncuestaEps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespLiteral_EncuestaLiteral">
+    <End Role="EncuestaLiteral" Type="Self.EncuestaLiteral" Multiplicity="1" />
+    <End Role="EncuestaEpsRespLiteral" Type="Self.EncuestaEpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespPregunta_EncuestaEps">
+    <End Role="EncuestaEps" Type="Self.EncuestaEps" Multiplicity="1" />
+    <End Role="EncuestaEpsRespPregunta" Type="Self.EncuestaEpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaEps">
+        <PropertyRef Name="idEncuestaEps" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespPregunta">
+        <PropertyRef Name="idEncuestaEps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespPregunta_EncuestaPregunta">
+    <End Role="EncuestaPregunta" Type="Self.EncuestaPregunta" Multiplicity="1" />
+    <End Role="EncuestaEpsRespPregunta" Type="Self.EncuestaEpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIps_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="EncuestaIps" Type="Self.EncuestaIps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="EncuestaIps">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIps_Ips">
+    <End Role="Ips" Type="Self.Ips" Multiplicity="1" />
+    <End Role="EncuestaIps" Type="Self.EncuestaIps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ips">
+        <PropertyRef Name="idIps" />
+      </Principal>
+      <Dependent Role="EncuestaIps">
+        <PropertyRef Name="idIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIps_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="EncuestaIps" Type="Self.EncuestaIps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EncuestaIps">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespLiteral_EncuestaIps">
+    <End Role="EncuestaIps" Type="Self.EncuestaIps" Multiplicity="1" />
+    <End Role="EncuestaIpsRespLiteral" Type="Self.EncuestaIpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaIps">
+        <PropertyRef Name="idEncuestaIps" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespLiteral">
+        <PropertyRef Name="idEncuestaIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespLiteral_EncuestaLiteral">
+    <End Role="EncuestaLiteral" Type="Self.EncuestaLiteral" Multiplicity="1" />
+    <End Role="EncuestaIpsRespLiteral" Type="Self.EncuestaIpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespPregunta_EncuestaIps">
+    <End Role="EncuestaIps" Type="Self.EncuestaIps" Multiplicity="1" />
+    <End Role="EncuestaIpsRespPregunta" Type="Self.EncuestaIpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaIps">
+        <PropertyRef Name="idEncuestaIps" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespPregunta">
+        <PropertyRef Name="idEncuestaIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespPregunta_EncuestaPregunta">
+    <End Role="EncuestaPregunta" Type="Self.EncuestaPregunta" Multiplicity="1" />
+    <End Role="EncuestaIpsRespPregunta" Type="Self.EncuestaIpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaLiteral_EncuestaPregunta">
+    <End Role="EncuestaPregunta" Type="Self.EncuestaPregunta" Multiplicity="1" />
+    <End Role="EncuestaLiteral" Type="Self.EncuestaLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Principal>
+      <Dependent Role="EncuestaLiteral">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaPregunta_EncuestaCategoria">
+    <End Role="EncuestaCategoria" Type="Self.EncuestaCategoria" Multiplicity="1" />
+    <End Role="EncuestaPregunta" Type="Self.EncuestaPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaCategoria">
+        <PropertyRef Name="idEncuestaCategoria" />
+      </Principal>
+      <Dependent Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoAfiliacion">
+    <End Role="TipoAfiliacion" Type="Self.TipoAfiliacion" Multiplicity="1" />
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAfiliacion">
+        <PropertyRef Name="idTipoAfiliacion" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoAfiliacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoAfiliado">
+    <End Role="TipoAfiliado" Type="Self.TipoAfiliado" Multiplicity="1" />
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAfiliado">
+        <PropertyRef Name="idTipoAfiliado" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoCotizante">
+    <End Role="TipoCotizante" Type="Self.TipoCotizante" Multiplicity="1" />
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCotizante">
+        <PropertyRef Name="idTipoCotizante" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoCotizante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoRegimen">
+    <End Role="TipoRegimen" Type="Self.TipoRegimen" Multiplicity="1" />
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRegimen">
+        <PropertyRef Name="idTipoRegimen" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoRegimen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoTramite">
+    <End Role="TipoTramite" Type="Self.TipoTramite" Multiplicity="1" />
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTramite">
+        <PropertyRef Name="idTipoTramite" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_CondicionDiscapacidad">
+    <End Role="CondicionDiscapacidad" Type="Self.CondicionDiscapacidad" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CondicionDiscapacidad">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_Fuan">
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_GrupoPoblacional">
+    <End Role="GrupoPoblacional" Type="Self.GrupoPoblacional" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoPoblacional">
+        <PropertyRef Name="idGrupoPoblacional" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idGrupoPoblacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoDiscapacidad">
+    <End Role="TipoDiscapacidad" Type="Self.TipoDiscapacidad" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDiscapacidad">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoEtnia">
+    <End Role="TipoEtnia" Type="Self.TipoEtnia" Multiplicity="1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEtnia">
+        <PropertyRef Name="idTipoEtnia" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoEtnia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoIdentificacion">
+    <End Role="TipoIdentificacion" Type="Self.TipoIdentificacion" Multiplicity="1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoIdentificacion1">
+    <End Role="TipoIdentificacion" Type="Self.TipoIdentificacion" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoIdentificacionConyugue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoSexo">
+    <End Role="TipoSexo" Type="Self.TipoSexo" Multiplicity="1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoSexo1">
+    <End Role="TipoSexo" Type="Self.TipoSexo" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoSexoConyugue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoZona">
+    <End Role="TipoZona" Type="Self.TipoZona" Multiplicity="1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoZona">
+        <PropertyRef Name="idTipoZona" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAnexos_Fuan">
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="1" />
+    <End Role="FuanAnexos" Type="Self.FuanAnexos" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanAnexos">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad">
+    <End Role="CondicionDiscapacidad" Type="Self.CondicionDiscapacidad" Multiplicity="0..1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CondicionDiscapacidad">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoDiscapacidad">
+    <End Role="TipoDiscapacidad" Type="Self.TipoDiscapacidad" Multiplicity="0..1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDiscapacidad">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoEtnia">
+    <End Role="TipoEtnia" Type="Self.TipoEtnia" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEtnia">
+        <PropertyRef Name="idTipoEtnia" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoEtnia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoIdentificacion">
+    <End Role="TipoIdentificacion" Type="Self.TipoIdentificacion" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoParentesco">
+    <End Role="TipoParentesco" Type="Self.TipoParentesco" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParentesco">
+        <PropertyRef Name="idTipoParentesco" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoParentesco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoSexo">
+    <End Role="TipoSexo" Type="Self.TipoSexo" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoZona">
+    <End Role="TipoZona" Type="Self.TipoZona" Multiplicity="1" />
+    <End Role="FuanBeneficiariosAfiliado" Type="Self.FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoZona">
+        <PropertyRef Name="idTipoZona" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion">
+    <End Role="DeclaracionAutorizacion" Type="Self.DeclaracionAutorizacion" Multiplicity="1" />
+    <End Role="FuanDeclaracionAutorizacion" Type="Self.FuanDeclaracionAutorizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeclaracionAutorizacion">
+        <PropertyRef Name="idDeclaracionAutorizacion" />
+      </Principal>
+      <Dependent Role="FuanDeclaracionAutorizacion">
+        <PropertyRef Name="idDeclaracionAutorizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanDeclaracionAutorizacion_Fuan">
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="1" />
+    <End Role="FuanDeclaracionAutorizacion" Type="Self.FuanDeclaracionAutorizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanDeclaracionAutorizacion">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEmpleadorAfiliado_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="FuanEmpleadorAfiliado" Type="Self.FuanEmpleadorAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanEmpleadorAfiliado">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEmpleadorAfiliado_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="FuanEmpleadorAfiliado" Type="Self.FuanEmpleadorAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanEmpleadorAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEmpleadorAfiliado_TipoIdentificacion">
+    <End Role="TipoIdentificacion" Type="Self.TipoIdentificacion" Multiplicity="1" />
+    <End Role="FuanEmpleadorAfiliado" Type="Self.FuanEmpleadorAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanEmpleadorAfiliado">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEntidadTerritorial_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="FuanEntidadTerritorial" Type="Self.FuanEntidadTerritorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanEntidadTerritorial">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEntidadTerritorial_Fuan">
+    <End Role="Fuan" Type="Self.Fuan" Multiplicity="1" />
+    <End Role="FuanEntidadTerritorial" Type="Self.FuanEntidadTerritorial" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanEntidadTerritorial">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEntidadTerritorial_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="FuanEntidadTerritorial" Type="Self.FuanEntidadTerritorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="FuanEntidadTerritorial">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanIpsPrimariaAfiliado_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="FuanIpsPrimariaAfiliado" Type="Self.FuanIpsPrimariaAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanIpsPrimariaAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanReporteNovedad_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="FuanReporteNovedad" Type="Self.FuanReporteNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanReporteNovedad">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanReporteNovedad_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="FuanReporteNovedad" Type="Self.FuanReporteNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="FuanReporteNovedad">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanTipoNovedad_FuanReporteNovedad">
+    <End Role="FuanReporteNovedad" Type="Self.FuanReporteNovedad" Multiplicity="1" />
+    <End Role="FuanTipoNovedad" Type="Self.FuanTipoNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanReporteNovedad">
+        <PropertyRef Name="idFuanReporteNovedad" />
+      </Principal>
+      <Dependent Role="FuanTipoNovedad">
+        <PropertyRef Name="idFuanReporteNovedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanTipoNovedad_TipoNovedad">
+    <End Role="TipoNovedad" Type="Self.TipoNovedad" Multiplicity="1" />
+    <End Role="FuanTipoNovedad" Type="Self.FuanTipoNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoNovedad">
+        <PropertyRef Name="idTipoNovedad" />
+      </Principal>
+      <Dependent Role="FuanTipoNovedad">
+        <PropertyRef Name="idTipoNovedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistorialUltimosFormatos_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="HistorialUltimosFormatos" Type="Self.HistorialUltimosFormatos" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="HistorialUltimosFormatos">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IfppirRespuestaFactor_InfoIfppir">
+    <End Role="InfoIfppir" Type="Self.InfoIfppir" Multiplicity="1" />
+    <End Role="IfppirRespuestaFactor" Type="Self.IfppirRespuestaFactor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoIfppir">
+        <PropertyRef Name="idInfoIfppir" />
+      </Principal>
+      <Dependent Role="IfppirRespuestaFactor">
+        <PropertyRef Name="idInfoIfppir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo">
+    <End Role="PreguntasSubFactorRiesgo" Type="Self.PreguntasSubFactorRiesgo" Multiplicity="1" />
+    <End Role="IfppirRespuestaFactor" Type="Self.IfppirRespuestaFactor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="IfppirRespuestaFactor">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoHfdfr_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="InfoHfdfr" Type="Self.InfoHfdfr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="InfoHfdfr">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoHfdfr_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="InfoHfdfr" Type="Self.InfoHfdfr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="InfoHfdfr">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoHfdfr_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="InfoHfdfr" Type="Self.InfoHfdfr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InfoHfdfr">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoIfppir_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="InfoIfppir" Type="Self.InfoIfppir" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="InfoIfppir">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoIfppir_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="InfoIfppir" Type="Self.InfoIfppir" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InfoIfppir">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoPurisu_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="InfoPurisu" Type="Self.InfoPurisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="InfoPurisu">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoPurisu_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="InfoPurisu" Type="Self.InfoPurisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InfoPurisu">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ips_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1" />
+    <End Role="Ips" Type="Self.Ips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="Ips">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ips_TipoIdentificacion">
+    <End Role="TipoIdentificacion" Type="Self.TipoIdentificacion" Multiplicity="1" />
+    <End Role="Ips" Type="Self.Ips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Ips">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaAsistenciaGeneral_AsistenciaGeneral">
+    <End Role="AsistenciaGeneral" Type="Self.AsistenciaGeneral" Multiplicity="1" />
+    <End Role="ListaAsistenciaGeneral" Type="Self.ListaAsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsistenciaGeneral">
+        <PropertyRef Name="idAsistenciaGeneral" />
+      </Principal>
+      <Dependent Role="ListaAsistenciaGeneral">
+        <PropertyRef Name="idAsistenciaGeneral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaAsistenciaGeneral_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="ListaAsistenciaGeneral" Type="Self.ListaAsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="ListaAsistenciaGeneral">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Menu">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="0..1" />
+    <End Role="Menu1" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="idMenu" />
+      </Principal>
+      <Dependent Role="Menu1">
+        <PropertyRef Name="idPadreMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Vista">
+    <End Role="Vista" Type="Self.Vista" Multiplicity="0..1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vista">
+        <PropertyRef Name="idVista" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="idVista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modulo_Unidad">
+    <End Role="Unidad" Type="Self.Unidad" Multiplicity="1" />
+    <End Role="Modulo" Type="Self.Modulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidad">
+        <PropertyRef Name="idUnidad" />
+      </Principal>
+      <Dependent Role="Modulo">
+        <PropertyRef Name="idUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreguntasSubFactorRiesgo_SubFactorRiesgo">
+    <End Role="SubFactorRiesgo" Type="Self.SubFactorRiesgo" Multiplicity="1" />
+    <End Role="PreguntasSubFactorRiesgo" Type="Self.PreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubFactorRiesgo">
+        <PropertyRef Name="idSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Eje">
+    <End Role="Eje" Type="Self.Eje" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eje">
+        <PropertyRef Name="idEje" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idEje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Eje1">
+    <End Role="Eje" Type="Self.Eje" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eje">
+        <PropertyRef Name="idEje" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idEje1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_FuanAfiliado">
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_GrupoInteres">
+    <End Role="GrupoInteres" Type="Self.GrupoInteres" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoInteres">
+        <PropertyRef Name="idGrupoInteres" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idGrupoInteres" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_GruposFocales">
+    <End Role="GruposFocales" Type="Self.GruposFocales" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GruposFocales">
+        <PropertyRef Name="idGruposFocales" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idGruposFocales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_InfoPurisu">
+    <End Role="InfoPurisu" Type="Self.InfoPurisu" Multiplicity="1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoPurisu">
+        <PropertyRef Name="idInfoPurisu" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idInfoPurisu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Modulo">
+    <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="idModulo" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Modulo1">
+    <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="idModulo" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idModulo1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_ProgramaResolucion412">
+    <End Role="ProgramaResolucion412" Type="Self.ProgramaResolucion412" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgramaResolucion412">
+        <PropertyRef Name="idProgramaResolucion412" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idProgramaResolucion412" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_SeguimientoProgramasIntervencionRiesgo">
+    <End Role="SeguimientoProgramasIntervencionRiesgo" Type="Self.SeguimientoProgramasIntervencionRiesgo" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeguimientoProgramasIntervencionRiesgo">
+        <PropertyRef Name="idSeguimientoProgramasIntervencionRiesgo" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idSeguimientoProgramasIntervencionRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_TipoVisitaDomiciliaria">
+    <End Role="TipoVisitaDomiciliaria" Type="Self.TipoVisitaDomiciliaria" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoVisitaDomiciliaria">
+        <PropertyRef Name="idTipoVisitaDomiciliaria" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idTipoVisitaDomiciliaria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Unidad">
+    <End Role="Unidad" Type="Self.Unidad" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidad">
+        <PropertyRef Name="idUnidad" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Unidad1">
+    <End Role="Unidad" Type="Self.Unidad" Multiplicity="0..1" />
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidad">
+        <PropertyRef Name="idUnidad" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idUnidad1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurisuMotivoConsulta_MotivoConsulta">
+    <End Role="MotivoConsulta" Type="Self.MotivoConsulta" Multiplicity="1" />
+    <End Role="PurisuMotivoConsulta" Type="Self.PurisuMotivoConsulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoConsulta">
+        <PropertyRef Name="idMotivoConsulta" />
+      </Principal>
+      <Dependent Role="PurisuMotivoConsulta">
+        <PropertyRef Name="idMotivoConsulta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurisuMotivoConsulta_Purisu">
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="1" />
+    <End Role="PurisuMotivoConsulta" Type="Self.PurisuMotivoConsulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purisu">
+        <PropertyRef Name="idInfoPurisu" />
+        <PropertyRef Name="idPurisu" />
+      </Principal>
+      <Dependent Role="PurisuMotivoConsulta">
+        <PropertyRef Name="idInfoPurisu" />
+        <PropertyRef Name="idPurisu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurisuMotivoContacto_MotivoContacto">
+    <End Role="MotivoContacto" Type="Self.MotivoContacto" Multiplicity="1" />
+    <End Role="PurisuMotivoContacto" Type="Self.PurisuMotivoContacto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoContacto">
+        <PropertyRef Name="idMotivoContacto" />
+      </Principal>
+      <Dependent Role="PurisuMotivoContacto">
+        <PropertyRef Name="idMotivoContacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurisuMotivoContacto_Purisu">
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="1" />
+    <End Role="PurisuMotivoContacto" Type="Self.PurisuMotivoContacto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purisu">
+        <PropertyRef Name="idInfoPurisu" />
+        <PropertyRef Name="idPurisu" />
+      </Principal>
+      <Dependent Role="PurisuMotivoContacto">
+        <PropertyRef Name="idInfoPurisu" />
+        <PropertyRef Name="idPurisu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurisuPiezasInformativas_PiezasInformativas">
+    <End Role="PiezasInformativas" Type="Self.PiezasInformativas" Multiplicity="1" />
+    <End Role="PurisuPiezasInformativas" Type="Self.PurisuPiezasInformativas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PiezasInformativas">
+        <PropertyRef Name="idPiezasInformativas" />
+      </Principal>
+      <Dependent Role="PurisuPiezasInformativas">
+        <PropertyRef Name="idPiezasInformativas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurisuPiezasInformativas_Purisu">
+    <End Role="Purisu" Type="Self.Purisu" Multiplicity="1" />
+    <End Role="PurisuPiezasInformativas" Type="Self.PurisuPiezasInformativas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purisu">
+        <PropertyRef Name="idInfoPurisu" />
+        <PropertyRef Name="idPurisu" />
+      </Principal>
+      <Dependent Role="PurisuPiezasInformativas">
+        <PropertyRef Name="idInfoPurisu" />
+        <PropertyRef Name="idPurisu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RolMenu_Menu">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="RolMenu" Type="Self.RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="idMenu" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="idMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RolMenu_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="RolMenu" Type="Self.RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubFactorRiesgo_FactorRiesgo">
+    <End Role="FactorRiesgo" Type="Self.FactorRiesgo" Multiplicity="1" />
+    <End Role="SubFactorRiesgo" Type="Self.SubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FactorRiesgo">
+        <PropertyRef Name="idFactorRiesgo" />
+      </Principal>
+      <Dependent Role="SubFactorRiesgo">
+        <PropertyRef Name="idFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unidad_Eje">
+    <End Role="Eje" Type="Self.Eje" Multiplicity="1" />
+    <End Role="Unidad" Type="Self.Unidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eje">
+        <PropertyRef Name="idEje" />
+      </Principal>
+      <Dependent Role="Unidad">
+        <PropertyRef Name="idEje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_TipoIdentificacion">
+    <End Role="TipoIdentificacion" Type="Self.TipoIdentificacion" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CoomuceModelStoreContainer">
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="ADM" store:Type="Tables" />
+    <EntitySet Name="ConfiguracionCuerpoCorreo" EntityType="Self.ConfiguracionCuerpoCorreo" Schema="ADM" store:Type="Tables" />
+    <EntitySet Name="ConfiguracionGeneral" EntityType="Self.ConfiguracionGeneral" Schema="ADM" store:Type="Tables" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="ADM" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="CFG" store:Type="Tables" />
+    <EntitySet Name="RolMenu" EntityType="Self.RolMenu" Schema="CFG" store:Type="Tables" />
+    <EntitySet Name="Vista" EntityType="Self.Vista" Schema="CFG" store:Type="Tables" />
+    <EntitySet Name="AsistenciaGeneral" EntityType="Self.AsistenciaGeneral" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaCategoria" EntityType="Self.EncuestaCategoria" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaEps" EntityType="Self.EncuestaEps" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaEpsRespLiteral" EntityType="Self.EncuestaEpsRespLiteral" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaEpsRespPregunta" EntityType="Self.EncuestaEpsRespPregunta" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaIps" EntityType="Self.EncuestaIps" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaIpsRespLiteral" EntityType="Self.EncuestaIpsRespLiteral" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaIpsRespPregunta" EntityType="Self.EncuestaIpsRespPregunta" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaLiteral" EntityType="Self.EncuestaLiteral" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="EncuestaPregunta" EntityType="Self.EncuestaPregunta" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="Fuan" EntityType="Self.Fuan" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanAfiliado" EntityType="Self.FuanAfiliado" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanAnexos" EntityType="Self.FuanAnexos" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanBeneficiariosAfiliado" EntityType="Self.FuanBeneficiariosAfiliado" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanDeclaracionAutorizacion" EntityType="Self.FuanDeclaracionAutorizacion" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanEmpleadorAfiliado" EntityType="Self.FuanEmpleadorAfiliado" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanEntidadTerritorial" EntityType="Self.FuanEntidadTerritorial" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanIpsPrimariaAfiliado" EntityType="Self.FuanIpsPrimariaAfiliado" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanReporteNovedad" EntityType="Self.FuanReporteNovedad" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="FuanTipoNovedad" EntityType="Self.FuanTipoNovedad" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="HistorialUltimosFormatos" EntityType="Self.HistorialUltimosFormatos" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="IfppirRespuestaFactor" EntityType="Self.IfppirRespuestaFactor" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="InfoHfdfr" EntityType="Self.InfoHfdfr" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="InfoIfppir" EntityType="Self.InfoIfppir" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="InfoPurisu" EntityType="Self.InfoPurisu" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="ListaAsistenciaGeneral" EntityType="Self.ListaAsistenciaGeneral" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="Purisu" EntityType="Self.Purisu" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="PurisuMotivoConsulta" EntityType="Self.PurisuMotivoConsulta" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="PurisuMotivoContacto" EntityType="Self.PurisuMotivoContacto" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="PurisuPiezasInformativas" EntityType="Self.PurisuPiezasInformativas" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="CicloVital" EntityType="Self.CicloVital" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="CicloVitalGestante" EntityType="Self.CicloVitalGestante" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="CicloVitalPreguntasSubFactorRiesgo" EntityType="Self.CicloVitalPreguntasSubFactorRiesgo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="CondicionDiscapacidad" EntityType="Self.CondicionDiscapacidad" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="CondicionVivienda" EntityType="Self.CondicionVivienda" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="DeclaracionAutorizacion" EntityType="Self.DeclaracionAutorizacion" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="DisposicionBasura" EntityType="Self.DisposicionBasura" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="DisposicionExcreta" EntityType="Self.DisposicionExcreta" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Eje" EntityType="Self.Eje" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="FactorRiesgo" EntityType="Self.FactorRiesgo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="GrupoInteres" EntityType="Self.GrupoInteres" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="GrupoPoblacional" EntityType="Self.GrupoPoblacional" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="GruposFocales" EntityType="Self.GruposFocales" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Ips" EntityType="Self.Ips" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="MotivoConsulta" EntityType="Self.MotivoConsulta" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="MotivoContacto" EntityType="Self.MotivoContacto" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="MotivoTraslado" EntityType="Self.MotivoTraslado" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="NivelEducativo" EntityType="Self.NivelEducativo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="PiezasInformativas" EntityType="Self.PiezasInformativas" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="PreguntasSubFactorRiesgo" EntityType="Self.PreguntasSubFactorRiesgo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Procedencia" EntityType="Self.Procedencia" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="ProgramaResolucion412" EntityType="Self.ProgramaResolucion412" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="SeguimientoProgramasIntervencionRiesgo" EntityType="Self.SeguimientoProgramasIntervencionRiesgo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="SubFactorRiesgo" EntityType="Self.SubFactorRiesgo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Tenencia" EntityType="Self.Tenencia" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoAfiliacion" EntityType="Self.TipoAfiliacion" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoAfiliado" EntityType="Self.TipoAfiliado" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoAnimal" EntityType="Self.TipoAnimal" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoCombustible" EntityType="Self.TipoCombustible" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoCotizante" EntityType="Self.TipoCotizante" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoDiscapacidad" EntityType="Self.TipoDiscapacidad" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoEtnia" EntityType="Self.TipoEtnia" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoIdentificacion" EntityType="Self.TipoIdentificacion" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoNovedad" EntityType="Self.TipoNovedad" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoParentesco" EntityType="Self.TipoParentesco" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoRegimen" EntityType="Self.TipoRegimen" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoSexo" EntityType="Self.TipoSexo" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoTramite" EntityType="Self.TipoTramite" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoVisitaDomiciliaria" EntityType="Self.TipoVisitaDomiciliaria" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoVivienda" EntityType="Self.TipoVivienda" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TipoZona" EntityType="Self.TipoZona" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="TratamientoAgua" EntityType="Self.TratamientoAgua" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Unidad" EntityType="Self.Unidad" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="SEC" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="SEC" store:Type="Tables" />
+    <AssociationSet Name="FK_AsistenciaGeneral_Ciudad" Association="Self.FK_AsistenciaGeneral_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsistenciaGeneral_GruposFocales" Association="Self.FK_AsistenciaGeneral_GruposFocales">
+      <End Role="GruposFocales" EntitySet="GruposFocales" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsistenciaGeneral_Modulo" Association="Self.FK_AsistenciaGeneral_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsistenciaGeneral_Usuario" Association="Self.FK_AsistenciaGeneral_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalGestante_PreguntasSubFactorRiesgo" Association="Self.FK_CicloVitalGestante_PreguntasSubFactorRiesgo">
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+      <End Role="CicloVitalGestante" EntitySet="CicloVitalGestante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital" Association="Self.FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital">
+      <End Role="CicloVital" EntitySet="CicloVital" />
+      <End Role="CicloVitalPreguntasSubFactorRiesgo" EntitySet="CicloVitalPreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo" Association="Self.FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo">
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+      <End Role="CicloVitalPreguntasSubFactorRiesgo" EntitySet="CicloVitalPreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo" Association="Self.FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="CicloVitalPreguntasSubFactorRiesgo" EntitySet="CicloVitalPreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ciudad_Departamento" Association="Self.FK_Ciudad_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Ciudad" EntitySet="Ciudad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEps_FuanAfiliado" Association="Self.FK_EncuestaEps_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEps_Ips" Association="Self.FK_EncuestaEps_Ips">
+      <End Role="Ips" EntitySet="Ips" />
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEps_Usuario" Association="Self.FK_EncuestaEps_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespLiteral_EncuestaEps" Association="Self.FK_EncuestaEpsRespLiteral_EncuestaEps">
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+      <End Role="EncuestaEpsRespLiteral" EntitySet="EncuestaEpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespLiteral_EncuestaLiteral" Association="Self.FK_EncuestaEpsRespLiteral_EncuestaLiteral">
+      <End Role="EncuestaLiteral" EntitySet="EncuestaLiteral" />
+      <End Role="EncuestaEpsRespLiteral" EntitySet="EncuestaEpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespPregunta_EncuestaEps" Association="Self.FK_EncuestaEpsRespPregunta_EncuestaEps">
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+      <End Role="EncuestaEpsRespPregunta" EntitySet="EncuestaEpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespPregunta_EncuestaPregunta" Association="Self.FK_EncuestaEpsRespPregunta_EncuestaPregunta">
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+      <End Role="EncuestaEpsRespPregunta" EntitySet="EncuestaEpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIps_FuanAfiliado" Association="Self.FK_EncuestaIps_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIps_Ips" Association="Self.FK_EncuestaIps_Ips">
+      <End Role="Ips" EntitySet="Ips" />
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIps_Usuario" Association="Self.FK_EncuestaIps_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespLiteral_EncuestaIps" Association="Self.FK_EncuestaIpsRespLiteral_EncuestaIps">
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+      <End Role="EncuestaIpsRespLiteral" EntitySet="EncuestaIpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespLiteral_EncuestaLiteral" Association="Self.FK_EncuestaIpsRespLiteral_EncuestaLiteral">
+      <End Role="EncuestaLiteral" EntitySet="EncuestaLiteral" />
+      <End Role="EncuestaIpsRespLiteral" EntitySet="EncuestaIpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespPregunta_EncuestaIps" Association="Self.FK_EncuestaIpsRespPregunta_EncuestaIps">
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+      <End Role="EncuestaIpsRespPregunta" EntitySet="EncuestaIpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespPregunta_EncuestaPregunta" Association="Self.FK_EncuestaIpsRespPregunta_EncuestaPregunta">
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+      <End Role="EncuestaIpsRespPregunta" EntitySet="EncuestaIpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaLiteral_EncuestaPregunta" Association="Self.FK_EncuestaLiteral_EncuestaPregunta">
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+      <End Role="EncuestaLiteral" EntitySet="EncuestaLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaPregunta_EncuestaCategoria" Association="Self.FK_EncuestaPregunta_EncuestaCategoria">
+      <End Role="EncuestaCategoria" EntitySet="EncuestaCategoria" />
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoAfiliacion" Association="Self.FK_Fuan_TipoAfiliacion">
+      <End Role="TipoAfiliacion" EntitySet="TipoAfiliacion" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoAfiliado" Association="Self.FK_Fuan_TipoAfiliado">
+      <End Role="TipoAfiliado" EntitySet="TipoAfiliado" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoCotizante" Association="Self.FK_Fuan_TipoCotizante">
+      <End Role="TipoCotizante" EntitySet="TipoCotizante" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoRegimen" Association="Self.FK_Fuan_TipoRegimen">
+      <End Role="TipoRegimen" EntitySet="TipoRegimen" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoTramite" Association="Self.FK_Fuan_TipoTramite">
+      <End Role="TipoTramite" EntitySet="TipoTramite" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_Usuario" Association="Self.FK_Fuan_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_Ciudad" Association="Self.FK_FuanAfiliado_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_CondicionDiscapacidad" Association="Self.FK_FuanAfiliado_CondicionDiscapacidad">
+      <End Role="CondicionDiscapacidad" EntitySet="CondicionDiscapacidad" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_Fuan" Association="Self.FK_FuanAfiliado_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_GrupoPoblacional" Association="Self.FK_FuanAfiliado_GrupoPoblacional">
+      <End Role="GrupoPoblacional" EntitySet="GrupoPoblacional" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoDiscapacidad" Association="Self.FK_FuanAfiliado_TipoDiscapacidad">
+      <End Role="TipoDiscapacidad" EntitySet="TipoDiscapacidad" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoEtnia" Association="Self.FK_FuanAfiliado_TipoEtnia">
+      <End Role="TipoEtnia" EntitySet="TipoEtnia" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoIdentificacion" Association="Self.FK_FuanAfiliado_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoIdentificacion1" Association="Self.FK_FuanAfiliado_TipoIdentificacion1">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoSexo" Association="Self.FK_FuanAfiliado_TipoSexo">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoSexo1" Association="Self.FK_FuanAfiliado_TipoSexo1">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoZona" Association="Self.FK_FuanAfiliado_TipoZona">
+      <End Role="TipoZona" EntitySet="TipoZona" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAnexos_Fuan" Association="Self.FK_FuanAnexos_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanAnexos" EntitySet="FuanAnexos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_Ciudad" Association="Self.FK_FuanBeneficiariosAfiliado_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad" Association="Self.FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad">
+      <End Role="CondicionDiscapacidad" EntitySet="CondicionDiscapacidad" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_FuanAfiliado" Association="Self.FK_FuanBeneficiariosAfiliado_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoDiscapacidad" Association="Self.FK_FuanBeneficiariosAfiliado_TipoDiscapacidad">
+      <End Role="TipoDiscapacidad" EntitySet="TipoDiscapacidad" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoEtnia" Association="Self.FK_FuanBeneficiariosAfiliado_TipoEtnia">
+      <End Role="TipoEtnia" EntitySet="TipoEtnia" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoIdentificacion" Association="Self.FK_FuanBeneficiariosAfiliado_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoParentesco" Association="Self.FK_FuanBeneficiariosAfiliado_TipoParentesco">
+      <End Role="TipoParentesco" EntitySet="TipoParentesco" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoSexo" Association="Self.FK_FuanBeneficiariosAfiliado_TipoSexo">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoZona" Association="Self.FK_FuanBeneficiariosAfiliado_TipoZona">
+      <End Role="TipoZona" EntitySet="TipoZona" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion" Association="Self.FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion">
+      <End Role="DeclaracionAutorizacion" EntitySet="DeclaracionAutorizacion" />
+      <End Role="FuanDeclaracionAutorizacion" EntitySet="FuanDeclaracionAutorizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanDeclaracionAutorizacion_Fuan" Association="Self.FK_FuanDeclaracionAutorizacion_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanDeclaracionAutorizacion" EntitySet="FuanDeclaracionAutorizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEmpleadorAfiliado_Ciudad" Association="Self.FK_FuanEmpleadorAfiliado_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanEmpleadorAfiliado" EntitySet="FuanEmpleadorAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEmpleadorAfiliado_FuanAfiliado" Association="Self.FK_FuanEmpleadorAfiliado_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanEmpleadorAfiliado" EntitySet="FuanEmpleadorAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEmpleadorAfiliado_TipoIdentificacion" Association="Self.FK_FuanEmpleadorAfiliado_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanEmpleadorAfiliado" EntitySet="FuanEmpleadorAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEntidadTerritorial_Ciudad" Association="Self.FK_FuanEntidadTerritorial_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanEntidadTerritorial" EntitySet="FuanEntidadTerritorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEntidadTerritorial_Fuan" Association="Self.FK_FuanEntidadTerritorial_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanEntidadTerritorial" EntitySet="FuanEntidadTerritorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEntidadTerritorial_Usuario" Association="Self.FK_FuanEntidadTerritorial_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FuanEntidadTerritorial" EntitySet="FuanEntidadTerritorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanIpsPrimariaAfiliado_FuanAfiliado" Association="Self.FK_FuanIpsPrimariaAfiliado_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanIpsPrimariaAfiliado" EntitySet="FuanIpsPrimariaAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanReporteNovedad_FuanAfiliado" Association="Self.FK_FuanReporteNovedad_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanReporteNovedad" EntitySet="FuanReporteNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanReporteNovedad_Usuario" Association="Self.FK_FuanReporteNovedad_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FuanReporteNovedad" EntitySet="FuanReporteNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanTipoNovedad_FuanReporteNovedad" Association="Self.FK_FuanTipoNovedad_FuanReporteNovedad">
+      <End Role="FuanReporteNovedad" EntitySet="FuanReporteNovedad" />
+      <End Role="FuanTipoNovedad" EntitySet="FuanTipoNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanTipoNovedad_TipoNovedad" Association="Self.FK_FuanTipoNovedad_TipoNovedad">
+      <End Role="TipoNovedad" EntitySet="TipoNovedad" />
+      <End Role="FuanTipoNovedad" EntitySet="FuanTipoNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistorialUltimosFormatos_FuanAfiliado" Association="Self.FK_HistorialUltimosFormatos_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="HistorialUltimosFormatos" EntitySet="HistorialUltimosFormatos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IfppirRespuestaFactor_InfoIfppir" Association="Self.FK_IfppirRespuestaFactor_InfoIfppir">
+      <End Role="InfoIfppir" EntitySet="InfoIfppir" />
+      <End Role="IfppirRespuestaFactor" EntitySet="IfppirRespuestaFactor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo" Association="Self.FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo">
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+      <End Role="IfppirRespuestaFactor" EntitySet="IfppirRespuestaFactor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoHfdfr_Ciudad" Association="Self.FK_InfoHfdfr_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="InfoHfdfr" EntitySet="InfoHfdfr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoHfdfr_FuanAfiliado" Association="Self.FK_InfoHfdfr_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="InfoHfdfr" EntitySet="InfoHfdfr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoHfdfr_Usuario" Association="Self.FK_InfoHfdfr_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoHfdfr" EntitySet="InfoHfdfr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoIfppir_FuanAfiliado" Association="Self.FK_InfoIfppir_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="InfoIfppir" EntitySet="InfoIfppir" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoIfppir_Usuario" Association="Self.FK_InfoIfppir_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoIfppir" EntitySet="InfoIfppir" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoPurisu_Ciudad" Association="Self.FK_InfoPurisu_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="InfoPurisu" EntitySet="InfoPurisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoPurisu_Usuario" Association="Self.FK_InfoPurisu_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoPurisu" EntitySet="InfoPurisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ips_Ciudad" Association="Self.FK_Ips_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Ips" EntitySet="Ips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ips_TipoIdentificacion" Association="Self.FK_Ips_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Ips" EntitySet="Ips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaAsistenciaGeneral_AsistenciaGeneral" Association="Self.FK_ListaAsistenciaGeneral_AsistenciaGeneral">
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+      <End Role="ListaAsistenciaGeneral" EntitySet="ListaAsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaAsistenciaGeneral_FuanAfiliado" Association="Self.FK_ListaAsistenciaGeneral_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="ListaAsistenciaGeneral" EntitySet="ListaAsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Menu" Association="Self.FK_Menu_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Menu1" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Vista" Association="Self.FK_Menu_Vista">
+      <End Role="Vista" EntitySet="Vista" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modulo_Unidad" Association="Self.FK_Modulo_Unidad">
+      <End Role="Unidad" EntitySet="Unidad" />
+      <End Role="Modulo" EntitySet="Modulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreguntasSubFactorRiesgo_SubFactorRiesgo" Association="Self.FK_PreguntasSubFactorRiesgo_SubFactorRiesgo">
+      <End Role="SubFactorRiesgo" EntitySet="SubFactorRiesgo" />
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Eje" Association="Self.FK_Purisu_Eje">
+      <End Role="Eje" EntitySet="Eje" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Eje1" Association="Self.FK_Purisu_Eje1">
+      <End Role="Eje" EntitySet="Eje" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_FuanAfiliado" Association="Self.FK_Purisu_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_GrupoInteres" Association="Self.FK_Purisu_GrupoInteres">
+      <End Role="GrupoInteres" EntitySet="GrupoInteres" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_GruposFocales" Association="Self.FK_Purisu_GruposFocales">
+      <End Role="GruposFocales" EntitySet="GruposFocales" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_InfoPurisu" Association="Self.FK_Purisu_InfoPurisu">
+      <End Role="InfoPurisu" EntitySet="InfoPurisu" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Modulo" Association="Self.FK_Purisu_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Modulo1" Association="Self.FK_Purisu_Modulo1">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_ProgramaResolucion412" Association="Self.FK_Purisu_ProgramaResolucion412">
+      <End Role="ProgramaResolucion412" EntitySet="ProgramaResolucion412" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_SeguimientoProgramasIntervencionRiesgo" Association="Self.FK_Purisu_SeguimientoProgramasIntervencionRiesgo">
+      <End Role="SeguimientoProgramasIntervencionRiesgo" EntitySet="SeguimientoProgramasIntervencionRiesgo" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_TipoVisitaDomiciliaria" Association="Self.FK_Purisu_TipoVisitaDomiciliaria">
+      <End Role="TipoVisitaDomiciliaria" EntitySet="TipoVisitaDomiciliaria" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Unidad" Association="Self.FK_Purisu_Unidad">
+      <End Role="Unidad" EntitySet="Unidad" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Unidad1" Association="Self.FK_Purisu_Unidad1">
+      <End Role="Unidad" EntitySet="Unidad" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurisuMotivoConsulta_MotivoConsulta" Association="Self.FK_PurisuMotivoConsulta_MotivoConsulta">
+      <End Role="MotivoConsulta" EntitySet="MotivoConsulta" />
+      <End Role="PurisuMotivoConsulta" EntitySet="PurisuMotivoConsulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurisuMotivoConsulta_Purisu" Association="Self.FK_PurisuMotivoConsulta_Purisu">
+      <End Role="Purisu" EntitySet="Purisu" />
+      <End Role="PurisuMotivoConsulta" EntitySet="PurisuMotivoConsulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurisuMotivoContacto_MotivoContacto" Association="Self.FK_PurisuMotivoContacto_MotivoContacto">
+      <End Role="MotivoContacto" EntitySet="MotivoContacto" />
+      <End Role="PurisuMotivoContacto" EntitySet="PurisuMotivoContacto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurisuMotivoContacto_Purisu" Association="Self.FK_PurisuMotivoContacto_Purisu">
+      <End Role="Purisu" EntitySet="Purisu" />
+      <End Role="PurisuMotivoContacto" EntitySet="PurisuMotivoContacto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurisuPiezasInformativas_PiezasInformativas" Association="Self.FK_PurisuPiezasInformativas_PiezasInformativas">
+      <End Role="PiezasInformativas" EntitySet="PiezasInformativas" />
+      <End Role="PurisuPiezasInformativas" EntitySet="PurisuPiezasInformativas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurisuPiezasInformativas_Purisu" Association="Self.FK_PurisuPiezasInformativas_Purisu">
+      <End Role="Purisu" EntitySet="Purisu" />
+      <End Role="PurisuPiezasInformativas" EntitySet="PurisuPiezasInformativas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RolMenu_Menu" Association="Self.FK_RolMenu_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RolMenu_Rol" Association="Self.FK_RolMenu_Rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubFactorRiesgo_FactorRiesgo" Association="Self.FK_SubFactorRiesgo_FactorRiesgo">
+      <End Role="FactorRiesgo" EntitySet="FactorRiesgo" />
+      <End Role="SubFactorRiesgo" EntitySet="SubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unidad_Eje" Association="Self.FK_Unidad_Eje">
+      <End Role="Eje" EntitySet="Eje" />
+      <End Role="Unidad" EntitySet="Unidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Rol" Association="Self.FK_Usuario_Rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_TipoIdentificacion" Association="Self.FK_Usuario_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,44 @@
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.dll.config
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.dll
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.pdb
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.dll
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.SqlServer.dll
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\Newtonsoft.Json.dll
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.xml
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.SqlServer.xml
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\bin\Newtonsoft.Json.xml
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csprojResolveAssemblyReference.cache
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.Recursos.Mensajes.resources
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csproj.GenerateResource.Cache
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.dll
+D:\Edgar\Proyectos\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.pdb
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.dll.config
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.pdb
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.SqlServer.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Newtonsoft.Json.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.xml
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.SqlServer.xml
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Newtonsoft.Json.xml
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.Recursos.Mensajes.resources
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csproj.GenerateResource.Cache
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.pdb
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csproj.CoreCompileInputs.cache
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csprojResolveAssemblyReference.cache
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.dll.config
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Coomuce.DirectorServicios.pdb
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.SqlServer.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Newtonsoft.Json.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.xml
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\EntityFramework.SqlServer.xml
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\bin\Newtonsoft.Json.xml
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csprojResolveAssemblyReference.cache
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.Recursos.Mensajes.resources
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csproj.GenerateResource.Cache
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.dll
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.pdb
+E:\PROYECTO MULTIACTIVA\VisualStudioSolution\RESPALDO\Coomuce\Coomuce\Solution\Coomuce.DirectorServicios\obj\Debug\Coomuce.DirectorServicios.csproj.CoreCompileInputs.cache

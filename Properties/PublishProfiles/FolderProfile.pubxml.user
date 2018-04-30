@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\PROYECTO MULTIACTIVA\VisualStudioSolution\REPOSITORIO\PUBLICAR</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Coomuce.DirectorServicios.dll">
+      <publishTime>02/26/2018 16:12:24</publishTime>
+    </File>
+    <File Include="bin/Coomuce.DirectorServicios.pdb">
+      <publishTime>02/26/2018 16:12:24</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/03/2015 17:13:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>11/03/2015 17:13:42</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/29/2017 13:01:08</publishTime>
+    </File>
+    <File Include="CoomuceAdministracion.svc">
+      <publishTime>05/04/2017 21:09:15</publishTime>
+    </File>
+    <File Include="CoomuceFunciones.svc">
+      <publishTime>06/08/2017 19:33:18</publishTime>
+    </File>
+    <File Include="CoomuceParametros.svc">
+      <publishTime>05/05/2017 17:07:36</publishTime>
+    </File>
+    <File Include="CoomuceSeguridad.svc">
+      <publishTime>04/28/2017 10:59:18</publishTime>
+    </File>
+    <File Include="Entidad/Coomuce.edmx.diagram">
+      <publishTime>10/04/2017 13:05:19</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/25/2018 11:52:15</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/26/2018 16:12:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

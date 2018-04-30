@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ecoopsos.Entity.PromocionyPrevencion" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ecoopsos.Entity.PromocionyPrevencion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFicha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ficha_042EL" nillable="true" type="tns:Ficha_042EL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFicha_042EL" nillable="true" type="tns:ArrayOfFicha_042EL" />
+  <xs:complexType name="Ficha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abortos" type="xs:short" />
+      <xs:element minOccurs="0" name="Carnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cesareas" type="xs:short" />
+      <xs:element minOccurs="0" name="ClasificacionCorporal" type="xs:short" />
+      <xs:element minOccurs="0" name="CodigoCanaliza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoDepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoEscolaridad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoIps" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoMun" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoRaza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColesterolHDL" type="xs:short" />
+      <xs:element minOccurs="0" name="ColesterolLDL" type="xs:short" />
+      <xs:element minOccurs="0" name="ColesterolTotal" type="xs:short" />
+      <xs:element minOccurs="0" name="Edad" type="xs:short" />
+      <xs:element minOccurs="0" name="FechaDigita" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaFicha" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaToma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaUltRegla" type="xs:int" />
+      <xs:element minOccurs="0" name="FormaCanaliza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gestaciones" type="xs:short" />
+      <xs:element minOccurs="0" name="Gestante" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Glicemia" type="xs:short" />
+      <xs:element minOccurs="0" name="Partos" type="xs:short" />
+      <xs:element minOccurs="0" name="PerimetroAdbominal" type="xs:short" />
+      <xs:element minOccurs="0" name="Peso" type="xs:short" />
+      <xs:element minOccurs="0" name="RespuestasFicha_042EL" nillable="true" type="tns:ArrayOfRespuestasFicha_042EL" />
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SinFicha" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Talla" type="xs:short" />
+      <xs:element minOccurs="0" name="TensionDiastolica" type="xs:short" />
+      <xs:element minOccurs="0" name="TensionSistolica" type="xs:short" />
+      <xs:element minOccurs="0" name="UsuarioDigita" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioDiligencia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ficha_042EL" nillable="true" type="tns:Ficha_042EL" />
+  <xs:complexType name="ArrayOfRespuestasFicha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestasFicha_042EL" nillable="true" type="tns:RespuestasFicha_042EL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestasFicha_042EL" nillable="true" type="tns:ArrayOfRespuestasFicha_042EL" />
+  <xs:complexType name="RespuestasFicha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoComponente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoFactor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoSubComponente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestasFicha_042EL" nillable="true" type="tns:RespuestasFicha_042EL" />
+  <xs:complexType name="ArrayOfResultadoFicha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultadoFicha_042EL" nillable="true" type="tns:ResultadoFicha_042EL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResultadoFicha_042EL" nillable="true" type="tns:ArrayOfResultadoFicha_042EL" />
+  <xs:complexType name="ResultadoFicha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Carnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFicha" type="xs:int" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoFicha_042EL" nillable="true" type="tns:ResultadoFicha_042EL" />
+  <xs:complexType name="VerificaFicha_042EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AfiliadoActivo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Carnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExisteAfiliado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExisteFicha" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificaFicha_042EL" nillable="true" type="tns:VerificaFicha_042EL" />
+</xs:schema>

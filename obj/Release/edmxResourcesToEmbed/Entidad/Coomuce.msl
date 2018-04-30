@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CoomuceModelStoreContainer" CdmEntityContainer="CoomuceEntities">
+    <EntitySetMapping Name="Ciudad">
+      <EntityTypeMapping TypeName="CoomuceModel.Ciudad">
+        <MappingFragment StoreEntitySet="Ciudad">
+          <ScalarProperty Name="nombreCiudad" ColumnName="nombreCiudad" />
+          <ScalarProperty Name="codigoCiudad" ColumnName="codigoCiudad" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfiguracionCuerpoCorreo">
+      <EntityTypeMapping TypeName="CoomuceModel.ConfiguracionCuerpoCorreo">
+        <MappingFragment StoreEntitySet="ConfiguracionCuerpoCorreo">
+          <ScalarProperty Name="mensajeConfiguracionCuerpoCorreo" ColumnName="mensajeConfiguracionCuerpoCorreo" />
+          <ScalarProperty Name="tituloConfiguracionCuerpoCorreo" ColumnName="tituloConfiguracionCuerpoCorreo" />
+          <ScalarProperty Name="tipoConfiguracionCuerpoCorreo" ColumnName="tipoConfiguracionCuerpoCorreo" />
+          <ScalarProperty Name="idConfiguracionCuerpoCorreo" ColumnName="idConfiguracionCuerpoCorreo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfiguracionGeneral">
+      <EntityTypeMapping TypeName="CoomuceModel.ConfiguracionGeneral">
+        <MappingFragment StoreEntitySet="ConfiguracionGeneral">
+          <ScalarProperty Name="sslConfiguracionGeneral" ColumnName="sslConfiguracionGeneral" />
+          <ScalarProperty Name="portConfiguracionGeneral" ColumnName="portConfiguracionGeneral" />
+          <ScalarProperty Name="hostConfiguracionGeneral" ColumnName="hostConfiguracionGeneral" />
+          <ScalarProperty Name="csConfiguracionGeneral" ColumnName="csConfiguracionGeneral" />
+          <ScalarProperty Name="ccConfiguracionGeneral" ColumnName="ccConfiguracionGeneral" />
+          <ScalarProperty Name="pswEmailConfiguracionGeneral" ColumnName="pswEmailConfiguracionGeneral" />
+          <ScalarProperty Name="emailSalienteConfiguracionGeneral" ColumnName="emailSalienteConfiguracionGeneral" />
+          <ScalarProperty Name="salarioConfiguracionGeneral" ColumnName="salarioConfiguracionGeneral" />
+          <ScalarProperty Name="tiempoInactividadConfiguracionGeneral" ColumnName="tiempoInactividadConfiguracionGeneral" />
+          <ScalarProperty Name="idConfiguracionGeneral" ColumnName="idConfiguracionGeneral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamento">
+      <EntityTypeMapping TypeName="CoomuceModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="nombreDepartamento" ColumnName="nombreDepartamento" />
+          <ScalarProperty Name="codigoDepartamento" ColumnName="codigoDepartamento" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="CoomuceModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="idVista" ColumnName="idVista" />
+          <ScalarProperty Name="iconoMenu" ColumnName="iconoMenu" />
+          <ScalarProperty Name="ordenMenu" ColumnName="ordenMenu" />
+          <ScalarProperty Name="nombreMenu" ColumnName="nombreMenu" />
+          <ScalarProperty Name="idPadreMenu" ColumnName="idPadreMenu" />
+          <ScalarProperty Name="idMenu" ColumnName="idMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolMenu">
+      <EntityTypeMapping TypeName="CoomuceModel.RolMenu">
+        <MappingFragment StoreEntitySet="RolMenu">
+          <ScalarProperty Name="habilitadoRolMenu" ColumnName="habilitadoRolMenu" />
+          <ScalarProperty Name="idMenu" ColumnName="idMenu" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vista">
+      <EntityTypeMapping TypeName="CoomuceModel.Vista">
+        <MappingFragment StoreEntitySet="Vista">
+          <ScalarProperty Name="rutaVista" ColumnName="rutaVista" />
+          <ScalarProperty Name="idDomVista" ColumnName="idDomVista" />
+          <ScalarProperty Name="nombreVista" ColumnName="nombreVista" />
+          <ScalarProperty Name="idVista" ColumnName="idVista" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsistenciaGeneral">
+      <EntityTypeMapping TypeName="CoomuceModel.AsistenciaGeneral">
+        <MappingFragment StoreEntitySet="AsistenciaGeneral">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="fechaAsistenciaGeneral" ColumnName="fechaAsistenciaGeneral" />
+          <ScalarProperty Name="formadorAsistenciaGeneral" ColumnName="formadorAsistenciaGeneral" />
+          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
+          <ScalarProperty Name="temaAsistenciaGeneral" ColumnName="temaAsistenciaGeneral" />
+          <ScalarProperty Name="idGruposFocales" ColumnName="idGruposFocales" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="idAsistenciaGeneral" ColumnName="idAsistenciaGeneral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaCategoria">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaCategoria">
+        <MappingFragment StoreEntitySet="EncuestaCategoria">
+          <ScalarProperty Name="ordenEncuestaCategoria" ColumnName="ordenEncuestaCategoria" />
+          <ScalarProperty Name="nombreEncuestaCategoria" ColumnName="nombreEncuestaCategoria" />
+          <ScalarProperty Name="codigoEncuestaCategoria" ColumnName="codigoEncuestaCategoria" />
+          <ScalarProperty Name="idDomVista" ColumnName="idDomVista" />
+          <ScalarProperty Name="idEncuestaCategoria" ColumnName="idEncuestaCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaEps">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaEps">
+        <MappingFragment StoreEntitySet="EncuestaEps">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="observacionEncuestaEps" ColumnName="observacionEncuestaEps" />
+          <ScalarProperty Name="idIps" ColumnName="idIps" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="fechaHoraEncuestaEps" ColumnName="fechaHoraEncuestaEps" />
+          <ScalarProperty Name="idEncuestaEps" ColumnName="idEncuestaEps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaEpsRespLiteral">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaEpsRespLiteral">
+        <MappingFragment StoreEntitySet="EncuestaEpsRespLiteral">
+          <ScalarProperty Name="valorEncuestaEpsRespLiteral" ColumnName="valorEncuestaEpsRespLiteral" />
+          <ScalarProperty Name="idEncuestaLiteral" ColumnName="idEncuestaLiteral" />
+          <ScalarProperty Name="idEncuestaEps" ColumnName="idEncuestaEps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaEpsRespPregunta">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaEpsRespPregunta">
+        <MappingFragment StoreEntitySet="EncuestaEpsRespPregunta">
+          <ScalarProperty Name="valorEncuestaEpsRespPregunta" ColumnName="valorEncuestaEpsRespPregunta" />
+          <ScalarProperty Name="idEncuestaPregunta" ColumnName="idEncuestaPregunta" />
+          <ScalarProperty Name="idEncuestaEps" ColumnName="idEncuestaEps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaIps">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaIps">
+        <MappingFragment StoreEntitySet="EncuestaIps">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="observacionEncuestaIps" ColumnName="observacionEncuestaIps" />
+          <ScalarProperty Name="idIps" ColumnName="idIps" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="fechaHoraEncuestaIps" ColumnName="fechaHoraEncuestaIps" />
+          <ScalarProperty Name="idEncuestaIps" ColumnName="idEncuestaIps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaIpsRespLiteral">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaIpsRespLiteral">
+        <MappingFragment StoreEntitySet="EncuestaIpsRespLiteral">
+          <ScalarProperty Name="valorEncuestaIpsRespLiteral" ColumnName="valorEncuestaIpsRespLiteral" />
+          <ScalarProperty Name="idEncuestaLiteral" ColumnName="idEncuestaLiteral" />
+          <ScalarProperty Name="idEncuestaIps" ColumnName="idEncuestaIps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaIpsRespPregunta">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaIpsRespPregunta">
+        <MappingFragment StoreEntitySet="EncuestaIpsRespPregunta">
+          <ScalarProperty Name="valorEncuestaIpsRespPregunta" ColumnName="valorEncuestaIpsRespPregunta" />
+          <ScalarProperty Name="idEncuestaPregunta" ColumnName="idEncuestaPregunta" />
+          <ScalarProperty Name="idEncuestaIps" ColumnName="idEncuestaIps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaLiteral">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaLiteral">
+        <MappingFragment StoreEntitySet="EncuestaLiteral">
+          <ScalarProperty Name="checkedEncuestaLiteral" ColumnName="checkedEncuestaLiteral" />
+          <ScalarProperty Name="valorEncuestaLiteral" ColumnName="valorEncuestaLiteral" />
+          <ScalarProperty Name="textoEncuestaLiteral" ColumnName="textoEncuestaLiteral" />
+          <ScalarProperty Name="liteEncuestaLiteral" ColumnName="liteEncuestaLiteral" />
+          <ScalarProperty Name="idEncuestaPregunta" ColumnName="idEncuestaPregunta" />
+          <ScalarProperty Name="idEncuestaLiteral" ColumnName="idEncuestaLiteral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaPregunta">
+      <EntityTypeMapping TypeName="CoomuceModel.EncuestaPregunta">
+        <MappingFragment StoreEntitySet="EncuestaPregunta">
+          <ScalarProperty Name="valorEncuestaPregunta" ColumnName="valorEncuestaPregunta" />
+          <ScalarProperty Name="tipoPreEncuestaPregunta" ColumnName="tipoPreEncuestaPregunta" />
+          <ScalarProperty Name="textoEncuestaPregunta" ColumnName="textoEncuestaPregunta" />
+          <ScalarProperty Name="codigoEncuestaPregunta" ColumnName="codigoEncuestaPregunta" />
+          <ScalarProperty Name="idEncuestaCategoria" ColumnName="idEncuestaCategoria" />
+          <ScalarProperty Name="idEncuestaPregunta" ColumnName="idEncuestaPregunta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fuan">
+      <EntityTypeMapping TypeName="CoomuceModel.Fuan">
+        <MappingFragment StoreEntitySet="Fuan">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="codigoCotizanteFuan" ColumnName="codigoCotizanteFuan" />
+          <ScalarProperty Name="idTipoCotizante" ColumnName="idTipoCotizante" />
+          <ScalarProperty Name="idTipoAfiliado" ColumnName="idTipoAfiliado" />
+          <ScalarProperty Name="idTipoRegimen" ColumnName="idTipoRegimen" />
+          <ScalarProperty Name="idTipoAfiliacion" ColumnName="idTipoAfiliacion" />
+          <ScalarProperty Name="idTipoTramite" ColumnName="idTipoTramite" />
+          <ScalarProperty Name="fechaRadicacionFuan" ColumnName="fechaRadicacionFuan" />
+          <ScalarProperty Name="idFuan" ColumnName="idFuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanAfiliado">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanAfiliado">
+        <MappingFragment StoreEntitySet="FuanAfiliado">
+          <ScalarProperty Name="grupofamiliar" ColumnName="grupofamiliar" />
+          <ScalarProperty Name="cabezafamilia" ColumnName="cabezafamilia" />
+          <ScalarProperty Name="firmaFuanAfiliado" ColumnName="firmaFuanAfiliado" />
+          <ScalarProperty Name="upcFuanAfiliado" ColumnName="upcFuanAfiliado" />
+          <ScalarProperty Name="fechaNacimientoConyugueFuanAfiliado" ColumnName="fechaNacimientoConyugueFuanAfiliado" />
+          <ScalarProperty Name="idTipoSexoConyugue" ColumnName="idTipoSexoConyugue" />
+          <ScalarProperty Name="identificacionConyugueFuanAfiliado" ColumnName="identificacionConyugueFuanAfiliado" />
+          <ScalarProperty Name="idTipoIdentificacionConyugue" ColumnName="idTipoIdentificacionConyugue" />
+          <ScalarProperty Name="segundoNombreConyugueFuanAfiliado" ColumnName="segundoNombreConyugueFuanAfiliado" />
+          <ScalarProperty Name="primerNombreConyugueFuanAfiliado" ColumnName="primerNombreConyugueFuanAfiliado" />
+          <ScalarProperty Name="segundoApellidoConyugueFuanAfiliado" ColumnName="segundoApellidoConyugueFuanAfiliado" />
+          <ScalarProperty Name="primerApellidoConyugueFuanAfiliado" ColumnName="primerApellidoConyugueFuanAfiliado" />
+          <ScalarProperty Name="barrioFuanAfiliado" ColumnName="barrioFuanAfiliado" />
+          <ScalarProperty Name="idTipoZona" ColumnName="idTipoZona" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="emailFuanAfiliado" ColumnName="emailFuanAfiliado" />
+          <ScalarProperty Name="celularFuanAfiliado" ColumnName="celularFuanAfiliado" />
+          <ScalarProperty Name="telefonoFuanAfiliado" ColumnName="telefonoFuanAfiliado" />
+          <ScalarProperty Name="direccionFuanAfiliado" ColumnName="direccionFuanAfiliado" />
+          <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
+          <ScalarProperty Name="pensionFuanAfiliado" ColumnName="pensionFuanAfiliado" />
+          <ScalarProperty Name="arlFuanAfiliado" ColumnName="arlFuanAfiliado" />
+          <ScalarProperty Name="idGrupoPoblacional" ColumnName="idGrupoPoblacional" />
+          <ScalarProperty Name="numCarnetFuanAfiliado" ColumnName="numCarnetFuanAfiliado" />
+          <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
+          <ScalarProperty Name="idCondicionDiscapacidad" ColumnName="idCondicionDiscapacidad" />
+          <ScalarProperty Name="idTipoDiscapacidad" ColumnName="idTipoDiscapacidad" />
+          <ScalarProperty Name="idTipoEtnia" ColumnName="idTipoEtnia" />
+          <ScalarProperty Name="fechaNacimientoFuanAfiliado" ColumnName="fechaNacimientoFuanAfiliado" />
+          <ScalarProperty Name="idTipoSexo" ColumnName="idTipoSexo" />
+          <ScalarProperty Name="identificacionFuanAfiliado" ColumnName="identificacionFuanAfiliado" />
+          <ScalarProperty Name="idTipoIdentificacion" ColumnName="idTipoIdentificacion" />
+          <ScalarProperty Name="segundoNombreFuanAfiliado" ColumnName="segundoNombreFuanAfiliado" />
+          <ScalarProperty Name="primerNombreFuanAfiliado" ColumnName="primerNombreFuanAfiliado" />
+          <ScalarProperty Name="segundoApellidoFuanAfiliado" ColumnName="segundoApellidoFuanAfiliado" />
+          <ScalarProperty Name="primerApellidoFuanAfiliado" ColumnName="primerApellidoFuanAfiliado" />
+          <ScalarProperty Name="tipoFuanAfiliado" ColumnName="tipoFuanAfiliado" />
+          <ScalarProperty Name="idFuan" ColumnName="idFuan" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanAnexos">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanAnexos">
+        <MappingFragment StoreEntitySet="FuanAnexos">
+          <ScalarProperty Name="anexo65FuanAnexos" ColumnName="anexo65FuanAnexos" />
+          <ScalarProperty Name="anexo64FuanAnexos" ColumnName="anexo64FuanAnexos" />
+          <ScalarProperty Name="anexo63FuanAnexos" ColumnName="anexo63FuanAnexos" />
+          <ScalarProperty Name="anexo62FuanAnexos" ColumnName="anexo62FuanAnexos" />
+          <ScalarProperty Name="anexo61FuanAnexos" ColumnName="anexo61FuanAnexos" />
+          <ScalarProperty Name="anexo60FuanAnexos" ColumnName="anexo60FuanAnexos" />
+          <ScalarProperty Name="anexo59FuanAnexos" ColumnName="anexo59FuanAnexos" />
+          <ScalarProperty Name="anexo58FuanAnexos" ColumnName="anexo58FuanAnexos" />
+          <ScalarProperty Name="anexo57FuanAnexos" ColumnName="anexo57FuanAnexos" />
+          <ScalarProperty Name="anexo56CSFuanAnexos" ColumnName="anexo56CSFuanAnexos" />
+          <ScalarProperty Name="anexo56CDFuanAnexos" ColumnName="anexo56CDFuanAnexos" />
+          <ScalarProperty Name="anexo56CEFuanAnexos" ColumnName="anexo56CEFuanAnexos" />
+          <ScalarProperty Name="anexo56PAFuanAnexos" ColumnName="anexo56PAFuanAnexos" />
+          <ScalarProperty Name="anexo56CCFuanAnexos" ColumnName="anexo56CCFuanAnexos" />
+          <ScalarProperty Name="anexo56TIFuanAnexos" ColumnName="anexo56TIFuanAnexos" />
+          <ScalarProperty Name="anexo56RCFuanAnexos" ColumnName="anexo56RCFuanAnexos" />
+          <ScalarProperty Name="anexo56CNFuanAnexos" ColumnName="anexo56CNFuanAnexos" />
+          <ScalarProperty Name="anexo56FuanAnexos" ColumnName="anexo56FuanAnexos" />
+          <ScalarProperty Name="idFuan" ColumnName="idFuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanBeneficiariosAfiliado">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanBeneficiariosAfiliado">
+        <MappingFragment StoreEntitySet="FuanBeneficiariosAfiliado">
+          <ScalarProperty Name="upcFuanBeneficiariosAfiliado" ColumnName="upcFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="telefonoFuanBeneficiariosAfiliado" ColumnName="telefonoFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="idTipoZona" ColumnName="idTipoZona" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="idCondicionDiscapacidad" ColumnName="idCondicionDiscapacidad" />
+          <ScalarProperty Name="idTipoDiscapacidad" ColumnName="idTipoDiscapacidad" />
+          <ScalarProperty Name="idTipoEtnia" ColumnName="idTipoEtnia" />
+          <ScalarProperty Name="idTipoParentesco" ColumnName="idTipoParentesco" />
+          <ScalarProperty Name="fechaNacimientoFuanBeneficiariosAfiliado" ColumnName="fechaNacimientoFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="idTipoSexo" ColumnName="idTipoSexo" />
+          <ScalarProperty Name="identificacionFuanBeneficiariosAfiliado" ColumnName="identificacionFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="idTipoIdentificacion" ColumnName="idTipoIdentificacion" />
+          <ScalarProperty Name="segundoNombreFuanBeneficiariosAfiliado" ColumnName="segundoNombreFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="primerNombreFuanBeneficiariosAfiliado" ColumnName="primerNombreFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="segundoApellidoFuanBeneficiariosAfiliado" ColumnName="segundoApellidoFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="primerApellidoFuanBeneficiariosAfiliado" ColumnName="primerApellidoFuanBeneficiariosAfiliado" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="idFuanBeneficiariosAfiliado" ColumnName="idFuanBeneficiariosAfiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanDeclaracionAutorizacion">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanDeclaracionAutorizacion">
+        <MappingFragment StoreEntitySet="FuanDeclaracionAutorizacion">
+          <ScalarProperty Name="valorFuanDeclaracionAutorizacion" ColumnName="valorFuanDeclaracionAutorizacion" />
+          <ScalarProperty Name="idDeclaracionAutorizacion" ColumnName="idDeclaracionAutorizacion" />
+          <ScalarProperty Name="idFuan" ColumnName="idFuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanEmpleadorAfiliado">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanEmpleadorAfiliado">
+        <MappingFragment StoreEntitySet="FuanEmpleadorAfiliado">
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="emailFuanEmpleadorAfiliado" ColumnName="emailFuanEmpleadorAfiliado" />
+          <ScalarProperty Name="telefonoFuanEmpleadorAfiliado" ColumnName="telefonoFuanEmpleadorAfiliado" />
+          <ScalarProperty Name="direccionFuanEmpleadorAfiliado" ColumnName="direccionFuanEmpleadorAfiliado" />
+          <ScalarProperty Name="tipoPagadorFuanEmpleadorAfiliado" ColumnName="tipoPagadorFuanEmpleadorAfiliado" />
+          <ScalarProperty Name="identificacionFuanEmpleadorAfiliado" ColumnName="identificacionFuanEmpleadorAfiliado" />
+          <ScalarProperty Name="idTipoIdentificacion" ColumnName="idTipoIdentificacion" />
+          <ScalarProperty Name="nombreFuanEmpleadorAfiliado" ColumnName="nombreFuanEmpleadorAfiliado" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="idFuanEmpleadorAfiliado" ColumnName="idFuanEmpleadorAfiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanEntidadTerritorial">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanEntidadTerritorial">
+        <MappingFragment StoreEntitySet="FuanEntidadTerritorial">
+          <ScalarProperty Name="observacionFuanEntidadTerritorial" ColumnName="observacionFuanEntidadTerritorial" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="fechaValidacionFuanEntidadTerritorial" ColumnName="fechaValidacionFuanEntidadTerritorial" />
+          <ScalarProperty Name="fechaRadicacionFuanEntidadTerritorial" ColumnName="fechaRadicacionFuanEntidadTerritorial" />
+          <ScalarProperty Name="nivelSisbenFuanEntidadTerritorial" ColumnName="nivelSisbenFuanEntidadTerritorial" />
+          <ScalarProperty Name="puntajeSisbenFuanEntidadTerritorial" ColumnName="puntajeSisbenFuanEntidadTerritorial" />
+          <ScalarProperty Name="numFichaSisbenFuanEntidadTerritorial" ColumnName="numFichaSisbenFuanEntidadTerritorial" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="idFuan" ColumnName="idFuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanIpsPrimariaAfiliado">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanIpsPrimariaAfiliado">
+        <MappingFragment StoreEntitySet="FuanIpsPrimariaAfiliado">
+          <ScalarProperty Name="codigoFuanIpsPrimariaAfiliado" ColumnName="codigoFuanIpsPrimariaAfiliado" />
+          <ScalarProperty Name="nombreFuanIpsPrimariaAfiliado" ColumnName="nombreFuanIpsPrimariaAfiliado" />
+          <ScalarProperty Name="tipoFuanIpsPrimariaAfiliado" ColumnName="tipoFuanIpsPrimariaAfiliado" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="idFuanIpsPrimariaAfiliado" ColumnName="idFuanIpsPrimariaAfiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanReporteNovedad">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanReporteNovedad">
+        <MappingFragment StoreEntitySet="FuanReporteNovedad">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="despuesFuanReporteNovedad" ColumnName="despuesFuanReporteNovedad" />
+          <ScalarProperty Name="antesFuanReporteNovedad" ColumnName="antesFuanReporteNovedad" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="fechaFuanReporteNovedad" ColumnName="fechaFuanReporteNovedad" />
+          <ScalarProperty Name="idFuanReporteNovedad" ColumnName="idFuanReporteNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuanTipoNovedad">
+      <EntityTypeMapping TypeName="CoomuceModel.FuanTipoNovedad">
+        <MappingFragment StoreEntitySet="FuanTipoNovedad">
+          <ScalarProperty Name="valorFuanTipoNovedad" ColumnName="valorFuanTipoNovedad" />
+          <ScalarProperty Name="selFuanTipoNovedad" ColumnName="selFuanTipoNovedad" />
+          <ScalarProperty Name="idTipoNovedad" ColumnName="idTipoNovedad" />
+          <ScalarProperty Name="idFuanReporteNovedad" ColumnName="idFuanReporteNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialUltimosFormatos">
+      <EntityTypeMapping TypeName="CoomuceModel.HistorialUltimosFormatos">
+        <MappingFragment StoreEntitySet="HistorialUltimosFormatos">
+          <ScalarProperty Name="fechaUltFicha" ColumnName="fechaUltFicha" />
+          <ScalarProperty Name="fechaUltHistoria" ColumnName="fechaUltHistoria" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IfppirRespuestaFactor">
+      <EntityTypeMapping TypeName="CoomuceModel.IfppirRespuestaFactor">
+        <MappingFragment StoreEntitySet="IfppirRespuestaFactor">
+          <ScalarProperty Name="respuestaNoIfppirRespuestaFactor" ColumnName="respuestaNoIfppirRespuestaFactor" />
+          <ScalarProperty Name="respuestaSiIfppirRespuestaFactor" ColumnName="respuestaSiIfppirRespuestaFactor" />
+          <ScalarProperty Name="idPreguntasSubFactorRiesgo" ColumnName="idPreguntasSubFactorRiesgo" />
+          <ScalarProperty Name="idInfoIfppir" ColumnName="idInfoIfppir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoHfdfr">
+      <EntityTypeMapping TypeName="CoomuceModel.InfoHfdfr">
+        <MappingFragment StoreEntitySet="InfoHfdfr">
+          <ScalarProperty Name="fechaInfoHfdfr" ColumnName="fechaInfoHfdfr" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="firmaHfdfr" ColumnName="firmaHfdfr" />
+          <ScalarProperty Name="archivoAudioHfdfr" ColumnName="archivoAudioHfdfr" />
+          <ScalarProperty Name="historiaInfoHfdfr" ColumnName="historiaInfoHfdfr" />
+          <ScalarProperty Name="telefonoInfoHfdfr" ColumnName="telefonoInfoHfdfr" />
+          <ScalarProperty Name="barrioInfoHfdfr" ColumnName="barrioInfoHfdfr" />
+          <ScalarProperty Name="veredaInfoHfdfr" ColumnName="veredaInfoHfdfr" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="horaFinHfdfr" ColumnName="horaFinHfdfr" />
+          <ScalarProperty Name="horaInicioHfdfr" ColumnName="horaInicioHfdfr" />
+          <ScalarProperty Name="fechaVisitaHfdfr" ColumnName="fechaVisitaHfdfr" />
+          <ScalarProperty Name="tipoDiligenciamientoHfdfr" ColumnName="tipoDiligenciamientoHfdfr" />
+          <ScalarProperty Name="idInfoHfdfr" ColumnName="idInfoHfdfr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoIfppir">
+      <EntityTypeMapping TypeName="CoomuceModel.InfoIfppir">
+        <MappingFragment StoreEntitySet="InfoIfppir">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="firmaIfppir" ColumnName="firmaIfppir" />
+          <ScalarProperty Name="archivoAudioIfppir" ColumnName="archivoAudioIfppir" />
+          <ScalarProperty Name="observacionIfppir" ColumnName="observacionIfppir" />
+          <ScalarProperty Name="nacidoVivoIfppir" ColumnName="nacidoVivoIfppir" />
+          <ScalarProperty Name="aIfppir" ColumnName="aIfppir" />
+          <ScalarProperty Name="cIfppir" ColumnName="cIfppir" />
+          <ScalarProperty Name="pIfppir" ColumnName="pIfppir" />
+          <ScalarProperty Name="gIfppir" ColumnName="gIfppir" />
+          <ScalarProperty Name="glicemiaIfppir" ColumnName="glicemiaIfppir" />
+          <ScalarProperty Name="colesterolHdlIfppir" ColumnName="colesterolHdlIfppir" />
+          <ScalarProperty Name="colesterolLdlIfppir" ColumnName="colesterolLdlIfppir" />
+          <ScalarProperty Name="colesterolTotalIfppir" ColumnName="colesterolTotalIfppir" />
+          <ScalarProperty Name="fppIfppir" ColumnName="fppIfppir" />
+          <ScalarProperty Name="furIfppir" ColumnName="furIfppir" />
+          <ScalarProperty Name="diastolicaIfppir" ColumnName="diastolicaIfppir" />
+          <ScalarProperty Name="sistolicaIfppir" ColumnName="sistolicaIfppir" />
+          <ScalarProperty Name="perimetroAbdominalIfppir" ColumnName="perimetroAbdominalIfppir" />
+          <ScalarProperty Name="masaCorporalIfppir" ColumnName="masaCorporalIfppir" />
+          <ScalarProperty Name="tallaIfppir" ColumnName="tallaIfppir" />
+          <ScalarProperty Name="pesoIfppir" ColumnName="pesoIfppir" />
+          <ScalarProperty Name="fechaAplicacionIfppir" ColumnName="fechaAplicacionIfppir" />
+          <ScalarProperty Name="gestanteIfppir" ColumnName="gestanteIfppir" />
+          <ScalarProperty Name="telefonoFamiliarIfppir" ColumnName="telefonoFamiliarIfppir" />
+          <ScalarProperty Name="familiarCercanoIfppir" ColumnName="familiarCercanoIfppir" />
+          <ScalarProperty Name="escolaridadIfppir" ColumnName="escolaridadIfppir" />
+          <ScalarProperty Name="razaIfppir" ColumnName="razaIfppir" />
+          <ScalarProperty Name="ipsPrimariaIfppir" ColumnName="ipsPrimariaIfppir" />
+          <ScalarProperty Name="numCarneIfppir" ColumnName="numCarneIfppir" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="tipoDiligenciamientoIfppir" ColumnName="tipoDiligenciamientoIfppir" />
+          <ScalarProperty Name="fechaInfoIfppir" ColumnName="fechaInfoIfppir" />
+          <ScalarProperty Name="idInfoIfppir" ColumnName="idInfoIfppir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoPurisu">
+      <EntityTypeMapping TypeName="CoomuceModel.InfoPurisu">
+        <MappingFragment StoreEntitySet="InfoPurisu">
+          <ScalarProperty Name="tipoDiligenciamientoInfoPurisu" ColumnName="tipoDiligenciamientoInfoPurisu" />
+          <ScalarProperty Name="archivoAudioInfoPurisu" ColumnName="archivoAudioInfoPurisu" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="fechaAtencionPurisu" ColumnName="fechaAtencionPurisu" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="idInfoPurisu" ColumnName="idInfoPurisu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaAsistenciaGeneral">
+      <EntityTypeMapping TypeName="CoomuceModel.ListaAsistenciaGeneral">
+        <MappingFragment StoreEntitySet="ListaAsistenciaGeneral">
+          <ScalarProperty Name="firmaListaAsistenciaGeneral" ColumnName="firmaListaAsistenciaGeneral" />
+          <ScalarProperty Name="areaEntidadListaAsistenciaGeneral" ColumnName="areaEntidadListaAsistenciaGeneral" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="idAsistenciaGeneral" ColumnName="idAsistenciaGeneral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Purisu">
+      <EntityTypeMapping TypeName="CoomuceModel.Purisu">
+        <MappingFragment StoreEntitySet="Purisu">
+          <ScalarProperty Name="firmaPurisu" ColumnName="firmaPurisu" />
+          <ScalarProperty Name="idModulo1" ColumnName="idModulo1" />
+          <ScalarProperty Name="idUnidad1" ColumnName="idUnidad1" />
+          <ScalarProperty Name="idEje1" ColumnName="idEje1" />
+          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
+          <ScalarProperty Name="idUnidad" ColumnName="idUnidad" />
+          <ScalarProperty Name="idEje" ColumnName="idEje" />
+          <ScalarProperty Name="idGruposFocales" ColumnName="idGruposFocales" />
+          <ScalarProperty Name="numAutorizacionPurisu" ColumnName="numAutorizacionPurisu" />
+          <ScalarProperty Name="idSeguimientoProgramasIntervencionRiesgo" ColumnName="idSeguimientoProgramasIntervencionRiesgo" />
+          <ScalarProperty Name="idGrupoInteres" ColumnName="idGrupoInteres" />
+          <ScalarProperty Name="idProgramaResolucion412" ColumnName="idProgramaResolucion412" />
+          <ScalarProperty Name="actividadExtramuralPurisu" ColumnName="actividadExtramuralPurisu" />
+          <ScalarProperty Name="cauPurisu" ColumnName="cauPurisu" />
+          <ScalarProperty Name="telefonicaPurisu" ColumnName="telefonicaPurisu" />
+          <ScalarProperty Name="ipsPrimariaPurisu" ColumnName="ipsPrimariaPurisu" />
+          <ScalarProperty Name="usisPurisu" ColumnName="usisPurisu" />
+          <ScalarProperty Name="idTipoVisitaDomiciliaria" ColumnName="idTipoVisitaDomiciliaria" />
+          <ScalarProperty Name="numCarnePurisu" ColumnName="numCarnePurisu" />
+          <ScalarProperty Name="idFuanAfiliado" ColumnName="idFuanAfiliado" />
+          <ScalarProperty Name="idPurisu" ColumnName="idPurisu" />
+          <ScalarProperty Name="idInfoPurisu" ColumnName="idInfoPurisu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CicloVital">
+      <EntityTypeMapping TypeName="CoomuceModel.CicloVital">
+        <MappingFragment StoreEntitySet="CicloVital">
+          <ScalarProperty Name="edadMaxCicloVital" ColumnName="edadMaxCicloVital" />
+          <ScalarProperty Name="edadMinCicloVital" ColumnName="edadMinCicloVital" />
+          <ScalarProperty Name="idCicloVital" ColumnName="idCicloVital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CicloVitalGestante">
+      <EntityTypeMapping TypeName="CoomuceModel.CicloVitalGestante">
+        <MappingFragment StoreEntitySet="CicloVitalGestante">
+          <ScalarProperty Name="idPreguntasSubFactorRiesgo" ColumnName="idPreguntasSubFactorRiesgo" />
+          <ScalarProperty Name="idCicloVitalGestante" ColumnName="idCicloVitalGestante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CicloVitalPreguntasSubFactorRiesgo">
+      <EntityTypeMapping TypeName="CoomuceModel.CicloVitalPreguntasSubFactorRiesgo">
+        <MappingFragment StoreEntitySet="CicloVitalPreguntasSubFactorRiesgo">
+          <ScalarProperty Name="idPreguntasSubFactorRiesgo" ColumnName="idPreguntasSubFactorRiesgo" />
+          <ScalarProperty Name="idTipoSexo" ColumnName="idTipoSexo" />
+          <ScalarProperty Name="idCicloVital" ColumnName="idCicloVital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CondicionDiscapacidad">
+      <EntityTypeMapping TypeName="CoomuceModel.CondicionDiscapacidad">
+        <MappingFragment StoreEntitySet="CondicionDiscapacidad">
+          <ScalarProperty Name="nombreCondicionDiscapacidad" ColumnName="nombreCondicionDiscapacidad" />
+          <ScalarProperty Name="codigoCondicionDiscapacidad" ColumnName="codigoCondicionDiscapacidad" />
+          <ScalarProperty Name="idCondicionDiscapacidad" ColumnName="idCondicionDiscapacidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CondicionVivienda">
+      <EntityTypeMapping TypeName="CoomuceModel.CondicionVivienda">
+        <MappingFragment StoreEntitySet="CondicionVivienda">
+          <ScalarProperty Name="nombreCondicionVivienda" ColumnName="nombreCondicionVivienda" />
+          <ScalarProperty Name="idCondicionVivienda" ColumnName="idCondicionVivienda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeclaracionAutorizacion">
+      <EntityTypeMapping TypeName="CoomuceModel.DeclaracionAutorizacion">
+        <MappingFragment StoreEntitySet="DeclaracionAutorizacion">
+          <ScalarProperty Name="descripcionDeclaracionAutorizacion" ColumnName="descripcionDeclaracionAutorizacion" />
+          <ScalarProperty Name="codigoDeclaracionAutorizacion" ColumnName="codigoDeclaracionAutorizacion" />
+          <ScalarProperty Name="idDeclaracionAutorizacion" ColumnName="idDeclaracionAutorizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisposicionBasura">
+      <EntityTypeMapping TypeName="CoomuceModel.DisposicionBasura">
+        <MappingFragment StoreEntitySet="DisposicionBasura">
+          <ScalarProperty Name="nombreDisposicionBasura" ColumnName="nombreDisposicionBasura" />
+          <ScalarProperty Name="codigoDisposicionBasura" ColumnName="codigoDisposicionBasura" />
+          <ScalarProperty Name="idDisposicionBasura" ColumnName="idDisposicionBasura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisposicionExcreta">
+      <EntityTypeMapping TypeName="CoomuceModel.DisposicionExcreta">
+        <MappingFragment StoreEntitySet="DisposicionExcreta">
+          <ScalarProperty Name="nombreDisposicionExcreta" ColumnName="nombreDisposicionExcreta" />
+          <ScalarProperty Name="codigoDisposicionExcreta" ColumnName="codigoDisposicionExcreta" />
+          <ScalarProperty Name="idDisposicionExcreta" ColumnName="idDisposicionExcreta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eje">
+      <EntityTypeMapping TypeName="CoomuceModel.Eje">
+        <MappingFragment StoreEntitySet="Eje">
+          <ScalarProperty Name="nombreEje" ColumnName="nombreEje" />
+          <ScalarProperty Name="codigoEje" ColumnName="codigoEje" />
+          <ScalarProperty Name="idEje" ColumnName="idEje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactorRiesgo">
+      <EntityTypeMapping TypeName="CoomuceModel.FactorRiesgo">
+        <MappingFragment StoreEntitySet="FactorRiesgo">
+          <ScalarProperty Name="nombreFactorRiesgo" ColumnName="nombreFactorRiesgo" />
+          <ScalarProperty Name="codigoFactorRiesgo" ColumnName="codigoFactorRiesgo" />
+          <ScalarProperty Name="idFactorRiesgo" ColumnName="idFactorRiesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoInteres">
+      <EntityTypeMapping TypeName="CoomuceModel.GrupoInteres">
+        <MappingFragment StoreEntitySet="GrupoInteres">
+          <ScalarProperty Name="descripcionGrupoInteres" ColumnName="descripcionGrupoInteres" />
+          <ScalarProperty Name="codigoGrupoInteres" ColumnName="codigoGrupoInteres" />
+          <ScalarProperty Name="idGrupoInteres" ColumnName="idGrupoInteres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoPoblacional">
+      <EntityTypeMapping TypeName="CoomuceModel.GrupoPoblacional">
+        <MappingFragment StoreEntitySet="GrupoPoblacional">
+          <ScalarProperty Name="nombreGrupoPoblacional" ColumnName="nombreGrupoPoblacional" />
+          <ScalarProperty Name="codigoGrupoPoblacional" ColumnName="codigoGrupoPoblacional" />
+          <ScalarProperty Name="idGrupoPoblacional" ColumnName="idGrupoPoblacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GruposFocales">
+      <EntityTypeMapping TypeName="CoomuceModel.GruposFocales">
+        <MappingFragment StoreEntitySet="GruposFocales">
+          <ScalarProperty Name="nombreGruposFocales" ColumnName="nombreGruposFocales" />
+          <ScalarProperty Name="codigoGruposFocales" ColumnName="codigoGruposFocales" />
+          <ScalarProperty Name="idGruposFocales" ColumnName="idGruposFocales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ips">
+      <EntityTypeMapping TypeName="CoomuceModel.Ips">
+        <MappingFragment StoreEntitySet="Ips">
+          <ScalarProperty Name="emailIps" ColumnName="emailIps" />
+          <ScalarProperty Name="contactoIps" ColumnName="contactoIps" />
+          <ScalarProperty Name="nivelIps" ColumnName="nivelIps" />
+          <ScalarProperty Name="representanteIps" ColumnName="representanteIps" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="telefonoIps" ColumnName="telefonoIps" />
+          <ScalarProperty Name="direccionIps" ColumnName="direccionIps" />
+          <ScalarProperty Name="identificacionIps" ColumnName="identificacionIps" />
+          <ScalarProperty Name="idTipoIdentificacion" ColumnName="idTipoIdentificacion" />
+          <ScalarProperty Name="razonIps" ColumnName="razonIps" />
+          <ScalarProperty Name="codigoIps" ColumnName="codigoIps" />
+          <ScalarProperty Name="idIps" ColumnName="idIps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulo">
+      <EntityTypeMapping TypeName="CoomuceModel.Modulo">
+        <MappingFragment StoreEntitySet="Modulo">
+          <ScalarProperty Name="nombreModulo" ColumnName="nombreModulo" />
+          <ScalarProperty Name="codigoModulo" ColumnName="codigoModulo" />
+          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
+          <ScalarProperty Name="idUnidad" ColumnName="idUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoConsulta">
+      <EntityTypeMapping TypeName="CoomuceModel.MotivoConsulta">
+        <MappingFragment StoreEntitySet="MotivoConsulta">
+          <ScalarProperty Name="descripcionMotivoConsulta" ColumnName="descripcionMotivoConsulta" />
+          <ScalarProperty Name="codigoMotivoConsulta" ColumnName="codigoMotivoConsulta" />
+          <ScalarProperty Name="idMotivoConsulta" ColumnName="idMotivoConsulta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoContacto">
+      <EntityTypeMapping TypeName="CoomuceModel.MotivoContacto">
+        <MappingFragment StoreEntitySet="MotivoContacto">
+          <ScalarProperty Name="descripcionMotivoContacto" ColumnName="descripcionMotivoContacto" />
+          <ScalarProperty Name="codigoMotivoContacto" ColumnName="codigoMotivoContacto" />
+          <ScalarProperty Name="idMotivoContacto" ColumnName="idMotivoContacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoTraslado">
+      <EntityTypeMapping TypeName="CoomuceModel.MotivoTraslado">
+        <MappingFragment StoreEntitySet="MotivoTraslado">
+          <ScalarProperty Name="descripcionMotivoTraslado" ColumnName="descripcionMotivoTraslado" />
+          <ScalarProperty Name="codigoMotivoTraslado" ColumnName="codigoMotivoTraslado" />
+          <ScalarProperty Name="idMotivoTraslado" ColumnName="idMotivoTraslado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NivelEducativo">
+      <EntityTypeMapping TypeName="CoomuceModel.NivelEducativo">
+        <MappingFragment StoreEntitySet="NivelEducativo">
+          <ScalarProperty Name="nombreNivelEducativo" ColumnName="nombreNivelEducativo" />
+          <ScalarProperty Name="codigoNivelEducativo" ColumnName="codigoNivelEducativo" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PiezasInformativas">
+      <EntityTypeMapping TypeName="CoomuceModel.PiezasInformativas">
+        <MappingFragment StoreEntitySet="PiezasInformativas">
+          <ScalarProperty Name="descripcionPiezasInformativas" ColumnName="descripcionPiezasInformativas" />
+          <ScalarProperty Name="codigoPiezasInformativas" ColumnName="codigoPiezasInformativas" />
+          <ScalarProperty Name="idPiezasInformativas" ColumnName="idPiezasInformativas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreguntasSubFactorRiesgo">
+      <EntityTypeMapping TypeName="CoomuceModel.PreguntasSubFactorRiesgo">
+        <MappingFragment StoreEntitySet="PreguntasSubFactorRiesgo">
+          <ScalarProperty Name="descripcionPreguntasSubFactorRiesgo" ColumnName="descripcionPreguntasSubFactorRiesgo" />
+          <ScalarProperty Name="codigoPreguntasSubFactorRiesgo" ColumnName="codigoPreguntasSubFactorRiesgo" />
+          <ScalarProperty Name="idSubFactorRiesgo" ColumnName="idSubFactorRiesgo" />
+          <ScalarProperty Name="idPreguntasSubFactorRiesgo" ColumnName="idPreguntasSubFactorRiesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Procedencia">
+      <EntityTypeMapping TypeName="CoomuceModel.Procedencia">
+        <MappingFragment StoreEntitySet="Procedencia">
+          <ScalarProperty Name="nombreProcedencia" ColumnName="nombreProcedencia" />
+          <ScalarProperty Name="codigoProcedencia" ColumnName="codigoProcedencia" />
+          <ScalarProperty Name="idProcedencia" ColumnName="idProcedencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgramaResolucion412">
+      <EntityTypeMapping TypeName="CoomuceModel.ProgramaResolucion412">
+        <MappingFragment StoreEntitySet="ProgramaResolucion412">
+          <ScalarProperty Name="descripcionProgramaResolucion412" ColumnName="descripcionProgramaResolucion412" />
+          <ScalarProperty Name="codigoProgramaResolucion412" ColumnName="codigoProgramaResolucion412" />
+          <ScalarProperty Name="idProgramaResolucion412" ColumnName="idProgramaResolucion412" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeguimientoProgramasIntervencionRiesgo">
+      <EntityTypeMapping TypeName="CoomuceModel.SeguimientoProgramasIntervencionRiesgo">
+        <MappingFragment StoreEntitySet="SeguimientoProgramasIntervencionRiesgo">
+          <ScalarProperty Name="nombreSeguimientoProgramasIntervencionRiesgo" ColumnName="nombreSeguimientoProgramasIntervencionRiesgo" />
+          <ScalarProperty Name="codigoSeguimientoProgramasIntervencionRiesgo" ColumnName="codigoSeguimientoProgramasIntervencionRiesgo" />
+          <ScalarProperty Name="idSeguimientoProgramasIntervencionRiesgo" ColumnName="idSeguimientoProgramasIntervencionRiesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubFactorRiesgo">
+      <EntityTypeMapping TypeName="CoomuceModel.SubFactorRiesgo">
+        <MappingFragment StoreEntitySet="SubFactorRiesgo">
+          <ScalarProperty Name="nombreSubFactorRiesgo" ColumnName="nombreSubFactorRiesgo" />
+          <ScalarProperty Name="codigoSubFactorRiesgo" ColumnName="codigoSubFactorRiesgo" />
+          <ScalarProperty Name="idFactorRiesgo" ColumnName="idFactorRiesgo" />
+          <ScalarProperty Name="idSubFactorRiesgo" ColumnName="idSubFactorRiesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tenencia">
+      <EntityTypeMapping TypeName="CoomuceModel.Tenencia">
+        <MappingFragment StoreEntitySet="Tenencia">
+          <ScalarProperty Name="nombreTenencia" ColumnName="nombreTenencia" />
+          <ScalarProperty Name="codigoTenencia" ColumnName="codigoTenencia" />
+          <ScalarProperty Name="idTenencia" ColumnName="idTenencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAfiliacion">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoAfiliacion">
+        <MappingFragment StoreEntitySet="TipoAfiliacion">
+          <ScalarProperty Name="nombreTipoAfiliacion" ColumnName="nombreTipoAfiliacion" />
+          <ScalarProperty Name="codigoTipoAfiliacion" ColumnName="codigoTipoAfiliacion" />
+          <ScalarProperty Name="idTipoAfiliacion" ColumnName="idTipoAfiliacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAfiliado">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoAfiliado">
+        <MappingFragment StoreEntitySet="TipoAfiliado">
+          <ScalarProperty Name="nombreTipoAfiliado" ColumnName="nombreTipoAfiliado" />
+          <ScalarProperty Name="codigoTipoAfiliado" ColumnName="codigoTipoAfiliado" />
+          <ScalarProperty Name="idTipoAfiliado" ColumnName="idTipoAfiliado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAnimal">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoAnimal">
+        <MappingFragment StoreEntitySet="TipoAnimal">
+          <ScalarProperty Name="nombreTipoAnimal" ColumnName="nombreTipoAnimal" />
+          <ScalarProperty Name="codigoTipoAnimal" ColumnName="codigoTipoAnimal" />
+          <ScalarProperty Name="idTipoAnimal" ColumnName="idTipoAnimal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCombustible">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoCombustible">
+        <MappingFragment StoreEntitySet="TipoCombustible">
+          <ScalarProperty Name="nombreTipoCombustible" ColumnName="nombreTipoCombustible" />
+          <ScalarProperty Name="codigoTipoCombustible" ColumnName="codigoTipoCombustible" />
+          <ScalarProperty Name="idTipoCombustible" ColumnName="idTipoCombustible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCotizante">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoCotizante">
+        <MappingFragment StoreEntitySet="TipoCotizante">
+          <ScalarProperty Name="nombreTipoCotizante" ColumnName="nombreTipoCotizante" />
+          <ScalarProperty Name="codigoTipoCotizante" ColumnName="codigoTipoCotizante" />
+          <ScalarProperty Name="idTipoCotizante" ColumnName="idTipoCotizante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDiscapacidad">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoDiscapacidad">
+        <MappingFragment StoreEntitySet="TipoDiscapacidad">
+          <ScalarProperty Name="nombreTipoDiscapacidad" ColumnName="nombreTipoDiscapacidad" />
+          <ScalarProperty Name="codigoTipoDiscapacidad" ColumnName="codigoTipoDiscapacidad" />
+          <ScalarProperty Name="idTipoDiscapacidad" ColumnName="idTipoDiscapacidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEtnia">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoEtnia">
+        <MappingFragment StoreEntitySet="TipoEtnia">
+          <ScalarProperty Name="nombreTipoEtnia" ColumnName="nombreTipoEtnia" />
+          <ScalarProperty Name="codigoTipoEtnia" ColumnName="codigoTipoEtnia" />
+          <ScalarProperty Name="idTipoEtnia" ColumnName="idTipoEtnia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoIdentificacion">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoIdentificacion">
+        <MappingFragment StoreEntitySet="TipoIdentificacion">
+          <ScalarProperty Name="nombreTipoIdentificacion" ColumnName="nombreTipoIdentificacion" />
+          <ScalarProperty Name="codigoTipoIdentificacion" ColumnName="codigoTipoIdentificacion" />
+          <ScalarProperty Name="idTipoIdentificacion" ColumnName="idTipoIdentificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoNovedad">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoNovedad">
+        <MappingFragment StoreEntitySet="TipoNovedad">
+          <ScalarProperty Name="valorCampoTipoNovedad" ColumnName="valorCampoTipoNovedad" />
+          <ScalarProperty Name="tipoValorCampoTipoNovedad" ColumnName="tipoValorCampoTipoNovedad" />
+          <ScalarProperty Name="nombreTipoNovedad" ColumnName="nombreTipoNovedad" />
+          <ScalarProperty Name="codigoTipoNovedad" ColumnName="codigoTipoNovedad" />
+          <ScalarProperty Name="idTipoNovedad" ColumnName="idTipoNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoParentesco">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoParentesco">
+        <MappingFragment StoreEntitySet="TipoParentesco">
+          <ScalarProperty Name="descripcionTipoParentesco" ColumnName="descripcionTipoParentesco" />
+          <ScalarProperty Name="nombreTipoParentesco" ColumnName="nombreTipoParentesco" />
+          <ScalarProperty Name="codigoTipoParentesco" ColumnName="codigoTipoParentesco" />
+          <ScalarProperty Name="idTipoParentesco" ColumnName="idTipoParentesco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoRegimen">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoRegimen">
+        <MappingFragment StoreEntitySet="TipoRegimen">
+          <ScalarProperty Name="nombreTipoRegimen" ColumnName="nombreTipoRegimen" />
+          <ScalarProperty Name="codigoTipoRegimen" ColumnName="codigoTipoRegimen" />
+          <ScalarProperty Name="idTipoRegimen" ColumnName="idTipoRegimen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSexo">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoSexo">
+        <MappingFragment StoreEntitySet="TipoSexo">
+          <ScalarProperty Name="nombreTipoSexo" ColumnName="nombreTipoSexo" />
+          <ScalarProperty Name="codigoTipoSexo" ColumnName="codigoTipoSexo" />
+          <ScalarProperty Name="idTipoSexo" ColumnName="idTipoSexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTramite">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoTramite">
+        <MappingFragment StoreEntitySet="TipoTramite">
+          <ScalarProperty Name="nombreTipoTramite" ColumnName="nombreTipoTramite" />
+          <ScalarProperty Name="codigoTipoTramite" ColumnName="codigoTipoTramite" />
+          <ScalarProperty Name="idTipoTramite" ColumnName="idTipoTramite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoVisitaDomiciliaria">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoVisitaDomiciliaria">
+        <MappingFragment StoreEntitySet="TipoVisitaDomiciliaria">
+          <ScalarProperty Name="nombreTipoVisitaDomiciliaria" ColumnName="nombreTipoVisitaDomiciliaria" />
+          <ScalarProperty Name="codigoTipoVisitaDomiciliaria" ColumnName="codigoTipoVisitaDomiciliaria" />
+          <ScalarProperty Name="idTipoVisitaDomiciliaria" ColumnName="idTipoVisitaDomiciliaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoVivienda">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoVivienda">
+        <MappingFragment StoreEntitySet="TipoVivienda">
+          <ScalarProperty Name="nombreTipoVivienda" ColumnName="nombreTipoVivienda" />
+          <ScalarProperty Name="codigoTipoVivienda" ColumnName="codigoTipoVivienda" />
+          <ScalarProperty Name="idTipoVivienda" ColumnName="idTipoVivienda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoZona">
+      <EntityTypeMapping TypeName="CoomuceModel.TipoZona">
+        <MappingFragment StoreEntitySet="TipoZona">
+          <ScalarProperty Name="nombreTipoZona" ColumnName="nombreTipoZona" />
+          <ScalarProperty Name="codigoTipoZona" ColumnName="codigoTipoZona" />
+          <ScalarProperty Name="idTipoZona" ColumnName="idTipoZona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TratamientoAgua">
+      <EntityTypeMapping TypeName="CoomuceModel.TratamientoAgua">
+        <MappingFragment StoreEntitySet="TratamientoAgua">
+          <ScalarProperty Name="nombreTratamientoAgua" ColumnName="nombreTratamientoAgua" />
+          <ScalarProperty Name="codigoTratamientoAgua" ColumnName="codigoTratamientoAgua" />
+          <ScalarProperty Name="idTratamientoAgua" ColumnName="idTratamientoAgua" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unidad">
+      <EntityTypeMapping TypeName="CoomuceModel.Unidad">
+        <MappingFragment StoreEntitySet="Unidad">
+          <ScalarProperty Name="nombreUnidad" ColumnName="nombreUnidad" />
+          <ScalarProperty Name="codigoUnidad" ColumnName="codigoUnidad" />
+          <ScalarProperty Name="idUnidad" ColumnName="idUnidad" />
+          <ScalarProperty Name="idEje" ColumnName="idEje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="CoomuceModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="nombreRol" ColumnName="nombreRol" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="CoomuceModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="estaHabilitadoUsuario" ColumnName="estaHabilitadoUsuario" />
+          <ScalarProperty Name="esTemporalUsuario" ColumnName="esTemporalUsuario" />
+          <ScalarProperty Name="passwordSaltUsuario" ColumnName="passwordSaltUsuario" />
+          <ScalarProperty Name="passwordHashUsuario" ColumnName="passwordHashUsuario" />
+          <ScalarProperty Name="passwordUsuario" ColumnName="passwordUsuario" />
+          <ScalarProperty Name="loginUsuario" ColumnName="loginUsuario" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="celularUsuario" ColumnName="celularUsuario" />
+          <ScalarProperty Name="emailUsuario" ColumnName="emailUsuario" />
+          <ScalarProperty Name="segundoNombreUsuario" ColumnName="segundoNombreUsuario" />
+          <ScalarProperty Name="primerNombreUsuario" ColumnName="primerNombreUsuario" />
+          <ScalarProperty Name="segundoApellidoUsuario" ColumnName="segundoApellidoUsuario" />
+          <ScalarProperty Name="primerApellidoUsuario" ColumnName="primerApellidoUsuario" />
+          <ScalarProperty Name="identificacionUsuario" ColumnName="identificacionUsuario" />
+          <ScalarProperty Name="idTipoIdentificacion" ColumnName="idTipoIdentificacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PurisuMotivoConsulta" TypeName="CoomuceModel.PurisuMotivoConsulta" StoreEntitySet="PurisuMotivoConsulta">
+      <EndProperty Name="Purisu">
+        <ScalarProperty Name="idPurisu" ColumnName="idPurisu" />
+        <ScalarProperty Name="idInfoPurisu" ColumnName="idInfoPurisu" />
+      </EndProperty>
+      <EndProperty Name="MotivoConsulta">
+        <ScalarProperty Name="idMotivoConsulta" ColumnName="idMotivoConsulta" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PurisuMotivoContacto" TypeName="CoomuceModel.PurisuMotivoContacto" StoreEntitySet="PurisuMotivoContacto">
+      <EndProperty Name="Purisu">
+        <ScalarProperty Name="idPurisu" ColumnName="idPurisu" />
+        <ScalarProperty Name="idInfoPurisu" ColumnName="idInfoPurisu" />
+      </EndProperty>
+      <EndProperty Name="MotivoContacto">
+        <ScalarProperty Name="idMotivoContacto" ColumnName="idMotivoContacto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PurisuPiezasInformativas" TypeName="CoomuceModel.PurisuPiezasInformativas" StoreEntitySet="PurisuPiezasInformativas">
+      <EndProperty Name="Purisu">
+        <ScalarProperty Name="idPurisu" ColumnName="idPurisu" />
+        <ScalarProperty Name="idInfoPurisu" ColumnName="idInfoPurisu" />
+      </EndProperty>
+      <EndProperty Name="PiezasInformativas">
+        <ScalarProperty Name="idPiezasInformativas" ColumnName="idPiezasInformativas" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

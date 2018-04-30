@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AsuntoCorreoCredenciales" xml:space="preserve">
+    <value>Credenciales de autenticación COOMUCE</value>
+    <comment>Asunto del correo.</comment>
+  </data>
+  <data name="CompañiaActivarDesactivar" xml:space="preserve">
+    <value>Se ha activo / desactivo la compañia correctamente.</value>
+    <comment>Mensaje que confirma si la compañia fue activada o desactivada.</comment>
+  </data>
+  <data name="CredencialesEnviadas" xml:space="preserve">
+    <value>Se realizo el envio de las credenciales a la dirección de correo especificada.</value>
+    <comment>Mensaje que confirma el envio de credenciales al correo electronico.</comment>
+  </data>
+  <data name="CredencialesNoEnviadas" xml:space="preserve">
+    <value>Se presento un error en el envio de las credenciales al correo electronico, intente reenviarla nuevamente desde la pantalla listado de usuarios.</value>
+    <comment>Mensaje que indica el no envio de las credenciales.</comment>
+  </data>
+  <data name="CuerpoCorreoCredenciales" xml:space="preserve">
+    <value>Señor (a): &lt;b&gt;{0} {1} {2} {3}&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;Le informamos que los datos para acceder al Sistema son los siguientes: &lt;br /&gt;&lt;br /&gt;Usuario: {4}&lt;br /&gt;Contraseña: {5}&lt;br /&gt;&lt;br /&gt;Para que su usuario sea activado debe cambiar su contraseña cuando inicie sesión la primera vez.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Cordialmente,&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;DISOLINF&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Este es un mensaje generado automáticamente, por favor no responda a esta dirección de correo. En caso de requerir información adicional por favor comuníquese con el administrador del sistema.&lt;/p&gt;</value>
+    <comment>Cuerpo de mensaje para el envío de credenciales.</comment>
+  </data>
+  <data name="Eliminar" xml:space="preserve">
+    <value>Datos eliminados correctamente.</value>
+    <comment>Mensaje que confima si los datos fueron eliminados.</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Se ha producido un error, comuniquese con soporte informatico.&lt;br /&gt;{0}</value>
+    <comment>Mensaje que se presentara con se produce una falla en el sistema.</comment>
+  </data>
+  <data name="Guardar" xml:space="preserve">
+    <value>Datos guardados correctamente.</value>
+    <comment>Mensaje que confirma si los datos se guardaron.</comment>
+  </data>
+  <data name="MenuConstruido" xml:space="preserve">
+    <value>Menú construido correctamente.</value>
+    <comment>Mensaje que indica si el menú se construyo correctamente.</comment>
+  </data>
+  <data name="UsuarioActivarDesactivar" xml:space="preserve">
+    <value>Se ha activo / desactivo el usuario correctamente.</value>
+    <comment>Mensaje que confirma si el usuario fue activado o desactivado.</comment>
+  </data>
+  <data name="UsuarioAutenticado" xml:space="preserve">
+    <value>El usuario se ha autenticado correctamente.</value>
+    <comment>Mensaje que indica si el usuario se autentico correctamente.</comment>
+  </data>
+  <data name="UsuarioCambiarContraseña" xml:space="preserve">
+    <value>Contraseña cambiada correctamente.</value>
+    <comment>Indica que la contraaseña fue cambiada.</comment>
+  </data>
+  <data name="UsuarioClaveIncorrecta" xml:space="preserve">
+    <value>La contraseña ingresada es incorrecta.</value>
+    <comment>Mensaje que indica que la contraseña que se esta ingresando es incorrecta.</comment>
+  </data>
+  <data name="UsuarioClaveTemporal" xml:space="preserve">
+    <value>El usuario ingresado tiene clave temporal debe realizar el cambio para que el usuario se active y poder ingresar al sistema.</value>
+    <comment>Mensaje que indica si el usuario tiene clave temporal.</comment>
+  </data>
+  <data name="UsuarioInactivo" xml:space="preserve">
+    <value>El usuario se encuentra inactivo.</value>
+    <comment>Mensaje que indica que el usuario esta inactivo.</comment>
+  </data>
+  <data name="UsuarioIncorrecto" xml:space="preserve">
+    <value>El usuario o contraseña ingresado son incorrectos.</value>
+    <comment>Mensaje que indica que el usuario que se esta autenticando no existe.</comment>
+  </data>
+  <data name="UsuarioReingresado" xml:space="preserve">
+    <value>Contraseña de usuario correcta.</value>
+    <comment>Mensaje que indica que el usuario ingreso correctamente su contraseña para reingresar al sistema.</comment>
+  </data>
+</root>

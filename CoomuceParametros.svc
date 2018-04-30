@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Coomuce.DirectorServicios.CoomuceParametros" CodeBehind="CoomuceParametros.svc.cs" %>

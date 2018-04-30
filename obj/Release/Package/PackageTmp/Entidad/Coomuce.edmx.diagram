@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="774ed2db873944c992491441585daa53" Name="Diagram1" ZoomLevel="90">
+        <EntityTypeShape EntityType="CoomuceModel.Ciudad" Width="1.5" PointX="6.75" PointY="30.5" />
+        <EntityTypeShape EntityType="CoomuceModel.ConfiguracionCuerpoCorreo" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CoomuceModel.ConfiguracionGeneral" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CoomuceModel.Departamento" Width="1.5" PointX="4.5" PointY="31.375" />
+        <EntityTypeShape EntityType="CoomuceModel.Menu" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="CoomuceModel.RolMenu" Width="1.5" PointX="5.25" PointY="20.625" />
+        <EntityTypeShape EntityType="CoomuceModel.Vista" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="CoomuceModel.AsistenciaGeneral" Width="1.5" PointX="5.25" PointY="48.625" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaCategoria" Width="1.5" PointX="9.75" PointY="22.375" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaEps" Width="1.5" PointX="14.25" PointY="36.875" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaEpsRespLiteral" Width="1.5" PointX="16.5" PointY="35.5" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaEpsRespPregunta" Width="1.5" PointX="19.5" PointY="37.5" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaIps" Width="1.5" PointX="17.25" PointY="43.875" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaIpsRespLiteral" Width="1.5" PointX="19.5" PointY="41.5" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaIpsRespPregunta" Width="1.5" PointX="19.5" PointY="44.5" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaLiteral" Width="1.5" PointX="14.25" PointY="22.125" />
+        <EntityTypeShape EntityType="CoomuceModel.EncuestaPregunta" Width="1.5" PointX="12" PointY="22" />
+        <EntityTypeShape EntityType="CoomuceModel.Fuan" Width="1.5" PointX="11.25" PointY="34.125" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanAfiliado" Width="1.5" PointX="9" PointY="39.25" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanAnexos" Width="1.5" PointX="13.5" PointY="31" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanBeneficiariosAfiliado" Width="1.5" PointX="14.25" PointY="50.375" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanDeclaracionAutorizacion" Width="1.5" PointX="16.5" PointY="32.5" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanEmpleadorAfiliado" Width="1.5" PointX="17.25" PointY="38.625" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanEntidadTerritorial" Width="1.5" PointX="19.5" PointY="32.625" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanIpsPrimariaAfiliado" Width="1.5" PointX="11.25" PointY="63.625" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanReporteNovedad" Width="1.5" PointX="11.25" PointY="49.125" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanTipoNovedad" Width="1.5" PointX="19.5" PointY="49.375" />
+        <EntityTypeShape EntityType="CoomuceModel.HistorialUltimosFormatos" Width="1.5" PointX="11.25" PointY="94.25" />
+        <EntityTypeShape EntityType="CoomuceModel.IfppirRespuestaFactor" Width="1.5" PointX="19.5" PointY="52.375" />
+        <EntityTypeShape EntityType="CoomuceModel.InfoHfdfr" Width="1.5" PointX="11.25" PointY="43.25" />
+        <EntityTypeShape EntityType="CoomuceModel.InfoIfppir" Width="1.5" PointX="17.25" PointY="48.5" />
+        <EntityTypeShape EntityType="CoomuceModel.InfoPurisu" Width="1.5" PointX="5.25" PointY="39.125" />
+        <EntityTypeShape EntityType="CoomuceModel.ListaAsistenciaGeneral" Width="1.5" PointX="11.25" PointY="40.375" />
+        <EntityTypeShape EntityType="CoomuceModel.Purisu" Width="1.5" PointX="14.25" PointY="41.25" />
+        <EntityTypeShape EntityType="CoomuceModel.CicloVital" Width="1.5" PointX="17.25" PointY="65.875" />
+        <EntityTypeShape EntityType="CoomuceModel.CicloVitalGestante" Width="1.5" PointX="19.5" PointY="75.625" />
+        <EntityTypeShape EntityType="CoomuceModel.CicloVitalPreguntasSubFactorRiesgo" Width="1.5" PointX="19.5" PointY="65.625" />
+        <EntityTypeShape EntityType="CoomuceModel.CondicionDiscapacidad" Width="1.5" PointX="6.75" PointY="27.75" />
+        <EntityTypeShape EntityType="CoomuceModel.CondicionVivienda" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CoomuceModel.DeclaracionAutorizacion" Width="1.5" PointX="14.25" PointY="27.5" />
+        <EntityTypeShape EntityType="CoomuceModel.DisposicionBasura" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CoomuceModel.DisposicionExcreta" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CoomuceModel.Eje" Width="1.5" PointX="1.5" PointY="56.75" />
+        <EntityTypeShape EntityType="CoomuceModel.FactorRiesgo" Width="1.5" PointX="12.75" PointY="75.5" />
+        <EntityTypeShape EntityType="CoomuceModel.GrupoInteres" Width="1.5" PointX="12" PointY="53.5" />
+        <EntityTypeShape EntityType="CoomuceModel.GrupoPoblacional" Width="1.5" PointX="6.75" PointY="53.25" />
+        <EntityTypeShape EntityType="CoomuceModel.GruposFocales" Width="1.5" PointX="3" PointY="49.75" />
+        <EntityTypeShape EntityType="CoomuceModel.Ips" Width="1.5" PointX="6" PointY="43.375" />
+        <EntityTypeShape EntityType="CoomuceModel.Modulo" Width="1.5" PointX="3" PointY="52.5" />
+        <EntityTypeShape EntityType="CoomuceModel.MotivoConsulta" Width="1.5" PointX="12" PointY="67.125" />
+        <EntityTypeShape EntityType="CoomuceModel.MotivoContacto" Width="1.5" PointX="12" PointY="69.625" />
+        <EntityTypeShape EntityType="CoomuceModel.MotivoTraslado" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CoomuceModel.NivelEducativo" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CoomuceModel.PiezasInformativas" Width="1.5" PointX="12" PointY="58.5" />
+        <EntityTypeShape EntityType="CoomuceModel.PreguntasSubFactorRiesgo" Width="1.5" PointX="17.25" PointY="75.125" />
+        <EntityTypeShape EntityType="CoomuceModel.Procedencia" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CoomuceModel.ProgramaResolucion412" Width="1.5" PointX="12" PointY="72.125" />
+        <EntityTypeShape EntityType="CoomuceModel.SeguimientoProgramasIntervencionRiesgo" Width="1.5" PointX="12" PointY="27.875" />
+        <EntityTypeShape EntityType="CoomuceModel.SubFactorRiesgo" Width="1.5" PointX="15" PointY="75.375" />
+        <EntityTypeShape EntityType="CoomuceModel.Tenencia" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoAfiliacion" Width="1.5" PointX="9" PointY="34.25" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoAfiliado" Width="1.5" PointX="9" PointY="53.375" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoAnimal" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoCombustible" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoCotizante" Width="1.5" PointX="9" PointY="25.875" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoDiscapacidad" Width="1.5" PointX="6.75" PointY="58.875" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoEtnia" Width="1.5" PointX="6.75" PointY="34.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoIdentificacion" Width="1.5" PointX="0.75" PointY="44.125" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoNovedad" Width="1.5" PointX="17.25" PointY="57.375" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoParentesco" Width="1.5" PointX="12" PointY="78.5" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoRegimen" Width="1.5" PointX="9" PointY="31.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoSexo" Width="1.5" PointX="6.75" PointY="55.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoTramite" Width="1.5" PointX="9" PointY="29.25" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoVisitaDomiciliaria" Width="1.5" PointX="12" PointY="56" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoVivienda" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CoomuceModel.TipoZona" Width="1.5" PointX="6.75" PointY="24.5" />
+        <EntityTypeShape EntityType="CoomuceModel.TratamientoAgua" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="CoomuceModel.Unidad" Width="1.5" PointX="0.75" PointY="52.5" />
+        <EntityTypeShape EntityType="CoomuceModel.Rol" Width="1.5" PointX="0.75" PointY="40.5" />
+        <EntityTypeShape EntityType="CoomuceModel.Usuario" Width="1.5" PointX="3" PointY="42.375" />
+        <AssociationConnector Association="CoomuceModel.FK_AsistenciaGeneral_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_Ciudad_Departamento" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanEmpleadorAfiliado_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanEntidadTerritorial_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoHfdfr_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoPurisu_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_Ips_Ciudad" />
+        <AssociationConnector Association="CoomuceModel.FK_Menu_Menu" />
+        <AssociationConnector Association="CoomuceModel.FK_Menu_Vista" />
+        <AssociationConnector Association="CoomuceModel.FK_RolMenu_Menu" />
+        <AssociationConnector Association="CoomuceModel.FK_RolMenu_Rol" />
+        <AssociationConnector Association="CoomuceModel.FK_AsistenciaGeneral_GruposFocales" />
+        <AssociationConnector Association="CoomuceModel.FK_AsistenciaGeneral_Modulo" />
+        <AssociationConnector Association="CoomuceModel.FK_AsistenciaGeneral_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_ListaAsistenciaGeneral_AsistenciaGeneral" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaPregunta_EncuestaCategoria" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEps_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEps_Ips" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEps_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaEps" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaEps" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaLiteral" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaPregunta" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIps_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIps_Ips" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIps_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaIps" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaIps" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaLiteral" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaPregunta" />
+        <AssociationConnector Association="CoomuceModel.FK_EncuestaLiteral_EncuestaPregunta" />
+        <AssociationConnector Association="CoomuceModel.FK_Fuan_TipoAfiliacion" />
+        <AssociationConnector Association="CoomuceModel.FK_Fuan_TipoAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_Fuan_TipoCotizante" />
+        <AssociationConnector Association="CoomuceModel.FK_Fuan_TipoRegimen" />
+        <AssociationConnector Association="CoomuceModel.FK_Fuan_TipoTramite" />
+        <AssociationConnector Association="CoomuceModel.FK_Fuan_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_Fuan" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAnexos_Fuan" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanDeclaracionAutorizacion_Fuan" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanEntidadTerritorial_Fuan" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_CondicionDiscapacidad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_GrupoPoblacional" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoDiscapacidad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoEtnia" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion1" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoSexo" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoSexo1" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoZona" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanEmpleadorAfiliado_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanIpsPrimariaAfiliado_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanReporteNovedad_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_HistorialUltimosFormatos_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoHfdfr_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoIfppir_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_ListaAsistenciaGeneral_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_FuanAfiliado" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoDiscapacidad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoEtnia" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoIdentificacion" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoParentesco" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoSexo" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoZona" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanEmpleadorAfiliado_TipoIdentificacion" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanEntidadTerritorial_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanReporteNovedad_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanTipoNovedad_FuanReporteNovedad" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanTipoNovedad_TipoNovedad" />
+        <AssociationConnector Association="CoomuceModel.FK_IfppirRespuestaFactor_InfoIfppir" />
+        <AssociationConnector Association="CoomuceModel.FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoHfdfr_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoIfppir_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_InfoPurisu_Usuario" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_InfoPurisu" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_Eje" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_Eje1" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_GrupoInteres" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_GruposFocales" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_Modulo" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_Modulo1" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_ProgramaResolucion412" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_SeguimientoProgramasIntervencionRiesgo" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_TipoVisitaDomiciliaria" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_Unidad" />
+        <AssociationConnector Association="CoomuceModel.FK_Purisu_Unidad1" />
+        <AssociationConnector Association="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital" />
+        <AssociationConnector Association="CoomuceModel.FK_CicloVitalGestante_PreguntasSubFactorRiesgo" />
+        <AssociationConnector Association="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo" />
+        <AssociationConnector Association="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo" />
+        <AssociationConnector Association="CoomuceModel.FK_Unidad_Eje" />
+        <AssociationConnector Association="CoomuceModel.FK_SubFactorRiesgo_FactorRiesgo" />
+        <AssociationConnector Association="CoomuceModel.FK_Ips_TipoIdentificacion" />
+        <AssociationConnector Association="CoomuceModel.FK_Modulo_Unidad" />
+        <AssociationConnector Association="CoomuceModel.FK_PreguntasSubFactorRiesgo_SubFactorRiesgo" />
+        <AssociationConnector Association="CoomuceModel.FK_Usuario_TipoIdentificacion" />
+        <AssociationConnector Association="CoomuceModel.FK_Usuario_Rol" />
+        <AssociationConnector Association="CoomuceModel.PurisuMotivoConsulta" />
+        <AssociationConnector Association="CoomuceModel.PurisuMotivoContacto" />
+        <AssociationConnector Association="CoomuceModel.PurisuPiezasInformativas" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

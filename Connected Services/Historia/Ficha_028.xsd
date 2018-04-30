@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ecoopsos.Entity.PromocionyPrevencion" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ecoopsos.Entity.PromocionyPrevencion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFicha_028EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ficha_028EL" nillable="true" type="tns:Ficha_028EL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFicha_028EL" nillable="true" type="tns:ArrayOfFicha_028EL" />
+  <xs:complexType name="Ficha_028EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActFamiliarDeportiva" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActFamiliarEspiritual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActFamiliarNinguna" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActFamiliarOtras" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActFamiliarRecreativa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActFamiliarSocial" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActividadMayor60Deportiva" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActividadMayor60Espiritual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActividadMayor60Manual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActividadMayor60Ninguna" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActividadMayor60Otras" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActividadMayor60Recreativa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredeFisicaVerbal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredeHijo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredeMadrastra" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredeMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredeNoAplica" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredeNoEsClaro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredePadrastro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgredePadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Animales" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AportaHijo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AportaMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AportaOtro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AportaPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BachilleratoCompletoMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BachilleratoCompletoPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BachilleratoIncompletoMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BachilleratoIncompletoPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Carnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarnetDiscapacitado1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarnetDiscapacitado2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarnetDiscapacitado3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarnetManchasPiel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CocinaDondeDuerme" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CodAguaTratada" type="xs:int" />
+      <xs:element minOccurs="0" name="CodCombustible" type="xs:int" />
+      <xs:element minOccurs="0" name="CodDiscapacidad1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodDiscapacidad2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodDiscapacidad3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodDisposicionBasura" type="xs:int" />
+      <xs:element minOccurs="0" name="CodEscretas" type="xs:int" />
+      <xs:element minOccurs="0" name="CodManejoBasura" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMaterialParedes" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMaterialPiso" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMaterialTecho" type="xs:int" />
+      <xs:element minOccurs="0" name="CodProcedencia" type="xs:int" />
+      <xs:element minOccurs="0" name="CodTenenciaVivienda" type="xs:int" />
+      <xs:element minOccurs="0" name="CodTipoVivienda" type="xs:int" />
+      <xs:element minOccurs="0" name="CodUbicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="ComparteMadre" type="tns:TypeRespuesta" />
+      <xs:element minOccurs="0" name="ComparteOtros" type="tns:TypeRespuesta" />
+      <xs:element minOccurs="0" name="CompartePadre" type="tns:TypeRespuesta" />
+      <xs:element minOccurs="0" name="CorrigeAislamiento" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigeCastigoFisico" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigeDialogo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigeEncierro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigeOtro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigePrivacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigeRegaño" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CorrigeZarandeo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DesinfectarRecipientes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EducacionNoFormalMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EducacionNoFormalPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ejercicio5Dias30Min" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ejercicio5DiasSemana" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EjercicioNoRealiza" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EjercicioTodosLosDias" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnfermosVisita" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaIngreso" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaVisita" type="xs:int" />
+      <xs:element minOccurs="0" name="FichaSisben" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoraFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoraInicial" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NingunEstudioMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NingunEstudioPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NingunRiesgo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NiñosMenor12Cocinan" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoComparteDescansar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoComparteExcesoTrabajo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoComparteNiñosJuguenSolos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoComparteOtras" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NumAves" type="xs:int" />
+      <xs:element minOccurs="0" name="NumAvesVacunada" type="xs:int" />
+      <xs:element minOccurs="0" name="NumBovinos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumCamas" type="xs:int" />
+      <xs:element minOccurs="0" name="NumCaninos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumCaninosVacunado" type="xs:int" />
+      <xs:element minOccurs="0" name="NumControlesOdontologicos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumEquinos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumEquinosVacunado" type="xs:int" />
+      <xs:element minOccurs="0" name="NumFelinos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumFelinosVacunado" type="xs:int" />
+      <xs:element minOccurs="0" name="NumHabitaciones" type="xs:int" />
+      <xs:element minOccurs="0" name="NumHombreMayor60SinControlMed" type="xs:int" />
+      <xs:element minOccurs="0" name="NumMujerMayor60SinControlMed" type="xs:int" />
+      <xs:element minOccurs="0" name="NumNoAplicaMayor60SinControlMed" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOfidios" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOvinos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumOvinosVacunado" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonas15y65" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonas15y65Trabaja" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonas6y14" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonas6y14Trabaja" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonas6y18" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonas6y18Estudio" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonasHogar" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonasMayor65" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPersonasMayor65Trabaja" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPorcinos" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPorcinosVacunada" type="xs:int" />
+      <xs:element minOccurs="0" name="NumRoedores" type="xs:int" />
+      <xs:element minOccurs="0" name="OrientaSexualHijosColegio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrientaSexualHijosDialogo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrientaSexualHijosNinguno" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrientacionSexualHijos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OtroEstudioMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OtroEstudioPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OtroRiesgo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OtrosAnimales" type="xs:int" />
+      <xs:element minOccurs="0" name="PrimariaCompletaMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimariaCompletaPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimariaIncompletaMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimariaIncompletaPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoAlcoholismo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoArenera" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoBasuras" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoCarbonera" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoCaños" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoDeslizamiento" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoDrogadiccion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoInsectos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoInseguridad" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoInundaciones" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoPandillismo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoProstitucion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoRoedores" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RiesgoViolencia" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServicioAgua" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServicioAlcantarillado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServicioBasura" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServicioLuz" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServicioTelefono" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoAgresionFisica" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoAgresionSexual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoAgresionVerbal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoDialogo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoOtro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoPrivacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoPrivacionEconomica" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolConflictoSinDato" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TecnicosMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TecnicosPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TiempoLibreHijos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UniversitarioMadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UniversitarioPadre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioDigita" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorIngresos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ficha_028EL" nillable="true" type="tns:Ficha_028EL" />
+  <xs:simpleType name="TypeRespuesta">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Si" />
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Aveces" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TypeRespuesta" nillable="true" type="tns:TypeRespuesta" />
+  <xs:complexType name="ArrayOfResultadoFicha_028EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultadoFicha_028EL" nillable="true" type="tns:ResultadoFicha_028EL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResultadoFicha_028EL" nillable="true" type="tns:ArrayOfResultadoFicha_028EL" />
+  <xs:complexType name="ResultadoFicha_028EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Carnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFicha" type="xs:int" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoFicha_028EL" nillable="true" type="tns:ResultadoFicha_028EL" />
+  <xs:complexType name="VerificaFicha_028EL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AfiliadoActivo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Carnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExisteAfiliado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExisteFicha" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificaFicha_028EL" nillable="true" type="tns:VerificaFicha_028EL" />
+</xs:schema>

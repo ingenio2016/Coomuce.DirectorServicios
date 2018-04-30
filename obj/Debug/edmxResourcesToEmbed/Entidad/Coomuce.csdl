@@ -1,0 +1,2820 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CoomuceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CoomuceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ciudad" EntityType="CoomuceModel.Ciudad" />
+    <EntitySet Name="ConfiguracionCuerpoCorreo" EntityType="CoomuceModel.ConfiguracionCuerpoCorreo" />
+    <EntitySet Name="ConfiguracionGeneral" EntityType="CoomuceModel.ConfiguracionGeneral" />
+    <EntitySet Name="Departamento" EntityType="CoomuceModel.Departamento" />
+    <EntitySet Name="Menu" EntityType="CoomuceModel.Menu" />
+    <EntitySet Name="RolMenu" EntityType="CoomuceModel.RolMenu" />
+    <EntitySet Name="Vista" EntityType="CoomuceModel.Vista" />
+    <EntitySet Name="AsistenciaGeneral" EntityType="CoomuceModel.AsistenciaGeneral" />
+    <EntitySet Name="EncuestaCategoria" EntityType="CoomuceModel.EncuestaCategoria" />
+    <EntitySet Name="EncuestaEps" EntityType="CoomuceModel.EncuestaEps" />
+    <EntitySet Name="EncuestaEpsRespLiteral" EntityType="CoomuceModel.EncuestaEpsRespLiteral" />
+    <EntitySet Name="EncuestaEpsRespPregunta" EntityType="CoomuceModel.EncuestaEpsRespPregunta" />
+    <EntitySet Name="EncuestaIps" EntityType="CoomuceModel.EncuestaIps" />
+    <EntitySet Name="EncuestaIpsRespLiteral" EntityType="CoomuceModel.EncuestaIpsRespLiteral" />
+    <EntitySet Name="EncuestaIpsRespPregunta" EntityType="CoomuceModel.EncuestaIpsRespPregunta" />
+    <EntitySet Name="EncuestaLiteral" EntityType="CoomuceModel.EncuestaLiteral" />
+    <EntitySet Name="EncuestaPregunta" EntityType="CoomuceModel.EncuestaPregunta" />
+    <EntitySet Name="Fuan" EntityType="CoomuceModel.Fuan" />
+    <EntitySet Name="FuanAfiliado" EntityType="CoomuceModel.FuanAfiliado" />
+    <EntitySet Name="FuanAnexos" EntityType="CoomuceModel.FuanAnexos" />
+    <EntitySet Name="FuanBeneficiariosAfiliado" EntityType="CoomuceModel.FuanBeneficiariosAfiliado" />
+    <EntitySet Name="FuanDeclaracionAutorizacion" EntityType="CoomuceModel.FuanDeclaracionAutorizacion" />
+    <EntitySet Name="FuanEmpleadorAfiliado" EntityType="CoomuceModel.FuanEmpleadorAfiliado" />
+    <EntitySet Name="FuanEntidadTerritorial" EntityType="CoomuceModel.FuanEntidadTerritorial" />
+    <EntitySet Name="FuanIpsPrimariaAfiliado" EntityType="CoomuceModel.FuanIpsPrimariaAfiliado" />
+    <EntitySet Name="FuanReporteNovedad" EntityType="CoomuceModel.FuanReporteNovedad" />
+    <EntitySet Name="FuanTipoNovedad" EntityType="CoomuceModel.FuanTipoNovedad" />
+    <EntitySet Name="HistorialUltimosFormatos" EntityType="CoomuceModel.HistorialUltimosFormatos" />
+    <EntitySet Name="IfppirRespuestaFactor" EntityType="CoomuceModel.IfppirRespuestaFactor" />
+    <EntitySet Name="InfoHfdfr" EntityType="CoomuceModel.InfoHfdfr" />
+    <EntitySet Name="InfoIfppir" EntityType="CoomuceModel.InfoIfppir" />
+    <EntitySet Name="InfoPurisu" EntityType="CoomuceModel.InfoPurisu" />
+    <EntitySet Name="ListaAsistenciaGeneral" EntityType="CoomuceModel.ListaAsistenciaGeneral" />
+    <EntitySet Name="Purisu" EntityType="CoomuceModel.Purisu" />
+    <EntitySet Name="CicloVital" EntityType="CoomuceModel.CicloVital" />
+    <EntitySet Name="CicloVitalGestante" EntityType="CoomuceModel.CicloVitalGestante" />
+    <EntitySet Name="CicloVitalPreguntasSubFactorRiesgo" EntityType="CoomuceModel.CicloVitalPreguntasSubFactorRiesgo" />
+    <EntitySet Name="CondicionDiscapacidad" EntityType="CoomuceModel.CondicionDiscapacidad" />
+    <EntitySet Name="CondicionVivienda" EntityType="CoomuceModel.CondicionVivienda" />
+    <EntitySet Name="DeclaracionAutorizacion" EntityType="CoomuceModel.DeclaracionAutorizacion" />
+    <EntitySet Name="DisposicionBasura" EntityType="CoomuceModel.DisposicionBasura" />
+    <EntitySet Name="DisposicionExcreta" EntityType="CoomuceModel.DisposicionExcreta" />
+    <EntitySet Name="Eje" EntityType="CoomuceModel.Eje" />
+    <EntitySet Name="FactorRiesgo" EntityType="CoomuceModel.FactorRiesgo" />
+    <EntitySet Name="GrupoInteres" EntityType="CoomuceModel.GrupoInteres" />
+    <EntitySet Name="GrupoPoblacional" EntityType="CoomuceModel.GrupoPoblacional" />
+    <EntitySet Name="GruposFocales" EntityType="CoomuceModel.GruposFocales" />
+    <EntitySet Name="Ips" EntityType="CoomuceModel.Ips" />
+    <EntitySet Name="Modulo" EntityType="CoomuceModel.Modulo" />
+    <EntitySet Name="MotivoConsulta" EntityType="CoomuceModel.MotivoConsulta" />
+    <EntitySet Name="MotivoContacto" EntityType="CoomuceModel.MotivoContacto" />
+    <EntitySet Name="MotivoTraslado" EntityType="CoomuceModel.MotivoTraslado" />
+    <EntitySet Name="NivelEducativo" EntityType="CoomuceModel.NivelEducativo" />
+    <EntitySet Name="PiezasInformativas" EntityType="CoomuceModel.PiezasInformativas" />
+    <EntitySet Name="PreguntasSubFactorRiesgo" EntityType="CoomuceModel.PreguntasSubFactorRiesgo" />
+    <EntitySet Name="Procedencia" EntityType="CoomuceModel.Procedencia" />
+    <EntitySet Name="ProgramaResolucion412" EntityType="CoomuceModel.ProgramaResolucion412" />
+    <EntitySet Name="SeguimientoProgramasIntervencionRiesgo" EntityType="CoomuceModel.SeguimientoProgramasIntervencionRiesgo" />
+    <EntitySet Name="SubFactorRiesgo" EntityType="CoomuceModel.SubFactorRiesgo" />
+    <EntitySet Name="Tenencia" EntityType="CoomuceModel.Tenencia" />
+    <EntitySet Name="TipoAfiliacion" EntityType="CoomuceModel.TipoAfiliacion" />
+    <EntitySet Name="TipoAfiliado" EntityType="CoomuceModel.TipoAfiliado" />
+    <EntitySet Name="TipoAnimal" EntityType="CoomuceModel.TipoAnimal" />
+    <EntitySet Name="TipoCombustible" EntityType="CoomuceModel.TipoCombustible" />
+    <EntitySet Name="TipoCotizante" EntityType="CoomuceModel.TipoCotizante" />
+    <EntitySet Name="TipoDiscapacidad" EntityType="CoomuceModel.TipoDiscapacidad" />
+    <EntitySet Name="TipoEtnia" EntityType="CoomuceModel.TipoEtnia" />
+    <EntitySet Name="TipoIdentificacion" EntityType="CoomuceModel.TipoIdentificacion" />
+    <EntitySet Name="TipoNovedad" EntityType="CoomuceModel.TipoNovedad" />
+    <EntitySet Name="TipoParentesco" EntityType="CoomuceModel.TipoParentesco" />
+    <EntitySet Name="TipoRegimen" EntityType="CoomuceModel.TipoRegimen" />
+    <EntitySet Name="TipoSexo" EntityType="CoomuceModel.TipoSexo" />
+    <EntitySet Name="TipoTramite" EntityType="CoomuceModel.TipoTramite" />
+    <EntitySet Name="TipoVisitaDomiciliaria" EntityType="CoomuceModel.TipoVisitaDomiciliaria" />
+    <EntitySet Name="TipoVivienda" EntityType="CoomuceModel.TipoVivienda" />
+    <EntitySet Name="TipoZona" EntityType="CoomuceModel.TipoZona" />
+    <EntitySet Name="TratamientoAgua" EntityType="CoomuceModel.TratamientoAgua" />
+    <EntitySet Name="Unidad" EntityType="CoomuceModel.Unidad" />
+    <EntitySet Name="Rol" EntityType="CoomuceModel.Rol" />
+    <EntitySet Name="Usuario" EntityType="CoomuceModel.Usuario" />
+    <AssociationSet Name="FK_AsistenciaGeneral_Ciudad" Association="CoomuceModel.FK_AsistenciaGeneral_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ciudad_Departamento" Association="CoomuceModel.FK_Ciudad_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Ciudad" EntitySet="Ciudad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_Ciudad" Association="CoomuceModel.FK_FuanAfiliado_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_Ciudad" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEmpleadorAfiliado_Ciudad" Association="CoomuceModel.FK_FuanEmpleadorAfiliado_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanEmpleadorAfiliado" EntitySet="FuanEmpleadorAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEntidadTerritorial_Ciudad" Association="CoomuceModel.FK_FuanEntidadTerritorial_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="FuanEntidadTerritorial" EntitySet="FuanEntidadTerritorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoHfdfr_Ciudad" Association="CoomuceModel.FK_InfoHfdfr_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="InfoHfdfr" EntitySet="InfoHfdfr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoPurisu_Ciudad" Association="CoomuceModel.FK_InfoPurisu_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="InfoPurisu" EntitySet="InfoPurisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ips_Ciudad" Association="CoomuceModel.FK_Ips_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Ips" EntitySet="Ips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Menu" Association="CoomuceModel.FK_Menu_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Menu1" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Vista" Association="CoomuceModel.FK_Menu_Vista">
+      <End Role="Vista" EntitySet="Vista" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RolMenu_Menu" Association="CoomuceModel.FK_RolMenu_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RolMenu_Rol" Association="CoomuceModel.FK_RolMenu_Rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="RolMenu" EntitySet="RolMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsistenciaGeneral_GruposFocales" Association="CoomuceModel.FK_AsistenciaGeneral_GruposFocales">
+      <End Role="GruposFocales" EntitySet="GruposFocales" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsistenciaGeneral_Modulo" Association="CoomuceModel.FK_AsistenciaGeneral_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsistenciaGeneral_Usuario" Association="CoomuceModel.FK_AsistenciaGeneral_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaAsistenciaGeneral_AsistenciaGeneral" Association="CoomuceModel.FK_ListaAsistenciaGeneral_AsistenciaGeneral">
+      <End Role="AsistenciaGeneral" EntitySet="AsistenciaGeneral" />
+      <End Role="ListaAsistenciaGeneral" EntitySet="ListaAsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaPregunta_EncuestaCategoria" Association="CoomuceModel.FK_EncuestaPregunta_EncuestaCategoria">
+      <End Role="EncuestaCategoria" EntitySet="EncuestaCategoria" />
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEps_FuanAfiliado" Association="CoomuceModel.FK_EncuestaEps_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEps_Ips" Association="CoomuceModel.FK_EncuestaEps_Ips">
+      <End Role="Ips" EntitySet="Ips" />
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEps_Usuario" Association="CoomuceModel.FK_EncuestaEps_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespLiteral_EncuestaEps" Association="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaEps">
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+      <End Role="EncuestaEpsRespLiteral" EntitySet="EncuestaEpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespPregunta_EncuestaEps" Association="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaEps">
+      <End Role="EncuestaEps" EntitySet="EncuestaEps" />
+      <End Role="EncuestaEpsRespPregunta" EntitySet="EncuestaEpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespLiteral_EncuestaLiteral" Association="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaLiteral">
+      <End Role="EncuestaLiteral" EntitySet="EncuestaLiteral" />
+      <End Role="EncuestaEpsRespLiteral" EntitySet="EncuestaEpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaEpsRespPregunta_EncuestaPregunta" Association="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaPregunta">
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+      <End Role="EncuestaEpsRespPregunta" EntitySet="EncuestaEpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIps_FuanAfiliado" Association="CoomuceModel.FK_EncuestaIps_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIps_Ips" Association="CoomuceModel.FK_EncuestaIps_Ips">
+      <End Role="Ips" EntitySet="Ips" />
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIps_Usuario" Association="CoomuceModel.FK_EncuestaIps_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespLiteral_EncuestaIps" Association="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaIps">
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+      <End Role="EncuestaIpsRespLiteral" EntitySet="EncuestaIpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespPregunta_EncuestaIps" Association="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaIps">
+      <End Role="EncuestaIps" EntitySet="EncuestaIps" />
+      <End Role="EncuestaIpsRespPregunta" EntitySet="EncuestaIpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespLiteral_EncuestaLiteral" Association="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaLiteral">
+      <End Role="EncuestaLiteral" EntitySet="EncuestaLiteral" />
+      <End Role="EncuestaIpsRespLiteral" EntitySet="EncuestaIpsRespLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaIpsRespPregunta_EncuestaPregunta" Association="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaPregunta">
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+      <End Role="EncuestaIpsRespPregunta" EntitySet="EncuestaIpsRespPregunta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EncuestaLiteral_EncuestaPregunta" Association="CoomuceModel.FK_EncuestaLiteral_EncuestaPregunta">
+      <End Role="EncuestaPregunta" EntitySet="EncuestaPregunta" />
+      <End Role="EncuestaLiteral" EntitySet="EncuestaLiteral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoAfiliacion" Association="CoomuceModel.FK_Fuan_TipoAfiliacion">
+      <End Role="TipoAfiliacion" EntitySet="TipoAfiliacion" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoAfiliado" Association="CoomuceModel.FK_Fuan_TipoAfiliado">
+      <End Role="TipoAfiliado" EntitySet="TipoAfiliado" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoCotizante" Association="CoomuceModel.FK_Fuan_TipoCotizante">
+      <End Role="TipoCotizante" EntitySet="TipoCotizante" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoRegimen" Association="CoomuceModel.FK_Fuan_TipoRegimen">
+      <End Role="TipoRegimen" EntitySet="TipoRegimen" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_TipoTramite" Association="CoomuceModel.FK_Fuan_TipoTramite">
+      <End Role="TipoTramite" EntitySet="TipoTramite" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fuan_Usuario" Association="CoomuceModel.FK_Fuan_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Fuan" EntitySet="Fuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_Fuan" Association="CoomuceModel.FK_FuanAfiliado_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAnexos_Fuan" Association="CoomuceModel.FK_FuanAnexos_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanAnexos" EntitySet="FuanAnexos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanDeclaracionAutorizacion_Fuan" Association="CoomuceModel.FK_FuanDeclaracionAutorizacion_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanDeclaracionAutorizacion" EntitySet="FuanDeclaracionAutorizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEntidadTerritorial_Fuan" Association="CoomuceModel.FK_FuanEntidadTerritorial_Fuan">
+      <End Role="Fuan" EntitySet="Fuan" />
+      <End Role="FuanEntidadTerritorial" EntitySet="FuanEntidadTerritorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_CondicionDiscapacidad" Association="CoomuceModel.FK_FuanAfiliado_CondicionDiscapacidad">
+      <End Role="CondicionDiscapacidad" EntitySet="CondicionDiscapacidad" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_GrupoPoblacional" Association="CoomuceModel.FK_FuanAfiliado_GrupoPoblacional">
+      <End Role="GrupoPoblacional" EntitySet="GrupoPoblacional" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoDiscapacidad" Association="CoomuceModel.FK_FuanAfiliado_TipoDiscapacidad">
+      <End Role="TipoDiscapacidad" EntitySet="TipoDiscapacidad" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoEtnia" Association="CoomuceModel.FK_FuanAfiliado_TipoEtnia">
+      <End Role="TipoEtnia" EntitySet="TipoEtnia" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoIdentificacion" Association="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoIdentificacion1" Association="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion1">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoSexo" Association="CoomuceModel.FK_FuanAfiliado_TipoSexo">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoSexo1" Association="CoomuceModel.FK_FuanAfiliado_TipoSexo1">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoZona" Association="CoomuceModel.FK_FuanAfiliado_TipoZona">
+      <End Role="TipoZona" EntitySet="TipoZona" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_FuanAfiliado" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEmpleadorAfiliado_FuanAfiliado" Association="CoomuceModel.FK_FuanEmpleadorAfiliado_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanEmpleadorAfiliado" EntitySet="FuanEmpleadorAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanIpsPrimariaAfiliado_FuanAfiliado" Association="CoomuceModel.FK_FuanIpsPrimariaAfiliado_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanIpsPrimariaAfiliado" EntitySet="FuanIpsPrimariaAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanReporteNovedad_FuanAfiliado" Association="CoomuceModel.FK_FuanReporteNovedad_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="FuanReporteNovedad" EntitySet="FuanReporteNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistorialUltimosFormatos_FuanAfiliado" Association="CoomuceModel.FK_HistorialUltimosFormatos_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="HistorialUltimosFormatos" EntitySet="HistorialUltimosFormatos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoHfdfr_FuanAfiliado" Association="CoomuceModel.FK_InfoHfdfr_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="InfoHfdfr" EntitySet="InfoHfdfr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoIfppir_FuanAfiliado" Association="CoomuceModel.FK_InfoIfppir_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="InfoIfppir" EntitySet="InfoIfppir" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaAsistenciaGeneral_FuanAfiliado" Association="CoomuceModel.FK_ListaAsistenciaGeneral_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="ListaAsistenciaGeneral" EntitySet="ListaAsistenciaGeneral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_FuanAfiliado" Association="CoomuceModel.FK_Purisu_FuanAfiliado">
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad">
+      <End Role="CondicionDiscapacidad" EntitySet="CondicionDiscapacidad" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoDiscapacidad" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoDiscapacidad">
+      <End Role="TipoDiscapacidad" EntitySet="TipoDiscapacidad" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoEtnia" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoEtnia">
+      <End Role="TipoEtnia" EntitySet="TipoEtnia" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoIdentificacion" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoParentesco" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoParentesco">
+      <End Role="TipoParentesco" EntitySet="TipoParentesco" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoSexo" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoSexo">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanBeneficiariosAfiliado_TipoZona" Association="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoZona">
+      <End Role="TipoZona" EntitySet="TipoZona" />
+      <End Role="FuanBeneficiariosAfiliado" EntitySet="FuanBeneficiariosAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion" Association="CoomuceModel.FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion">
+      <End Role="DeclaracionAutorizacion" EntitySet="DeclaracionAutorizacion" />
+      <End Role="FuanDeclaracionAutorizacion" EntitySet="FuanDeclaracionAutorizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEmpleadorAfiliado_TipoIdentificacion" Association="CoomuceModel.FK_FuanEmpleadorAfiliado_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanEmpleadorAfiliado" EntitySet="FuanEmpleadorAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanEntidadTerritorial_Usuario" Association="CoomuceModel.FK_FuanEntidadTerritorial_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FuanEntidadTerritorial" EntitySet="FuanEntidadTerritorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanReporteNovedad_Usuario" Association="CoomuceModel.FK_FuanReporteNovedad_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FuanReporteNovedad" EntitySet="FuanReporteNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanTipoNovedad_FuanReporteNovedad" Association="CoomuceModel.FK_FuanTipoNovedad_FuanReporteNovedad">
+      <End Role="FuanReporteNovedad" EntitySet="FuanReporteNovedad" />
+      <End Role="FuanTipoNovedad" EntitySet="FuanTipoNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanTipoNovedad_TipoNovedad" Association="CoomuceModel.FK_FuanTipoNovedad_TipoNovedad">
+      <End Role="TipoNovedad" EntitySet="TipoNovedad" />
+      <End Role="FuanTipoNovedad" EntitySet="FuanTipoNovedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IfppirRespuestaFactor_InfoIfppir" Association="CoomuceModel.FK_IfppirRespuestaFactor_InfoIfppir">
+      <End Role="InfoIfppir" EntitySet="InfoIfppir" />
+      <End Role="IfppirRespuestaFactor" EntitySet="IfppirRespuestaFactor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo" Association="CoomuceModel.FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo">
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+      <End Role="IfppirRespuestaFactor" EntitySet="IfppirRespuestaFactor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoHfdfr_Usuario" Association="CoomuceModel.FK_InfoHfdfr_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoHfdfr" EntitySet="InfoHfdfr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoIfppir_Usuario" Association="CoomuceModel.FK_InfoIfppir_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoIfppir" EntitySet="InfoIfppir" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InfoPurisu_Usuario" Association="CoomuceModel.FK_InfoPurisu_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoPurisu" EntitySet="InfoPurisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_InfoPurisu" Association="CoomuceModel.FK_Purisu_InfoPurisu">
+      <End Role="InfoPurisu" EntitySet="InfoPurisu" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Eje" Association="CoomuceModel.FK_Purisu_Eje">
+      <End Role="Eje" EntitySet="Eje" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Eje1" Association="CoomuceModel.FK_Purisu_Eje1">
+      <End Role="Eje" EntitySet="Eje" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_GrupoInteres" Association="CoomuceModel.FK_Purisu_GrupoInteres">
+      <End Role="GrupoInteres" EntitySet="GrupoInteres" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_GruposFocales" Association="CoomuceModel.FK_Purisu_GruposFocales">
+      <End Role="GruposFocales" EntitySet="GruposFocales" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Modulo" Association="CoomuceModel.FK_Purisu_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Modulo1" Association="CoomuceModel.FK_Purisu_Modulo1">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_ProgramaResolucion412" Association="CoomuceModel.FK_Purisu_ProgramaResolucion412">
+      <End Role="ProgramaResolucion412" EntitySet="ProgramaResolucion412" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_SeguimientoProgramasIntervencionRiesgo" Association="CoomuceModel.FK_Purisu_SeguimientoProgramasIntervencionRiesgo">
+      <End Role="SeguimientoProgramasIntervencionRiesgo" EntitySet="SeguimientoProgramasIntervencionRiesgo" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_TipoVisitaDomiciliaria" Association="CoomuceModel.FK_Purisu_TipoVisitaDomiciliaria">
+      <End Role="TipoVisitaDomiciliaria" EntitySet="TipoVisitaDomiciliaria" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Unidad" Association="CoomuceModel.FK_Purisu_Unidad">
+      <End Role="Unidad" EntitySet="Unidad" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purisu_Unidad1" Association="CoomuceModel.FK_Purisu_Unidad1">
+      <End Role="Unidad" EntitySet="Unidad" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital" Association="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital">
+      <End Role="CicloVital" EntitySet="CicloVital" />
+      <End Role="CicloVitalPreguntasSubFactorRiesgo" EntitySet="CicloVitalPreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalGestante_PreguntasSubFactorRiesgo" Association="CoomuceModel.FK_CicloVitalGestante_PreguntasSubFactorRiesgo">
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+      <End Role="CicloVitalGestante" EntitySet="CicloVitalGestante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo" Association="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo">
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+      <End Role="CicloVitalPreguntasSubFactorRiesgo" EntitySet="CicloVitalPreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo" Association="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo">
+      <End Role="TipoSexo" EntitySet="TipoSexo" />
+      <End Role="CicloVitalPreguntasSubFactorRiesgo" EntitySet="CicloVitalPreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unidad_Eje" Association="CoomuceModel.FK_Unidad_Eje">
+      <End Role="Eje" EntitySet="Eje" />
+      <End Role="Unidad" EntitySet="Unidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubFactorRiesgo_FactorRiesgo" Association="CoomuceModel.FK_SubFactorRiesgo_FactorRiesgo">
+      <End Role="FactorRiesgo" EntitySet="FactorRiesgo" />
+      <End Role="SubFactorRiesgo" EntitySet="SubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ips_TipoIdentificacion" Association="CoomuceModel.FK_Ips_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Ips" EntitySet="Ips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modulo_Unidad" Association="CoomuceModel.FK_Modulo_Unidad">
+      <End Role="Unidad" EntitySet="Unidad" />
+      <End Role="Modulo" EntitySet="Modulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreguntasSubFactorRiesgo_SubFactorRiesgo" Association="CoomuceModel.FK_PreguntasSubFactorRiesgo_SubFactorRiesgo">
+      <End Role="SubFactorRiesgo" EntitySet="SubFactorRiesgo" />
+      <End Role="PreguntasSubFactorRiesgo" EntitySet="PreguntasSubFactorRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_TipoIdentificacion" Association="CoomuceModel.FK_Usuario_TipoIdentificacion">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Rol" Association="CoomuceModel.FK_Usuario_Rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="PurisuMotivoConsulta" Association="CoomuceModel.PurisuMotivoConsulta">
+      <End Role="MotivoConsulta" EntitySet="MotivoConsulta" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="PurisuMotivoContacto" Association="CoomuceModel.PurisuMotivoContacto">
+      <End Role="MotivoContacto" EntitySet="MotivoContacto" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+    <AssociationSet Name="PurisuPiezasInformativas" Association="CoomuceModel.PurisuPiezasInformativas">
+      <End Role="PiezasInformativas" EntitySet="PiezasInformativas" />
+      <End Role="Purisu" EntitySet="Purisu" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="idCiudad" />
+    </Key>
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <Property Name="idDepartamento" Type="Byte" Nullable="false" />
+    <Property Name="codigoCiudad" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="nombreCiudad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AsistenciaGeneral" Relationship="CoomuceModel.FK_AsistenciaGeneral_Ciudad" FromRole="Ciudad" ToRole="AsistenciaGeneral" />
+    <NavigationProperty Name="Departamento" Relationship="CoomuceModel.FK_Ciudad_Departamento" FromRole="Ciudad" ToRole="Departamento" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_Ciudad" FromRole="Ciudad" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_Ciudad" FromRole="Ciudad" ToRole="FuanBeneficiariosAfiliado" />
+    <NavigationProperty Name="FuanEmpleadorAfiliado" Relationship="CoomuceModel.FK_FuanEmpleadorAfiliado_Ciudad" FromRole="Ciudad" ToRole="FuanEmpleadorAfiliado" />
+    <NavigationProperty Name="FuanEntidadTerritorial" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Ciudad" FromRole="Ciudad" ToRole="FuanEntidadTerritorial" />
+    <NavigationProperty Name="InfoHfdfr" Relationship="CoomuceModel.FK_InfoHfdfr_Ciudad" FromRole="Ciudad" ToRole="InfoHfdfr" />
+    <NavigationProperty Name="InfoPurisu" Relationship="CoomuceModel.FK_InfoPurisu_Ciudad" FromRole="Ciudad" ToRole="InfoPurisu" />
+    <NavigationProperty Name="Ips" Relationship="CoomuceModel.FK_Ips_Ciudad" FromRole="Ciudad" ToRole="Ips" />
+  </EntityType>
+  <EntityType Name="ConfiguracionCuerpoCorreo">
+    <Key>
+      <PropertyRef Name="idConfiguracionCuerpoCorreo" />
+    </Key>
+    <Property Name="idConfiguracionCuerpoCorreo" Type="Byte" Nullable="false" />
+    <Property Name="tipoConfiguracionCuerpoCorreo" Type="Byte" Nullable="false" />
+    <Property Name="tituloConfiguracionCuerpoCorreo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mensajeConfiguracionCuerpoCorreo" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ConfiguracionGeneral">
+    <Key>
+      <PropertyRef Name="idConfiguracionGeneral" />
+    </Key>
+    <Property Name="idConfiguracionGeneral" Type="Byte" Nullable="false" />
+    <Property Name="tiempoInactividadConfiguracionGeneral" Type="Byte" Nullable="false" />
+    <Property Name="salarioConfiguracionGeneral" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="emailSalienteConfiguracionGeneral" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pswEmailConfiguracionGeneral" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ccConfiguracionGeneral" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="csConfiguracionGeneral" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hostConfiguracionGeneral" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="portConfiguracionGeneral" Type="Byte" Nullable="false" />
+    <Property Name="sslConfiguracionGeneral" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="idDepartamento" />
+    </Key>
+    <Property Name="idDepartamento" Type="Byte" Nullable="false" />
+    <Property Name="codigoDepartamento" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="nombreDepartamento" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_Ciudad_Departamento" FromRole="Departamento" ToRole="Ciudad" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idMenu" Type="Int16" Nullable="false" />
+    <Property Name="idPadreMenu" Type="Int16" />
+    <Property Name="nombreMenu" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ordenMenu" Type="Byte" Nullable="false" />
+    <Property Name="iconoMenu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="idVista" Type="Int16" />
+    <NavigationProperty Name="Menu1" Relationship="CoomuceModel.FK_Menu_Menu" FromRole="Menu" ToRole="Menu1" />
+    <NavigationProperty Name="Menu2" Relationship="CoomuceModel.FK_Menu_Menu" FromRole="Menu1" ToRole="Menu" />
+    <NavigationProperty Name="Vista" Relationship="CoomuceModel.FK_Menu_Vista" FromRole="Menu" ToRole="Vista" />
+    <NavigationProperty Name="RolMenu" Relationship="CoomuceModel.FK_RolMenu_Menu" FromRole="Menu" ToRole="RolMenu" />
+  </EntityType>
+  <EntityType Name="RolMenu">
+    <Key>
+      <PropertyRef Name="idRol" />
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idRol" Type="Byte" Nullable="false" />
+    <Property Name="idMenu" Type="Int16" Nullable="false" />
+    <Property Name="habilitadoRolMenu" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="CoomuceModel.FK_RolMenu_Menu" FromRole="RolMenu" ToRole="Menu" />
+    <NavigationProperty Name="Rol" Relationship="CoomuceModel.FK_RolMenu_Rol" FromRole="RolMenu" ToRole="Rol" />
+  </EntityType>
+  <EntityType Name="Vista">
+    <Key>
+      <PropertyRef Name="idVista" />
+    </Key>
+    <Property Name="idVista" Type="Int16" Nullable="false" />
+    <Property Name="nombreVista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idDomVista" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rutaVista" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Menu" Relationship="CoomuceModel.FK_Menu_Vista" FromRole="Vista" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="AsistenciaGeneral">
+    <Key>
+      <PropertyRef Name="idAsistenciaGeneral" />
+    </Key>
+    <Property Name="idAsistenciaGeneral" Type="Int32" Nullable="false" />
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <Property Name="idGruposFocales" Type="Byte" Nullable="false" />
+    <Property Name="temaAsistenciaGeneral" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idModulo" Type="Int16" Nullable="false" />
+    <Property Name="formadorAsistenciaGeneral" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaAsistenciaGeneral" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idUsuario" Type="Int32" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_AsistenciaGeneral_Ciudad" FromRole="AsistenciaGeneral" ToRole="Ciudad" />
+    <NavigationProperty Name="GruposFocales" Relationship="CoomuceModel.FK_AsistenciaGeneral_GruposFocales" FromRole="AsistenciaGeneral" ToRole="GruposFocales" />
+    <NavigationProperty Name="Modulo" Relationship="CoomuceModel.FK_AsistenciaGeneral_Modulo" FromRole="AsistenciaGeneral" ToRole="Modulo" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_AsistenciaGeneral_Usuario" FromRole="AsistenciaGeneral" ToRole="Usuario" />
+    <NavigationProperty Name="ListaAsistenciaGeneral" Relationship="CoomuceModel.FK_ListaAsistenciaGeneral_AsistenciaGeneral" FromRole="AsistenciaGeneral" ToRole="ListaAsistenciaGeneral" />
+  </EntityType>
+  <EntityType Name="EncuestaCategoria">
+    <Key>
+      <PropertyRef Name="idEncuestaCategoria" />
+    </Key>
+    <Property Name="idEncuestaCategoria" Type="Byte" Nullable="false" />
+    <Property Name="idDomVista" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codigoEncuestaCategoria" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreEncuestaCategoria" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ordenEncuestaCategoria" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="EncuestaPregunta" Relationship="CoomuceModel.FK_EncuestaPregunta_EncuestaCategoria" FromRole="EncuestaCategoria" ToRole="EncuestaPregunta" />
+  </EntityType>
+  <EntityType Name="EncuestaEps">
+    <Key>
+      <PropertyRef Name="idEncuestaEps" />
+    </Key>
+    <Property Name="idEncuestaEps" Type="Int32" Nullable="false" />
+    <Property Name="fechaHoraEncuestaEps" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idIps" Type="Int32" Nullable="false" />
+    <Property Name="observacionEncuestaEps" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_EncuestaEps_FuanAfiliado" FromRole="EncuestaEps" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="Ips" Relationship="CoomuceModel.FK_EncuestaEps_Ips" FromRole="EncuestaEps" ToRole="Ips" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_EncuestaEps_Usuario" FromRole="EncuestaEps" ToRole="Usuario" />
+    <NavigationProperty Name="EncuestaEpsRespLiteral" Relationship="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaEps" FromRole="EncuestaEps" ToRole="EncuestaEpsRespLiteral" />
+    <NavigationProperty Name="EncuestaEpsRespPregunta" Relationship="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaEps" FromRole="EncuestaEps" ToRole="EncuestaEpsRespPregunta" />
+  </EntityType>
+  <EntityType Name="EncuestaEpsRespLiteral">
+    <Key>
+      <PropertyRef Name="idEncuestaEps" />
+      <PropertyRef Name="idEncuestaLiteral" />
+    </Key>
+    <Property Name="idEncuestaEps" Type="Int32" Nullable="false" />
+    <Property Name="idEncuestaLiteral" Type="Int16" Nullable="false" />
+    <Property Name="valorEncuestaEpsRespLiteral" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EncuestaEps" Relationship="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaEps" FromRole="EncuestaEpsRespLiteral" ToRole="EncuestaEps" />
+    <NavigationProperty Name="EncuestaLiteral" Relationship="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaLiteral" FromRole="EncuestaEpsRespLiteral" ToRole="EncuestaLiteral" />
+  </EntityType>
+  <EntityType Name="EncuestaEpsRespPregunta">
+    <Key>
+      <PropertyRef Name="idEncuestaEps" />
+      <PropertyRef Name="idEncuestaPregunta" />
+    </Key>
+    <Property Name="idEncuestaEps" Type="Int32" Nullable="false" />
+    <Property Name="idEncuestaPregunta" Type="Int16" Nullable="false" />
+    <Property Name="valorEncuestaEpsRespPregunta" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EncuestaEps" Relationship="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaEps" FromRole="EncuestaEpsRespPregunta" ToRole="EncuestaEps" />
+    <NavigationProperty Name="EncuestaPregunta" Relationship="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaPregunta" FromRole="EncuestaEpsRespPregunta" ToRole="EncuestaPregunta" />
+  </EntityType>
+  <EntityType Name="EncuestaIps">
+    <Key>
+      <PropertyRef Name="idEncuestaIps" />
+    </Key>
+    <Property Name="idEncuestaIps" Type="Int32" Nullable="false" />
+    <Property Name="fechaHoraEncuestaIps" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idIps" Type="Int32" Nullable="false" />
+    <Property Name="observacionEncuestaIps" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_EncuestaIps_FuanAfiliado" FromRole="EncuestaIps" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="Ips" Relationship="CoomuceModel.FK_EncuestaIps_Ips" FromRole="EncuestaIps" ToRole="Ips" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_EncuestaIps_Usuario" FromRole="EncuestaIps" ToRole="Usuario" />
+    <NavigationProperty Name="EncuestaIpsRespLiteral" Relationship="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaIps" FromRole="EncuestaIps" ToRole="EncuestaIpsRespLiteral" />
+    <NavigationProperty Name="EncuestaIpsRespPregunta" Relationship="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaIps" FromRole="EncuestaIps" ToRole="EncuestaIpsRespPregunta" />
+  </EntityType>
+  <EntityType Name="EncuestaIpsRespLiteral">
+    <Key>
+      <PropertyRef Name="idEncuestaIps" />
+      <PropertyRef Name="idEncuestaLiteral" />
+    </Key>
+    <Property Name="idEncuestaIps" Type="Int32" Nullable="false" />
+    <Property Name="idEncuestaLiteral" Type="Int16" Nullable="false" />
+    <Property Name="valorEncuestaIpsRespLiteral" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="EncuestaIps" Relationship="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaIps" FromRole="EncuestaIpsRespLiteral" ToRole="EncuestaIps" />
+    <NavigationProperty Name="EncuestaLiteral" Relationship="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaLiteral" FromRole="EncuestaIpsRespLiteral" ToRole="EncuestaLiteral" />
+  </EntityType>
+  <EntityType Name="EncuestaIpsRespPregunta">
+    <Key>
+      <PropertyRef Name="idEncuestaIps" />
+      <PropertyRef Name="idEncuestaPregunta" />
+    </Key>
+    <Property Name="idEncuestaIps" Type="Int32" Nullable="false" />
+    <Property Name="idEncuestaPregunta" Type="Int16" Nullable="false" />
+    <Property Name="valorEncuestaIpsRespPregunta" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="EncuestaIps" Relationship="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaIps" FromRole="EncuestaIpsRespPregunta" ToRole="EncuestaIps" />
+    <NavigationProperty Name="EncuestaPregunta" Relationship="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaPregunta" FromRole="EncuestaIpsRespPregunta" ToRole="EncuestaPregunta" />
+  </EntityType>
+  <EntityType Name="EncuestaLiteral">
+    <Key>
+      <PropertyRef Name="idEncuestaLiteral" />
+    </Key>
+    <Property Name="idEncuestaLiteral" Type="Int16" Nullable="false" />
+    <Property Name="idEncuestaPregunta" Type="Int16" Nullable="false" />
+    <Property Name="liteEncuestaLiteral" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="textoEncuestaLiteral" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="valorEncuestaLiteral" Type="Byte" />
+    <Property Name="checkedEncuestaLiteral" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EncuestaEpsRespLiteral" Relationship="CoomuceModel.FK_EncuestaEpsRespLiteral_EncuestaLiteral" FromRole="EncuestaLiteral" ToRole="EncuestaEpsRespLiteral" />
+    <NavigationProperty Name="EncuestaIpsRespLiteral" Relationship="CoomuceModel.FK_EncuestaIpsRespLiteral_EncuestaLiteral" FromRole="EncuestaLiteral" ToRole="EncuestaIpsRespLiteral" />
+    <NavigationProperty Name="EncuestaPregunta" Relationship="CoomuceModel.FK_EncuestaLiteral_EncuestaPregunta" FromRole="EncuestaLiteral" ToRole="EncuestaPregunta" />
+  </EntityType>
+  <EntityType Name="EncuestaPregunta">
+    <Key>
+      <PropertyRef Name="idEncuestaPregunta" />
+    </Key>
+    <Property Name="idEncuestaPregunta" Type="Int16" Nullable="false" />
+    <Property Name="idEncuestaCategoria" Type="Byte" Nullable="false" />
+    <Property Name="codigoEncuestaPregunta" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="textoEncuestaPregunta" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tipoPreEncuestaPregunta" Type="Byte" Nullable="false" />
+    <Property Name="valorEncuestaPregunta" Type="Byte" />
+    <NavigationProperty Name="EncuestaCategoria" Relationship="CoomuceModel.FK_EncuestaPregunta_EncuestaCategoria" FromRole="EncuestaPregunta" ToRole="EncuestaCategoria" />
+    <NavigationProperty Name="EncuestaEpsRespPregunta" Relationship="CoomuceModel.FK_EncuestaEpsRespPregunta_EncuestaPregunta" FromRole="EncuestaPregunta" ToRole="EncuestaEpsRespPregunta" />
+    <NavigationProperty Name="EncuestaIpsRespPregunta" Relationship="CoomuceModel.FK_EncuestaIpsRespPregunta_EncuestaPregunta" FromRole="EncuestaPregunta" ToRole="EncuestaIpsRespPregunta" />
+    <NavigationProperty Name="EncuestaLiteral" Relationship="CoomuceModel.FK_EncuestaLiteral_EncuestaPregunta" FromRole="EncuestaPregunta" ToRole="EncuestaLiteral" />
+  </EntityType>
+  <EntityType Name="Fuan">
+    <Key>
+      <PropertyRef Name="idFuan" />
+    </Key>
+    <Property Name="idFuan" Type="Int32" Nullable="false" />
+    <Property Name="fechaRadicacionFuan" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idTipoTramite" Type="Byte" Nullable="false" />
+    <Property Name="idTipoAfiliacion" Type="Byte" Nullable="false" />
+    <Property Name="idTipoRegimen" Type="Byte" Nullable="false" />
+    <Property Name="idTipoAfiliado" Type="Byte" Nullable="false" />
+    <Property Name="idTipoCotizante" Type="Byte" Nullable="false" />
+    <Property Name="codigoCotizanteFuan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoAfiliacion" Relationship="CoomuceModel.FK_Fuan_TipoAfiliacion" FromRole="Fuan" ToRole="TipoAfiliacion" />
+    <NavigationProperty Name="TipoAfiliado" Relationship="CoomuceModel.FK_Fuan_TipoAfiliado" FromRole="Fuan" ToRole="TipoAfiliado" />
+    <NavigationProperty Name="TipoCotizante" Relationship="CoomuceModel.FK_Fuan_TipoCotizante" FromRole="Fuan" ToRole="TipoCotizante" />
+    <NavigationProperty Name="TipoRegimen" Relationship="CoomuceModel.FK_Fuan_TipoRegimen" FromRole="Fuan" ToRole="TipoRegimen" />
+    <NavigationProperty Name="TipoTramite" Relationship="CoomuceModel.FK_Fuan_TipoTramite" FromRole="Fuan" ToRole="TipoTramite" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_Fuan_Usuario" FromRole="Fuan" ToRole="Usuario" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_Fuan" FromRole="Fuan" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanAnexos" Relationship="CoomuceModel.FK_FuanAnexos_Fuan" FromRole="Fuan" ToRole="FuanAnexos" />
+    <NavigationProperty Name="FuanDeclaracionAutorizacion" Relationship="CoomuceModel.FK_FuanDeclaracionAutorizacion_Fuan" FromRole="Fuan" ToRole="FuanDeclaracionAutorizacion" />
+    <NavigationProperty Name="FuanEntidadTerritorial" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Fuan" FromRole="Fuan" ToRole="FuanEntidadTerritorial" />
+  </EntityType>
+  <EntityType Name="FuanAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idFuan" Type="Int32" />
+    <Property Name="tipoFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="primerApellidoFuanAfiliado" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="segundoApellidoFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="primerNombreFuanAfiliado" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="segundoNombreFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoIdentificacion" Type="Byte" Nullable="false" />
+    <Property Name="identificacionFuanAfiliado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoSexo" Type="Byte" Nullable="false" />
+    <Property Name="fechaNacimientoFuanAfiliado" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idTipoEtnia" Type="Byte" Nullable="false" />
+    <Property Name="idTipoDiscapacidad" Type="Byte" />
+    <Property Name="idCondicionDiscapacidad" Type="Byte" />
+    <Property Name="puntajeSisbenFuanAfiliado" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="numCarnetFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idGrupoPoblacional" Type="Byte" />
+    <Property Name="arlFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pensionFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ibcFuanAfiliado" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="direccionFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="celularFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emailFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idCiudad" Type="Int16" />
+    <Property Name="idTipoZona" Type="Byte" Nullable="false" />
+    <Property Name="barrioFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="primerApellidoConyugueFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="segundoApellidoConyugueFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="primerNombreConyugueFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="segundoNombreConyugueFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoIdentificacionConyugue" Type="Byte" />
+    <Property Name="identificacionConyugueFuanAfiliado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoSexoConyugue" Type="Byte" />
+    <Property Name="fechaNacimientoConyugueFuanAfiliado" Type="DateTime" Precision="0" />
+    <Property Name="upcFuanAfiliado" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="firmaFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_FuanAfiliado_Ciudad" FromRole="FuanAfiliado" ToRole="Ciudad" />
+    <NavigationProperty Name="EncuestaEps" Relationship="CoomuceModel.FK_EncuestaEps_FuanAfiliado" FromRole="FuanAfiliado" ToRole="EncuestaEps" />
+    <NavigationProperty Name="EncuestaIps" Relationship="CoomuceModel.FK_EncuestaIps_FuanAfiliado" FromRole="FuanAfiliado" ToRole="EncuestaIps" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_FuanAfiliado_Fuan" FromRole="FuanAfiliado" ToRole="Fuan" />
+    <NavigationProperty Name="CondicionDiscapacidad" Relationship="CoomuceModel.FK_FuanAfiliado_CondicionDiscapacidad" FromRole="FuanAfiliado" ToRole="CondicionDiscapacidad" />
+    <NavigationProperty Name="GrupoPoblacional" Relationship="CoomuceModel.FK_FuanAfiliado_GrupoPoblacional" FromRole="FuanAfiliado" ToRole="GrupoPoblacional" />
+    <NavigationProperty Name="TipoDiscapacidad" Relationship="CoomuceModel.FK_FuanAfiliado_TipoDiscapacidad" FromRole="FuanAfiliado" ToRole="TipoDiscapacidad" />
+    <NavigationProperty Name="TipoEtnia" Relationship="CoomuceModel.FK_FuanAfiliado_TipoEtnia" FromRole="FuanAfiliado" ToRole="TipoEtnia" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion" FromRole="FuanAfiliado" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="TipoIdentificacion1" Relationship="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion1" FromRole="FuanAfiliado" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="TipoSexo" Relationship="CoomuceModel.FK_FuanAfiliado_TipoSexo" FromRole="FuanAfiliado" ToRole="TipoSexo" />
+    <NavigationProperty Name="TipoSexo1" Relationship="CoomuceModel.FK_FuanAfiliado_TipoSexo1" FromRole="FuanAfiliado" ToRole="TipoSexo" />
+    <NavigationProperty Name="TipoZona" Relationship="CoomuceModel.FK_FuanAfiliado_TipoZona" FromRole="FuanAfiliado" ToRole="TipoZona" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_FuanAfiliado" FromRole="FuanAfiliado" ToRole="FuanBeneficiariosAfiliado" />
+    <NavigationProperty Name="FuanEmpleadorAfiliado" Relationship="CoomuceModel.FK_FuanEmpleadorAfiliado_FuanAfiliado" FromRole="FuanAfiliado" ToRole="FuanEmpleadorAfiliado" />
+    <NavigationProperty Name="FuanIpsPrimariaAfiliado" Relationship="CoomuceModel.FK_FuanIpsPrimariaAfiliado_FuanAfiliado" FromRole="FuanAfiliado" ToRole="FuanIpsPrimariaAfiliado" />
+    <NavigationProperty Name="FuanReporteNovedad" Relationship="CoomuceModel.FK_FuanReporteNovedad_FuanAfiliado" FromRole="FuanAfiliado" ToRole="FuanReporteNovedad" />
+    <NavigationProperty Name="HistorialUltimosFormatos" Relationship="CoomuceModel.FK_HistorialUltimosFormatos_FuanAfiliado" FromRole="FuanAfiliado" ToRole="HistorialUltimosFormatos" />
+    <NavigationProperty Name="InfoHfdfr" Relationship="CoomuceModel.FK_InfoHfdfr_FuanAfiliado" FromRole="FuanAfiliado" ToRole="InfoHfdfr" />
+    <NavigationProperty Name="InfoIfppir" Relationship="CoomuceModel.FK_InfoIfppir_FuanAfiliado" FromRole="FuanAfiliado" ToRole="InfoIfppir" />
+    <NavigationProperty Name="ListaAsistenciaGeneral" Relationship="CoomuceModel.FK_ListaAsistenciaGeneral_FuanAfiliado" FromRole="FuanAfiliado" ToRole="ListaAsistenciaGeneral" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_FuanAfiliado" FromRole="FuanAfiliado" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="FuanAnexos">
+    <Key>
+      <PropertyRef Name="idFuan" />
+    </Key>
+    <Property Name="idFuan" Type="Int32" Nullable="false" />
+    <Property Name="anexo56FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo56CNFuanAnexos" Type="Byte" />
+    <Property Name="anexo56RCFuanAnexos" Type="Byte" />
+    <Property Name="anexo56TIFuanAnexos" Type="Byte" />
+    <Property Name="anexo56CCFuanAnexos" Type="Byte" />
+    <Property Name="anexo56PAFuanAnexos" Type="Byte" />
+    <Property Name="anexo56CEFuanAnexos" Type="Byte" />
+    <Property Name="anexo56CDFuanAnexos" Type="Byte" />
+    <Property Name="anexo56CSFuanAnexos" Type="Byte" />
+    <Property Name="anexo57FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo58FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo59FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo60FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo61FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo62FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo63FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo64FuanAnexos" Type="Boolean" Nullable="false" />
+    <Property Name="anexo65FuanAnexos" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_FuanAnexos_Fuan" FromRole="FuanAnexos" ToRole="Fuan" />
+  </EntityType>
+  <EntityType Name="FuanBeneficiariosAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanBeneficiariosAfiliado" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanBeneficiariosAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="primerApellidoFuanBeneficiariosAfiliado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="segundoApellidoFuanBeneficiariosAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="primerNombreFuanBeneficiariosAfiliado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="segundoNombreFuanBeneficiariosAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoIdentificacion" Type="Byte" Nullable="false" />
+    <Property Name="identificacionFuanBeneficiariosAfiliado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoSexo" Type="Byte" Nullable="false" />
+    <Property Name="fechaNacimientoFuanBeneficiariosAfiliado" Type="DateTime" Precision="0" />
+    <Property Name="idTipoParentesco" Type="Byte" Nullable="false" />
+    <Property Name="idTipoEtnia" Type="Byte" Nullable="false" />
+    <Property Name="idTipoDiscapacidad" Type="Byte" />
+    <Property Name="idCondicionDiscapacidad" Type="Byte" />
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <Property Name="idTipoZona" Type="Byte" Nullable="false" />
+    <Property Name="telefonoFuanBeneficiariosAfiliado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="upcFuanBeneficiariosAfiliado" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_Ciudad" FromRole="FuanBeneficiariosAfiliado" ToRole="Ciudad" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_FuanAfiliado" FromRole="FuanBeneficiariosAfiliado" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="CondicionDiscapacidad" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad" FromRole="FuanBeneficiariosAfiliado" ToRole="CondicionDiscapacidad" />
+    <NavigationProperty Name="TipoDiscapacidad" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoDiscapacidad" FromRole="FuanBeneficiariosAfiliado" ToRole="TipoDiscapacidad" />
+    <NavigationProperty Name="TipoEtnia" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoEtnia" FromRole="FuanBeneficiariosAfiliado" ToRole="TipoEtnia" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoIdentificacion" FromRole="FuanBeneficiariosAfiliado" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="TipoParentesco" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoParentesco" FromRole="FuanBeneficiariosAfiliado" ToRole="TipoParentesco" />
+    <NavigationProperty Name="TipoSexo" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoSexo" FromRole="FuanBeneficiariosAfiliado" ToRole="TipoSexo" />
+    <NavigationProperty Name="TipoZona" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoZona" FromRole="FuanBeneficiariosAfiliado" ToRole="TipoZona" />
+  </EntityType>
+  <EntityType Name="FuanDeclaracionAutorizacion">
+    <Key>
+      <PropertyRef Name="idFuan" />
+      <PropertyRef Name="idDeclaracionAutorizacion" />
+    </Key>
+    <Property Name="idFuan" Type="Int32" Nullable="false" />
+    <Property Name="idDeclaracionAutorizacion" Type="Byte" Nullable="false" />
+    <Property Name="valorFuanDeclaracionAutorizacion" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_FuanDeclaracionAutorizacion_Fuan" FromRole="FuanDeclaracionAutorizacion" ToRole="Fuan" />
+    <NavigationProperty Name="DeclaracionAutorizacion" Relationship="CoomuceModel.FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion" FromRole="FuanDeclaracionAutorizacion" ToRole="DeclaracionAutorizacion" />
+  </EntityType>
+  <EntityType Name="FuanEmpleadorAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanEmpleadorAfiliado" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanEmpleadorAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="nombreFuanEmpleadorAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoIdentificacion" Type="Byte" Nullable="false" />
+    <Property Name="identificacionFuanEmpleadorAfiliado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tipoPagadorFuanEmpleadorAfiliado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="direccionFuanEmpleadorAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoFuanEmpleadorAfiliado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="emailFuanEmpleadorAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_FuanEmpleadorAfiliado_Ciudad" FromRole="FuanEmpleadorAfiliado" ToRole="Ciudad" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanEmpleadorAfiliado_FuanAfiliado" FromRole="FuanEmpleadorAfiliado" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="CoomuceModel.FK_FuanEmpleadorAfiliado_TipoIdentificacion" FromRole="FuanEmpleadorAfiliado" ToRole="TipoIdentificacion" />
+  </EntityType>
+  <EntityType Name="FuanEntidadTerritorial">
+    <Key>
+      <PropertyRef Name="idFuan" />
+    </Key>
+    <Property Name="idFuan" Type="Int32" Nullable="false" />
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <Property Name="numFichaSisbenFuanEntidadTerritorial" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="puntajeSisbenFuanEntidadTerritorial" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nivelSisbenFuanEntidadTerritorial" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fechaRadicacionFuanEntidadTerritorial" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fechaValidacionFuanEntidadTerritorial" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="observacionFuanEntidadTerritorial" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Ciudad" FromRole="FuanEntidadTerritorial" ToRole="Ciudad" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Fuan" FromRole="FuanEntidadTerritorial" ToRole="Fuan" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Usuario" FromRole="FuanEntidadTerritorial" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="FuanIpsPrimariaAfiliado">
+    <Key>
+      <PropertyRef Name="idFuanIpsPrimariaAfiliado" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanIpsPrimariaAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="tipoFuanIpsPrimariaAfiliado" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreFuanIpsPrimariaAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="codigoFuanIpsPrimariaAfiliado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanIpsPrimariaAfiliado_FuanAfiliado" FromRole="FuanIpsPrimariaAfiliado" ToRole="FuanAfiliado" />
+  </EntityType>
+  <EntityType Name="FuanReporteNovedad">
+    <Key>
+      <PropertyRef Name="idFuanReporteNovedad" />
+    </Key>
+    <Property Name="idFuanReporteNovedad" Type="Int32" Nullable="false" />
+    <Property Name="fechaFuanReporteNovedad" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="antesFuanReporteNovedad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="despuesFuanReporteNovedad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanReporteNovedad_FuanAfiliado" FromRole="FuanReporteNovedad" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_FuanReporteNovedad_Usuario" FromRole="FuanReporteNovedad" ToRole="Usuario" />
+    <NavigationProperty Name="FuanTipoNovedad" Relationship="CoomuceModel.FK_FuanTipoNovedad_FuanReporteNovedad" FromRole="FuanReporteNovedad" ToRole="FuanTipoNovedad" />
+  </EntityType>
+  <EntityType Name="FuanTipoNovedad">
+    <Key>
+      <PropertyRef Name="idFuanReporteNovedad" />
+      <PropertyRef Name="idTipoNovedad" />
+    </Key>
+    <Property Name="idFuanReporteNovedad" Type="Int32" Nullable="false" />
+    <Property Name="idTipoNovedad" Type="Byte" Nullable="false" />
+    <Property Name="selFuanTipoNovedad" Type="Boolean" Nullable="false" />
+    <Property Name="valorFuanTipoNovedad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanReporteNovedad" Relationship="CoomuceModel.FK_FuanTipoNovedad_FuanReporteNovedad" FromRole="FuanTipoNovedad" ToRole="FuanReporteNovedad" />
+    <NavigationProperty Name="TipoNovedad" Relationship="CoomuceModel.FK_FuanTipoNovedad_TipoNovedad" FromRole="FuanTipoNovedad" ToRole="TipoNovedad" />
+  </EntityType>
+  <EntityType Name="HistorialUltimosFormatos">
+    <Key>
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="fechaUltHistoria" Type="DateTime" Precision="0" />
+    <Property Name="fechaUltFicha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_HistorialUltimosFormatos_FuanAfiliado" FromRole="HistorialUltimosFormatos" ToRole="FuanAfiliado" />
+  </EntityType>
+  <EntityType Name="IfppirRespuestaFactor">
+    <Key>
+      <PropertyRef Name="idInfoIfppir" />
+      <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+    </Key>
+    <Property Name="idInfoIfppir" Type="Int32" Nullable="false" />
+    <Property Name="idPreguntasSubFactorRiesgo" Type="Int16" Nullable="false" />
+    <Property Name="respuestaSiIfppirRespuestaFactor" Type="Boolean" Nullable="false" />
+    <Property Name="respuestaNoIfppirRespuestaFactor" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="InfoIfppir" Relationship="CoomuceModel.FK_IfppirRespuestaFactor_InfoIfppir" FromRole="IfppirRespuestaFactor" ToRole="InfoIfppir" />
+    <NavigationProperty Name="PreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo" FromRole="IfppirRespuestaFactor" ToRole="PreguntasSubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="InfoHfdfr">
+    <Key>
+      <PropertyRef Name="idInfoHfdfr" />
+    </Key>
+    <Property Name="idInfoHfdfr" Type="Int32" Nullable="false" />
+    <Property Name="tipoDiligenciamientoHfdfr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaVisitaHfdfr" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="horaInicioHfdfr" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="horaFinHfdfr" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <Property Name="veredaInfoHfdfr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="barrioInfoHfdfr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoInfoHfdfr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="historiaInfoHfdfr" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="archivoAudioHfdfr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="firmaHfdfr" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idUsuario" Type="Int32" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_InfoHfdfr_Ciudad" FromRole="InfoHfdfr" ToRole="Ciudad" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_InfoHfdfr_FuanAfiliado" FromRole="InfoHfdfr" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_InfoHfdfr_Usuario" FromRole="InfoHfdfr" ToRole="Usuario" />
+    <Property Name="fechaInfoHfdfr" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="InfoIfppir">
+    <Key>
+      <PropertyRef Name="idInfoIfppir" />
+    </Key>
+    <Property Name="idInfoIfppir" Type="Int32" Nullable="false" />
+    <Property Name="fechaInfoIfppir" Type="DateTime" Precision="3" />
+    <Property Name="tipoDiligenciamientoIfppir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="numCarneIfppir" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ipsPrimariaIfppir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="razaIfppir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="escolaridadIfppir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="familiarCercanoIfppir" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoFamiliarIfppir" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="gestanteIfppir" Type="Boolean" Nullable="false" />
+    <Property Name="fechaAplicacionIfppir" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="pesoIfppir" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="tallaIfppir" Type="Int16" />
+    <Property Name="masaCorporalIfppir" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="perimetroAbdominalIfppir" Type="Int16" />
+    <Property Name="sistolicaIfppir" Type="Int16" />
+    <Property Name="diastolicaIfppir" Type="Int16" />
+    <Property Name="furIfppir" Type="DateTime" Precision="3" />
+    <Property Name="fppIfppir" Type="DateTime" Precision="3" />
+    <Property Name="colesterolTotalIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="colesterolLdlIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="colesterolHdlIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="glicemiaIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="gIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="pIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="aIfppir" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nacidoVivoIfppir" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="observacionIfppir" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="archivoAudioIfppir" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="firmaIfppir" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idUsuario" Type="Int32" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_InfoIfppir_FuanAfiliado" FromRole="InfoIfppir" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="IfppirRespuestaFactor" Relationship="CoomuceModel.FK_IfppirRespuestaFactor_InfoIfppir" FromRole="InfoIfppir" ToRole="IfppirRespuestaFactor" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_InfoIfppir_Usuario" FromRole="InfoIfppir" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="InfoPurisu">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="Int32" Nullable="false" />
+    <Property Name="idCiudad" Type="Int16" Nullable="false" />
+    <Property Name="fechaAtencionPurisu" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="archivoAudioInfoPurisu" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tipoDiligenciamientoInfoPurisu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_InfoPurisu_Ciudad" FromRole="InfoPurisu" ToRole="Ciudad" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_InfoPurisu_Usuario" FromRole="InfoPurisu" ToRole="Usuario" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_InfoPurisu" FromRole="InfoPurisu" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="ListaAsistenciaGeneral">
+    <Key>
+      <PropertyRef Name="idAsistenciaGeneral" />
+      <PropertyRef Name="idFuanAfiliado" />
+    </Key>
+    <Property Name="idAsistenciaGeneral" Type="Int32" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="areaEntidadListaAsistenciaGeneral" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="firmaListaAsistenciaGeneral" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AsistenciaGeneral" Relationship="CoomuceModel.FK_ListaAsistenciaGeneral_AsistenciaGeneral" FromRole="ListaAsistenciaGeneral" ToRole="AsistenciaGeneral" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_ListaAsistenciaGeneral_FuanAfiliado" FromRole="ListaAsistenciaGeneral" ToRole="FuanAfiliado" />
+  </EntityType>
+  <EntityType Name="Purisu">
+    <Key>
+      <PropertyRef Name="idInfoPurisu" />
+      <PropertyRef Name="idPurisu" />
+    </Key>
+    <Property Name="idInfoPurisu" Type="Int32" Nullable="false" />
+    <Property Name="idPurisu" Type="Int32" Nullable="false" />
+    <Property Name="idFuanAfiliado" Type="Int32" Nullable="false" />
+    <Property Name="numCarnePurisu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoVisitaDomiciliaria" Type="Byte" />
+    <Property Name="usisPurisu" Type="Boolean" Nullable="false" />
+    <Property Name="ipsPrimariaPurisu" Type="Boolean" Nullable="false" />
+    <Property Name="telefonicaPurisu" Type="Boolean" Nullable="false" />
+    <Property Name="cauPurisu" Type="Boolean" Nullable="false" />
+    <Property Name="actividadExtramuralPurisu" Type="Boolean" Nullable="false" />
+    <Property Name="idProgramaResolucion412" Type="Byte" />
+    <Property Name="idGrupoInteres" Type="Byte" />
+    <Property Name="idSeguimientoProgramasIntervencionRiesgo" Type="Byte" />
+    <Property Name="numAutorizacionPurisu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idGruposFocales" Type="Byte" />
+    <Property Name="idEje" Type="Byte" />
+    <Property Name="idUnidad" Type="Int16" />
+    <Property Name="idModulo" Type="Int16" />
+    <Property Name="idEje1" Type="Byte" />
+    <Property Name="idUnidad1" Type="Int16" />
+    <Property Name="idModulo1" Type="Int16" />
+    <Property Name="firmaPurisu" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_Purisu_FuanAfiliado" FromRole="Purisu" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="InfoPurisu" Relationship="CoomuceModel.FK_Purisu_InfoPurisu" FromRole="Purisu" ToRole="InfoPurisu" />
+    <NavigationProperty Name="Eje" Relationship="CoomuceModel.FK_Purisu_Eje" FromRole="Purisu" ToRole="Eje" />
+    <NavigationProperty Name="Eje1" Relationship="CoomuceModel.FK_Purisu_Eje1" FromRole="Purisu" ToRole="Eje" />
+    <NavigationProperty Name="GrupoInteres" Relationship="CoomuceModel.FK_Purisu_GrupoInteres" FromRole="Purisu" ToRole="GrupoInteres" />
+    <NavigationProperty Name="GruposFocales" Relationship="CoomuceModel.FK_Purisu_GruposFocales" FromRole="Purisu" ToRole="GruposFocales" />
+    <NavigationProperty Name="Modulo" Relationship="CoomuceModel.FK_Purisu_Modulo" FromRole="Purisu" ToRole="Modulo" />
+    <NavigationProperty Name="Modulo1" Relationship="CoomuceModel.FK_Purisu_Modulo1" FromRole="Purisu" ToRole="Modulo" />
+    <NavigationProperty Name="ProgramaResolucion412" Relationship="CoomuceModel.FK_Purisu_ProgramaResolucion412" FromRole="Purisu" ToRole="ProgramaResolucion412" />
+    <NavigationProperty Name="SeguimientoProgramasIntervencionRiesgo" Relationship="CoomuceModel.FK_Purisu_SeguimientoProgramasIntervencionRiesgo" FromRole="Purisu" ToRole="SeguimientoProgramasIntervencionRiesgo" />
+    <NavigationProperty Name="TipoVisitaDomiciliaria" Relationship="CoomuceModel.FK_Purisu_TipoVisitaDomiciliaria" FromRole="Purisu" ToRole="TipoVisitaDomiciliaria" />
+    <NavigationProperty Name="Unidad" Relationship="CoomuceModel.FK_Purisu_Unidad" FromRole="Purisu" ToRole="Unidad" />
+    <NavigationProperty Name="Unidad1" Relationship="CoomuceModel.FK_Purisu_Unidad1" FromRole="Purisu" ToRole="Unidad" />
+    <NavigationProperty Name="MotivoConsulta" Relationship="CoomuceModel.PurisuMotivoConsulta" FromRole="Purisu" ToRole="MotivoConsulta" />
+    <NavigationProperty Name="MotivoContacto" Relationship="CoomuceModel.PurisuMotivoContacto" FromRole="Purisu" ToRole="MotivoContacto" />
+    <NavigationProperty Name="PiezasInformativas" Relationship="CoomuceModel.PurisuPiezasInformativas" FromRole="Purisu" ToRole="PiezasInformativas" />
+  </EntityType>
+  <EntityType Name="CicloVital">
+    <Key>
+      <PropertyRef Name="idCicloVital" />
+    </Key>
+    <Property Name="idCicloVital" Type="Byte" Nullable="false" />
+    <Property Name="edadMinCicloVital" Type="Byte" Nullable="false" />
+    <Property Name="edadMaxCicloVital" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="CicloVitalPreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital" FromRole="CicloVital" ToRole="CicloVitalPreguntasSubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="CicloVitalGestante">
+    <Key>
+      <PropertyRef Name="idCicloVitalGestante" />
+    </Key>
+    <Property Name="idCicloVitalGestante" Type="Byte" Nullable="false" />
+    <Property Name="idPreguntasSubFactorRiesgo" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="PreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_CicloVitalGestante_PreguntasSubFactorRiesgo" FromRole="CicloVitalGestante" ToRole="PreguntasSubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="CicloVitalPreguntasSubFactorRiesgo">
+    <Key>
+      <PropertyRef Name="idCicloVital" />
+      <PropertyRef Name="idTipoSexo" />
+      <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+    </Key>
+    <Property Name="idCicloVital" Type="Byte" Nullable="false" />
+    <Property Name="idTipoSexo" Type="Byte" Nullable="false" />
+    <Property Name="idPreguntasSubFactorRiesgo" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="CicloVital" Relationship="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital" FromRole="CicloVitalPreguntasSubFactorRiesgo" ToRole="CicloVital" />
+    <NavigationProperty Name="PreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo" FromRole="CicloVitalPreguntasSubFactorRiesgo" ToRole="PreguntasSubFactorRiesgo" />
+    <NavigationProperty Name="TipoSexo" Relationship="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo" FromRole="CicloVitalPreguntasSubFactorRiesgo" ToRole="TipoSexo" />
+  </EntityType>
+  <EntityType Name="CondicionDiscapacidad">
+    <Key>
+      <PropertyRef Name="idCondicionDiscapacidad" />
+    </Key>
+    <Property Name="idCondicionDiscapacidad" Type="Byte" Nullable="false" />
+    <Property Name="codigoCondicionDiscapacidad" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreCondicionDiscapacidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_CondicionDiscapacidad" FromRole="CondicionDiscapacidad" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad" FromRole="CondicionDiscapacidad" ToRole="FuanBeneficiariosAfiliado" />
+  </EntityType>
+  <EntityType Name="CondicionVivienda">
+    <Key>
+      <PropertyRef Name="idCondicionVivienda" />
+    </Key>
+    <Property Name="idCondicionVivienda" Type="Byte" Nullable="false" />
+    <Property Name="nombreCondicionVivienda" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DeclaracionAutorizacion">
+    <Key>
+      <PropertyRef Name="idDeclaracionAutorizacion" />
+    </Key>
+    <Property Name="idDeclaracionAutorizacion" Type="Byte" Nullable="false" />
+    <Property Name="codigoDeclaracionAutorizacion" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionDeclaracionAutorizacion" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanDeclaracionAutorizacion" Relationship="CoomuceModel.FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion" FromRole="DeclaracionAutorizacion" ToRole="FuanDeclaracionAutorizacion" />
+  </EntityType>
+  <EntityType Name="DisposicionBasura">
+    <Key>
+      <PropertyRef Name="idDisposicionBasura" />
+    </Key>
+    <Property Name="idDisposicionBasura" Type="Byte" Nullable="false" />
+    <Property Name="codigoDisposicionBasura" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreDisposicionBasura" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DisposicionExcreta">
+    <Key>
+      <PropertyRef Name="idDisposicionExcreta" />
+    </Key>
+    <Property Name="idDisposicionExcreta" Type="Byte" Nullable="false" />
+    <Property Name="codigoDisposicionExcreta" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreDisposicionExcreta" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Eje">
+    <Key>
+      <PropertyRef Name="idEje" />
+    </Key>
+    <Property Name="idEje" Type="Byte" Nullable="false" />
+    <Property Name="codigoEje" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreEje" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_Eje" FromRole="Eje" ToRole="Purisu" />
+    <NavigationProperty Name="Purisu1" Relationship="CoomuceModel.FK_Purisu_Eje1" FromRole="Eje" ToRole="Purisu" />
+    <NavigationProperty Name="Unidad" Relationship="CoomuceModel.FK_Unidad_Eje" FromRole="Eje" ToRole="Unidad" />
+  </EntityType>
+  <EntityType Name="FactorRiesgo">
+    <Key>
+      <PropertyRef Name="idFactorRiesgo" />
+    </Key>
+    <Property Name="idFactorRiesgo" Type="Byte" Nullable="false" />
+    <Property Name="codigoFactorRiesgo" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreFactorRiesgo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SubFactorRiesgo" Relationship="CoomuceModel.FK_SubFactorRiesgo_FactorRiesgo" FromRole="FactorRiesgo" ToRole="SubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="GrupoInteres">
+    <Key>
+      <PropertyRef Name="idGrupoInteres" />
+    </Key>
+    <Property Name="idGrupoInteres" Type="Byte" Nullable="false" />
+    <Property Name="codigoGrupoInteres" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionGrupoInteres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_GrupoInteres" FromRole="GrupoInteres" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="GrupoPoblacional">
+    <Key>
+      <PropertyRef Name="idGrupoPoblacional" />
+    </Key>
+    <Property Name="idGrupoPoblacional" Type="Byte" Nullable="false" />
+    <Property Name="codigoGrupoPoblacional" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreGrupoPoblacional" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_GrupoPoblacional" FromRole="GrupoPoblacional" ToRole="FuanAfiliado" />
+  </EntityType>
+  <EntityType Name="GruposFocales">
+    <Key>
+      <PropertyRef Name="idGruposFocales" />
+    </Key>
+    <Property Name="idGruposFocales" Type="Byte" Nullable="false" />
+    <Property Name="codigoGruposFocales" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="nombreGruposFocales" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AsistenciaGeneral" Relationship="CoomuceModel.FK_AsistenciaGeneral_GruposFocales" FromRole="GruposFocales" ToRole="AsistenciaGeneral" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_GruposFocales" FromRole="GruposFocales" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="Ips">
+    <Key>
+      <PropertyRef Name="idIps" />
+    </Key>
+    <Property Name="idIps" Type="Int32" Nullable="false" />
+    <Property Name="codigoIps" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="razonIps" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoIdentificacion" Type="Byte" Nullable="false" />
+    <Property Name="identificacionIps" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="direccionIps" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoIps" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idCiudad" Type="Int16" />
+    <Property Name="representanteIps" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nivelIps" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contactoIps" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="emailIps" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ciudad" Relationship="CoomuceModel.FK_Ips_Ciudad" FromRole="Ips" ToRole="Ciudad" />
+    <NavigationProperty Name="EncuestaEps" Relationship="CoomuceModel.FK_EncuestaEps_Ips" FromRole="Ips" ToRole="EncuestaEps" />
+    <NavigationProperty Name="EncuestaIps" Relationship="CoomuceModel.FK_EncuestaIps_Ips" FromRole="Ips" ToRole="EncuestaIps" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="CoomuceModel.FK_Ips_TipoIdentificacion" FromRole="Ips" ToRole="TipoIdentificacion" />
+  </EntityType>
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="idModulo" />
+    </Key>
+    <Property Name="idUnidad" Type="Int16" Nullable="false" />
+    <Property Name="idModulo" Type="Int16" Nullable="false" />
+    <Property Name="codigoModulo" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="nombreModulo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AsistenciaGeneral" Relationship="CoomuceModel.FK_AsistenciaGeneral_Modulo" FromRole="Modulo" ToRole="AsistenciaGeneral" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_Modulo" FromRole="Modulo" ToRole="Purisu" />
+    <NavigationProperty Name="Purisu1" Relationship="CoomuceModel.FK_Purisu_Modulo1" FromRole="Modulo" ToRole="Purisu" />
+    <NavigationProperty Name="Unidad" Relationship="CoomuceModel.FK_Modulo_Unidad" FromRole="Modulo" ToRole="Unidad" />
+  </EntityType>
+  <EntityType Name="MotivoConsulta">
+    <Key>
+      <PropertyRef Name="idMotivoConsulta" />
+    </Key>
+    <Property Name="idMotivoConsulta" Type="Byte" Nullable="false" />
+    <Property Name="codigoMotivoConsulta" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionMotivoConsulta" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.PurisuMotivoConsulta" FromRole="MotivoConsulta" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="MotivoContacto">
+    <Key>
+      <PropertyRef Name="idMotivoContacto" />
+    </Key>
+    <Property Name="idMotivoContacto" Type="Byte" Nullable="false" />
+    <Property Name="codigoMotivoContacto" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionMotivoContacto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.PurisuMotivoContacto" FromRole="MotivoContacto" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="MotivoTraslado">
+    <Key>
+      <PropertyRef Name="idMotivoTraslado" />
+    </Key>
+    <Property Name="idMotivoTraslado" Type="Byte" Nullable="false" />
+    <Property Name="codigoMotivoTraslado" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionMotivoTraslado" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NivelEducativo">
+    <Key>
+      <PropertyRef Name="idNivelEducativo" />
+    </Key>
+    <Property Name="idNivelEducativo" Type="Byte" Nullable="false" />
+    <Property Name="codigoNivelEducativo" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreNivelEducativo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PiezasInformativas">
+    <Key>
+      <PropertyRef Name="idPiezasInformativas" />
+    </Key>
+    <Property Name="idPiezasInformativas" Type="Byte" Nullable="false" />
+    <Property Name="codigoPiezasInformativas" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionPiezasInformativas" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.PurisuPiezasInformativas" FromRole="PiezasInformativas" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="PreguntasSubFactorRiesgo">
+    <Key>
+      <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+    </Key>
+    <Property Name="idPreguntasSubFactorRiesgo" Type="Int16" Nullable="false" />
+    <Property Name="idSubFactorRiesgo" Type="Byte" Nullable="false" />
+    <Property Name="codigoPreguntasSubFactorRiesgo" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionPreguntasSubFactorRiesgo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IfppirRespuestaFactor" Relationship="CoomuceModel.FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo" FromRole="PreguntasSubFactorRiesgo" ToRole="IfppirRespuestaFactor" />
+    <NavigationProperty Name="CicloVitalGestante" Relationship="CoomuceModel.FK_CicloVitalGestante_PreguntasSubFactorRiesgo" FromRole="PreguntasSubFactorRiesgo" ToRole="CicloVitalGestante" />
+    <NavigationProperty Name="CicloVitalPreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo" FromRole="PreguntasSubFactorRiesgo" ToRole="CicloVitalPreguntasSubFactorRiesgo" />
+    <NavigationProperty Name="SubFactorRiesgo" Relationship="CoomuceModel.FK_PreguntasSubFactorRiesgo_SubFactorRiesgo" FromRole="PreguntasSubFactorRiesgo" ToRole="SubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="Procedencia">
+    <Key>
+      <PropertyRef Name="idProcedencia" />
+    </Key>
+    <Property Name="idProcedencia" Type="Byte" Nullable="false" />
+    <Property Name="codigoProcedencia" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreProcedencia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProgramaResolucion412">
+    <Key>
+      <PropertyRef Name="idProgramaResolucion412" />
+    </Key>
+    <Property Name="idProgramaResolucion412" Type="Byte" Nullable="false" />
+    <Property Name="codigoProgramaResolucion412" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionProgramaResolucion412" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_ProgramaResolucion412" FromRole="ProgramaResolucion412" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="SeguimientoProgramasIntervencionRiesgo">
+    <Key>
+      <PropertyRef Name="idSeguimientoProgramasIntervencionRiesgo" />
+    </Key>
+    <Property Name="idSeguimientoProgramasIntervencionRiesgo" Type="Byte" Nullable="false" />
+    <Property Name="codigoSeguimientoProgramasIntervencionRiesgo" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreSeguimientoProgramasIntervencionRiesgo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_SeguimientoProgramasIntervencionRiesgo" FromRole="SeguimientoProgramasIntervencionRiesgo" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="SubFactorRiesgo">
+    <Key>
+      <PropertyRef Name="idSubFactorRiesgo" />
+    </Key>
+    <Property Name="idSubFactorRiesgo" Type="Byte" Nullable="false" />
+    <Property Name="idFactorRiesgo" Type="Byte" Nullable="false" />
+    <Property Name="codigoSubFactorRiesgo" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="nombreSubFactorRiesgo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FactorRiesgo" Relationship="CoomuceModel.FK_SubFactorRiesgo_FactorRiesgo" FromRole="SubFactorRiesgo" ToRole="FactorRiesgo" />
+    <NavigationProperty Name="PreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_PreguntasSubFactorRiesgo_SubFactorRiesgo" FromRole="SubFactorRiesgo" ToRole="PreguntasSubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="Tenencia">
+    <Key>
+      <PropertyRef Name="idTenencia" />
+    </Key>
+    <Property Name="idTenencia" Type="Byte" Nullable="false" />
+    <Property Name="codigoTenencia" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTenencia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TipoAfiliacion">
+    <Key>
+      <PropertyRef Name="idTipoAfiliacion" />
+    </Key>
+    <Property Name="idTipoAfiliacion" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoAfiliacion" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoAfiliacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_Fuan_TipoAfiliacion" FromRole="TipoAfiliacion" ToRole="Fuan" />
+  </EntityType>
+  <EntityType Name="TipoAfiliado">
+    <Key>
+      <PropertyRef Name="idTipoAfiliado" />
+    </Key>
+    <Property Name="idTipoAfiliado" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoAfiliado" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoAfiliado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_Fuan_TipoAfiliado" FromRole="TipoAfiliado" ToRole="Fuan" />
+  </EntityType>
+  <EntityType Name="TipoAnimal">
+    <Key>
+      <PropertyRef Name="idTipoAnimal" />
+    </Key>
+    <Property Name="idTipoAnimal" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoAnimal" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoAnimal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TipoCombustible">
+    <Key>
+      <PropertyRef Name="idTipoCombustible" />
+    </Key>
+    <Property Name="idTipoCombustible" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoCombustible" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoCombustible" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TipoCotizante">
+    <Key>
+      <PropertyRef Name="idTipoCotizante" />
+    </Key>
+    <Property Name="idTipoCotizante" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoCotizante" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoCotizante" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_Fuan_TipoCotizante" FromRole="TipoCotizante" ToRole="Fuan" />
+  </EntityType>
+  <EntityType Name="TipoDiscapacidad">
+    <Key>
+      <PropertyRef Name="idTipoDiscapacidad" />
+    </Key>
+    <Property Name="idTipoDiscapacidad" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoDiscapacidad" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoDiscapacidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_TipoDiscapacidad" FromRole="TipoDiscapacidad" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoDiscapacidad" FromRole="TipoDiscapacidad" ToRole="FuanBeneficiariosAfiliado" />
+  </EntityType>
+  <EntityType Name="TipoEtnia">
+    <Key>
+      <PropertyRef Name="idTipoEtnia" />
+    </Key>
+    <Property Name="idTipoEtnia" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoEtnia" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoEtnia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_TipoEtnia" FromRole="TipoEtnia" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoEtnia" FromRole="TipoEtnia" ToRole="FuanBeneficiariosAfiliado" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacion">
+    <Key>
+      <PropertyRef Name="idTipoIdentificacion" />
+    </Key>
+    <Property Name="idTipoIdentificacion" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoIdentificacion" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoIdentificacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion" FromRole="TipoIdentificacion" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanAfiliado1" Relationship="CoomuceModel.FK_FuanAfiliado_TipoIdentificacion1" FromRole="TipoIdentificacion" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoIdentificacion" FromRole="TipoIdentificacion" ToRole="FuanBeneficiariosAfiliado" />
+    <NavigationProperty Name="FuanEmpleadorAfiliado" Relationship="CoomuceModel.FK_FuanEmpleadorAfiliado_TipoIdentificacion" FromRole="TipoIdentificacion" ToRole="FuanEmpleadorAfiliado" />
+    <NavigationProperty Name="Ips" Relationship="CoomuceModel.FK_Ips_TipoIdentificacion" FromRole="TipoIdentificacion" ToRole="Ips" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_Usuario_TipoIdentificacion" FromRole="TipoIdentificacion" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TipoNovedad">
+    <Key>
+      <PropertyRef Name="idTipoNovedad" />
+    </Key>
+    <Property Name="idTipoNovedad" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoNovedad" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoNovedad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tipoValorCampoTipoNovedad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="valorCampoTipoNovedad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanTipoNovedad" Relationship="CoomuceModel.FK_FuanTipoNovedad_TipoNovedad" FromRole="TipoNovedad" ToRole="FuanTipoNovedad" />
+  </EntityType>
+  <EntityType Name="TipoParentesco">
+    <Key>
+      <PropertyRef Name="idTipoParentesco" />
+    </Key>
+    <Property Name="idTipoParentesco" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoParentesco" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoParentesco" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionTipoParentesco" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoParentesco" FromRole="TipoParentesco" ToRole="FuanBeneficiariosAfiliado" />
+  </EntityType>
+  <EntityType Name="TipoRegimen">
+    <Key>
+      <PropertyRef Name="idTipoRegimen" />
+    </Key>
+    <Property Name="idTipoRegimen" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoRegimen" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoRegimen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_Fuan_TipoRegimen" FromRole="TipoRegimen" ToRole="Fuan" />
+  </EntityType>
+  <EntityType Name="TipoSexo">
+    <Key>
+      <PropertyRef Name="idTipoSexo" />
+    </Key>
+    <Property Name="idTipoSexo" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoSexo" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoSexo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_TipoSexo" FromRole="TipoSexo" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanAfiliado1" Relationship="CoomuceModel.FK_FuanAfiliado_TipoSexo1" FromRole="TipoSexo" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoSexo" FromRole="TipoSexo" ToRole="FuanBeneficiariosAfiliado" />
+    <NavigationProperty Name="CicloVitalPreguntasSubFactorRiesgo" Relationship="CoomuceModel.FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo" FromRole="TipoSexo" ToRole="CicloVitalPreguntasSubFactorRiesgo" />
+  </EntityType>
+  <EntityType Name="TipoTramite">
+    <Key>
+      <PropertyRef Name="idTipoTramite" />
+    </Key>
+    <Property Name="idTipoTramite" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoTramite" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoTramite" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_Fuan_TipoTramite" FromRole="TipoTramite" ToRole="Fuan" />
+  </EntityType>
+  <EntityType Name="TipoVisitaDomiciliaria">
+    <Key>
+      <PropertyRef Name="idTipoVisitaDomiciliaria" />
+    </Key>
+    <Property Name="idTipoVisitaDomiciliaria" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoVisitaDomiciliaria" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoVisitaDomiciliaria" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_TipoVisitaDomiciliaria" FromRole="TipoVisitaDomiciliaria" ToRole="Purisu" />
+  </EntityType>
+  <EntityType Name="TipoVivienda">
+    <Key>
+      <PropertyRef Name="idTipoVivienda" />
+    </Key>
+    <Property Name="idTipoVivienda" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoVivienda" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoVivienda" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TipoZona">
+    <Key>
+      <PropertyRef Name="idTipoZona" />
+    </Key>
+    <Property Name="idTipoZona" Type="Byte" Nullable="false" />
+    <Property Name="codigoTipoZona" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTipoZona" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_TipoZona" FromRole="TipoZona" ToRole="FuanAfiliado" />
+    <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoZona" FromRole="TipoZona" ToRole="FuanBeneficiariosAfiliado" />
+  </EntityType>
+  <EntityType Name="TratamientoAgua">
+    <Key>
+      <PropertyRef Name="idTratamientoAgua" />
+    </Key>
+    <Property Name="idTratamientoAgua" Type="Byte" Nullable="false" />
+    <Property Name="codigoTratamientoAgua" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreTratamientoAgua" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Unidad">
+    <Key>
+      <PropertyRef Name="idUnidad" />
+    </Key>
+    <Property Name="idEje" Type="Byte" Nullable="false" />
+    <Property Name="idUnidad" Type="Int16" Nullable="false" />
+    <Property Name="codigoUnidad" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="nombreUnidad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_Unidad" FromRole="Unidad" ToRole="Purisu" />
+    <NavigationProperty Name="Purisu1" Relationship="CoomuceModel.FK_Purisu_Unidad1" FromRole="Unidad" ToRole="Purisu" />
+    <NavigationProperty Name="Eje" Relationship="CoomuceModel.FK_Unidad_Eje" FromRole="Unidad" ToRole="Eje" />
+    <NavigationProperty Name="Modulo" Relationship="CoomuceModel.FK_Modulo_Unidad" FromRole="Unidad" ToRole="Modulo" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="idRol" />
+    </Key>
+    <Property Name="idRol" Type="Byte" Nullable="false" />
+    <Property Name="nombreRol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RolMenu" Relationship="CoomuceModel.FK_RolMenu_Rol" FromRole="Rol" ToRole="RolMenu" />
+    <NavigationProperty Name="Usuario" Relationship="CoomuceModel.FK_Usuario_Rol" FromRole="Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idTipoIdentificacion" Type="Byte" Nullable="false" />
+    <Property Name="identificacionUsuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="primerApellidoUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="segundoApellidoUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="primerNombreUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="segundoNombreUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="emailUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="celularUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idRol" Type="Byte" Nullable="false" />
+    <Property Name="loginUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passwordUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passwordHashUsuario" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="passwordSaltUsuario" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="esTemporalUsuario" Type="Boolean" Nullable="false" />
+    <Property Name="estaHabilitadoUsuario" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AsistenciaGeneral" Relationship="CoomuceModel.FK_AsistenciaGeneral_Usuario" FromRole="Usuario" ToRole="AsistenciaGeneral" />
+    <NavigationProperty Name="EncuestaEps" Relationship="CoomuceModel.FK_EncuestaEps_Usuario" FromRole="Usuario" ToRole="EncuestaEps" />
+    <NavigationProperty Name="EncuestaIps" Relationship="CoomuceModel.FK_EncuestaIps_Usuario" FromRole="Usuario" ToRole="EncuestaIps" />
+    <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_Fuan_Usuario" FromRole="Usuario" ToRole="Fuan" />
+    <NavigationProperty Name="FuanEntidadTerritorial" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Usuario" FromRole="Usuario" ToRole="FuanEntidadTerritorial" />
+    <NavigationProperty Name="FuanReporteNovedad" Relationship="CoomuceModel.FK_FuanReporteNovedad_Usuario" FromRole="Usuario" ToRole="FuanReporteNovedad" />
+    <NavigationProperty Name="InfoHfdfr" Relationship="CoomuceModel.FK_InfoHfdfr_Usuario" FromRole="Usuario" ToRole="InfoHfdfr" />
+    <NavigationProperty Name="InfoIfppir" Relationship="CoomuceModel.FK_InfoIfppir_Usuario" FromRole="Usuario" ToRole="InfoIfppir" />
+    <NavigationProperty Name="InfoPurisu" Relationship="CoomuceModel.FK_InfoPurisu_Usuario" FromRole="Usuario" ToRole="InfoPurisu" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="CoomuceModel.FK_Usuario_TipoIdentificacion" FromRole="Usuario" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="Rol" Relationship="CoomuceModel.FK_Usuario_Rol" FromRole="Usuario" ToRole="Rol" />
+  </EntityType>
+  <Association Name="FK_AsistenciaGeneral_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="CoomuceModel.AsistenciaGeneral" Role="AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ciudad_Departamento">
+    <End Type="CoomuceModel.Departamento" Role="Departamento" Multiplicity="1" />
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEmpleadorAfiliado_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanEmpleadorAfiliado" Role="FuanEmpleadorAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanEmpleadorAfiliado">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEntidadTerritorial_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanEntidadTerritorial" Role="FuanEntidadTerritorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="FuanEntidadTerritorial">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoHfdfr_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="CoomuceModel.InfoHfdfr" Role="InfoHfdfr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="InfoHfdfr">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoPurisu_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="CoomuceModel.InfoPurisu" Role="InfoPurisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="InfoPurisu">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ips_Ciudad">
+    <End Type="CoomuceModel.Ciudad" Role="Ciudad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Ips" Role="Ips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="idCiudad" />
+      </Principal>
+      <Dependent Role="Ips">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Menu">
+    <End Type="CoomuceModel.Menu" Role="Menu" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Menu" Role="Menu1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="idMenu" />
+      </Principal>
+      <Dependent Role="Menu1">
+        <PropertyRef Name="idPadreMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Vista">
+    <End Type="CoomuceModel.Vista" Role="Vista" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Menu" Role="Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vista">
+        <PropertyRef Name="idVista" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="idVista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RolMenu_Menu">
+    <End Type="CoomuceModel.Menu" Role="Menu" Multiplicity="1" />
+    <End Type="CoomuceModel.RolMenu" Role="RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="idMenu" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="idMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RolMenu_Rol">
+    <End Type="CoomuceModel.Rol" Role="Rol" Multiplicity="1" />
+    <End Type="CoomuceModel.RolMenu" Role="RolMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="RolMenu">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsistenciaGeneral_GruposFocales">
+    <End Type="CoomuceModel.GruposFocales" Role="GruposFocales" Multiplicity="1" />
+    <End Type="CoomuceModel.AsistenciaGeneral" Role="AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GruposFocales">
+        <PropertyRef Name="idGruposFocales" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idGruposFocales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsistenciaGeneral_Modulo">
+    <End Type="CoomuceModel.Modulo" Role="Modulo" Multiplicity="1" />
+    <End Type="CoomuceModel.AsistenciaGeneral" Role="AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="idModulo" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsistenciaGeneral_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="CoomuceModel.AsistenciaGeneral" Role="AsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="AsistenciaGeneral">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaAsistenciaGeneral_AsistenciaGeneral">
+    <End Type="CoomuceModel.AsistenciaGeneral" Role="AsistenciaGeneral" Multiplicity="1" />
+    <End Type="CoomuceModel.ListaAsistenciaGeneral" Role="ListaAsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsistenciaGeneral">
+        <PropertyRef Name="idAsistenciaGeneral" />
+      </Principal>
+      <Dependent Role="ListaAsistenciaGeneral">
+        <PropertyRef Name="idAsistenciaGeneral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaPregunta_EncuestaCategoria">
+    <End Type="CoomuceModel.EncuestaCategoria" Role="EncuestaCategoria" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaPregunta" Role="EncuestaPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaCategoria">
+        <PropertyRef Name="idEncuestaCategoria" />
+      </Principal>
+      <Dependent Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEps_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEps" Role="EncuestaEps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="EncuestaEps">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEps_Ips">
+    <End Type="CoomuceModel.Ips" Role="Ips" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEps" Role="EncuestaEps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ips">
+        <PropertyRef Name="idIps" />
+      </Principal>
+      <Dependent Role="EncuestaEps">
+        <PropertyRef Name="idIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEps_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEps" Role="EncuestaEps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EncuestaEps">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespLiteral_EncuestaEps">
+    <End Type="CoomuceModel.EncuestaEps" Role="EncuestaEps" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEpsRespLiteral" Role="EncuestaEpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaEps">
+        <PropertyRef Name="idEncuestaEps" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespLiteral">
+        <PropertyRef Name="idEncuestaEps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespPregunta_EncuestaEps">
+    <End Type="CoomuceModel.EncuestaEps" Role="EncuestaEps" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEpsRespPregunta" Role="EncuestaEpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaEps">
+        <PropertyRef Name="idEncuestaEps" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespPregunta">
+        <PropertyRef Name="idEncuestaEps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespLiteral_EncuestaLiteral">
+    <End Type="CoomuceModel.EncuestaLiteral" Role="EncuestaLiteral" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEpsRespLiteral" Role="EncuestaEpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaEpsRespPregunta_EncuestaPregunta">
+    <End Type="CoomuceModel.EncuestaPregunta" Role="EncuestaPregunta" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaEpsRespPregunta" Role="EncuestaEpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Principal>
+      <Dependent Role="EncuestaEpsRespPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIps_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIps" Role="EncuestaIps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="EncuestaIps">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIps_Ips">
+    <End Type="CoomuceModel.Ips" Role="Ips" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIps" Role="EncuestaIps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ips">
+        <PropertyRef Name="idIps" />
+      </Principal>
+      <Dependent Role="EncuestaIps">
+        <PropertyRef Name="idIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIps_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIps" Role="EncuestaIps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EncuestaIps">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespLiteral_EncuestaIps">
+    <End Type="CoomuceModel.EncuestaIps" Role="EncuestaIps" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIpsRespLiteral" Role="EncuestaIpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaIps">
+        <PropertyRef Name="idEncuestaIps" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespLiteral">
+        <PropertyRef Name="idEncuestaIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespPregunta_EncuestaIps">
+    <End Type="CoomuceModel.EncuestaIps" Role="EncuestaIps" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIpsRespPregunta" Role="EncuestaIpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaIps">
+        <PropertyRef Name="idEncuestaIps" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespPregunta">
+        <PropertyRef Name="idEncuestaIps" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespLiteral_EncuestaLiteral">
+    <End Type="CoomuceModel.EncuestaLiteral" Role="EncuestaLiteral" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIpsRespLiteral" Role="EncuestaIpsRespLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespLiteral">
+        <PropertyRef Name="idEncuestaLiteral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaIpsRespPregunta_EncuestaPregunta">
+    <End Type="CoomuceModel.EncuestaPregunta" Role="EncuestaPregunta" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaIpsRespPregunta" Role="EncuestaIpsRespPregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Principal>
+      <Dependent Role="EncuestaIpsRespPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EncuestaLiteral_EncuestaPregunta">
+    <End Type="CoomuceModel.EncuestaPregunta" Role="EncuestaPregunta" Multiplicity="1" />
+    <End Type="CoomuceModel.EncuestaLiteral" Role="EncuestaLiteral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EncuestaPregunta">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Principal>
+      <Dependent Role="EncuestaLiteral">
+        <PropertyRef Name="idEncuestaPregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoAfiliacion">
+    <End Type="CoomuceModel.TipoAfiliacion" Role="TipoAfiliacion" Multiplicity="1" />
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAfiliacion">
+        <PropertyRef Name="idTipoAfiliacion" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoAfiliacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoAfiliado">
+    <End Type="CoomuceModel.TipoAfiliado" Role="TipoAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAfiliado">
+        <PropertyRef Name="idTipoAfiliado" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoCotizante">
+    <End Type="CoomuceModel.TipoCotizante" Role="TipoCotizante" Multiplicity="1" />
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCotizante">
+        <PropertyRef Name="idTipoCotizante" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoCotizante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoRegimen">
+    <End Type="CoomuceModel.TipoRegimen" Role="TipoRegimen" Multiplicity="1" />
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRegimen">
+        <PropertyRef Name="idTipoRegimen" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoRegimen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_TipoTramite">
+    <End Type="CoomuceModel.TipoTramite" Role="TipoTramite" Multiplicity="1" />
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTramite">
+        <PropertyRef Name="idTipoTramite" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idTipoTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fuan_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Fuan">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_Fuan">
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAnexos_Fuan">
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanAnexos" Role="FuanAnexos" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanAnexos">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanDeclaracionAutorizacion_Fuan">
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanDeclaracionAutorizacion" Role="FuanDeclaracionAutorizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanDeclaracionAutorizacion">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEntidadTerritorial_Fuan">
+    <End Type="CoomuceModel.Fuan" Role="Fuan" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanEntidadTerritorial" Role="FuanEntidadTerritorial" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Fuan">
+        <PropertyRef Name="idFuan" />
+      </Principal>
+      <Dependent Role="FuanEntidadTerritorial">
+        <PropertyRef Name="idFuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_CondicionDiscapacidad">
+    <End Type="CoomuceModel.CondicionDiscapacidad" Role="CondicionDiscapacidad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CondicionDiscapacidad">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_GrupoPoblacional">
+    <End Type="CoomuceModel.GrupoPoblacional" Role="GrupoPoblacional" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoPoblacional">
+        <PropertyRef Name="idGrupoPoblacional" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idGrupoPoblacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoDiscapacidad">
+    <End Type="CoomuceModel.TipoDiscapacidad" Role="TipoDiscapacidad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDiscapacidad">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoEtnia">
+    <End Type="CoomuceModel.TipoEtnia" Role="TipoEtnia" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEtnia">
+        <PropertyRef Name="idTipoEtnia" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoEtnia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoIdentificacion">
+    <End Type="CoomuceModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoIdentificacion1">
+    <End Type="CoomuceModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoIdentificacionConyugue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoSexo">
+    <End Type="CoomuceModel.TipoSexo" Role="TipoSexo" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoSexo1">
+    <End Type="CoomuceModel.TipoSexo" Role="TipoSexo" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoSexoConyugue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanAfiliado_TipoZona">
+    <End Type="CoomuceModel.TipoZona" Role="TipoZona" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoZona">
+        <PropertyRef Name="idTipoZona" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEmpleadorAfiliado_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanEmpleadorAfiliado" Role="FuanEmpleadorAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanEmpleadorAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanIpsPrimariaAfiliado_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanIpsPrimariaAfiliado" Role="FuanIpsPrimariaAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanIpsPrimariaAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanReporteNovedad_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanReporteNovedad" Role="FuanReporteNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="FuanReporteNovedad">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistorialUltimosFormatos_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.HistorialUltimosFormatos" Role="HistorialUltimosFormatos" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="HistorialUltimosFormatos">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoHfdfr_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.InfoHfdfr" Role="InfoHfdfr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="InfoHfdfr">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoIfppir_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.InfoIfppir" Role="InfoIfppir" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="InfoIfppir">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaAsistenciaGeneral_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.ListaAsistenciaGeneral" Role="ListaAsistenciaGeneral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="ListaAsistenciaGeneral">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_FuanAfiliado">
+    <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanAfiliado">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idFuanAfiliado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_CondicionDiscapacidad">
+    <End Type="CoomuceModel.CondicionDiscapacidad" Role="CondicionDiscapacidad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CondicionDiscapacidad">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idCondicionDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoDiscapacidad">
+    <End Type="CoomuceModel.TipoDiscapacidad" Role="TipoDiscapacidad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDiscapacidad">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoDiscapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoEtnia">
+    <End Type="CoomuceModel.TipoEtnia" Role="TipoEtnia" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEtnia">
+        <PropertyRef Name="idTipoEtnia" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoEtnia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoIdentificacion">
+    <End Type="CoomuceModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoParentesco">
+    <End Type="CoomuceModel.TipoParentesco" Role="TipoParentesco" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParentesco">
+        <PropertyRef Name="idTipoParentesco" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoParentesco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoSexo">
+    <End Type="CoomuceModel.TipoSexo" Role="TipoSexo" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanBeneficiariosAfiliado_TipoZona">
+    <End Type="CoomuceModel.TipoZona" Role="TipoZona" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanBeneficiariosAfiliado" Role="FuanBeneficiariosAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoZona">
+        <PropertyRef Name="idTipoZona" />
+      </Principal>
+      <Dependent Role="FuanBeneficiariosAfiliado">
+        <PropertyRef Name="idTipoZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanDeclaracionAutorizacion_DeclaracionAutorizacion">
+    <End Type="CoomuceModel.DeclaracionAutorizacion" Role="DeclaracionAutorizacion" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanDeclaracionAutorizacion" Role="FuanDeclaracionAutorizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeclaracionAutorizacion">
+        <PropertyRef Name="idDeclaracionAutorizacion" />
+      </Principal>
+      <Dependent Role="FuanDeclaracionAutorizacion">
+        <PropertyRef Name="idDeclaracionAutorizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEmpleadorAfiliado_TipoIdentificacion">
+    <End Type="CoomuceModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanEmpleadorAfiliado" Role="FuanEmpleadorAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="FuanEmpleadorAfiliado">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanEntidadTerritorial_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanEntidadTerritorial" Role="FuanEntidadTerritorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="FuanEntidadTerritorial">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanReporteNovedad_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanReporteNovedad" Role="FuanReporteNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="FuanReporteNovedad">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanTipoNovedad_FuanReporteNovedad">
+    <End Type="CoomuceModel.FuanReporteNovedad" Role="FuanReporteNovedad" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanTipoNovedad" Role="FuanTipoNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuanReporteNovedad">
+        <PropertyRef Name="idFuanReporteNovedad" />
+      </Principal>
+      <Dependent Role="FuanTipoNovedad">
+        <PropertyRef Name="idFuanReporteNovedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuanTipoNovedad_TipoNovedad">
+    <End Type="CoomuceModel.TipoNovedad" Role="TipoNovedad" Multiplicity="1" />
+    <End Type="CoomuceModel.FuanTipoNovedad" Role="FuanTipoNovedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoNovedad">
+        <PropertyRef Name="idTipoNovedad" />
+      </Principal>
+      <Dependent Role="FuanTipoNovedad">
+        <PropertyRef Name="idTipoNovedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IfppirRespuestaFactor_InfoIfppir">
+    <End Type="CoomuceModel.InfoIfppir" Role="InfoIfppir" Multiplicity="1" />
+    <End Type="CoomuceModel.IfppirRespuestaFactor" Role="IfppirRespuestaFactor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoIfppir">
+        <PropertyRef Name="idInfoIfppir" />
+      </Principal>
+      <Dependent Role="IfppirRespuestaFactor">
+        <PropertyRef Name="idInfoIfppir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IfppirRespuestaFactor_PreguntasSubFactorRiesgo">
+    <End Type="CoomuceModel.PreguntasSubFactorRiesgo" Role="PreguntasSubFactorRiesgo" Multiplicity="1" />
+    <End Type="CoomuceModel.IfppirRespuestaFactor" Role="IfppirRespuestaFactor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="IfppirRespuestaFactor">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoHfdfr_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="CoomuceModel.InfoHfdfr" Role="InfoHfdfr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InfoHfdfr">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoIfppir_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="CoomuceModel.InfoIfppir" Role="InfoIfppir" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InfoIfppir">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InfoPurisu_Usuario">
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="CoomuceModel.InfoPurisu" Role="InfoPurisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InfoPurisu">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_InfoPurisu">
+    <End Type="CoomuceModel.InfoPurisu" Role="InfoPurisu" Multiplicity="1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoPurisu">
+        <PropertyRef Name="idInfoPurisu" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idInfoPurisu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Eje">
+    <End Type="CoomuceModel.Eje" Role="Eje" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eje">
+        <PropertyRef Name="idEje" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idEje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Eje1">
+    <End Type="CoomuceModel.Eje" Role="Eje" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eje">
+        <PropertyRef Name="idEje" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idEje1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_GrupoInteres">
+    <End Type="CoomuceModel.GrupoInteres" Role="GrupoInteres" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoInteres">
+        <PropertyRef Name="idGrupoInteres" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idGrupoInteres" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_GruposFocales">
+    <End Type="CoomuceModel.GruposFocales" Role="GruposFocales" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GruposFocales">
+        <PropertyRef Name="idGruposFocales" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idGruposFocales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Modulo">
+    <End Type="CoomuceModel.Modulo" Role="Modulo" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="idModulo" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Modulo1">
+    <End Type="CoomuceModel.Modulo" Role="Modulo" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="idModulo" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idModulo1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_ProgramaResolucion412">
+    <End Type="CoomuceModel.ProgramaResolucion412" Role="ProgramaResolucion412" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgramaResolucion412">
+        <PropertyRef Name="idProgramaResolucion412" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idProgramaResolucion412" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_SeguimientoProgramasIntervencionRiesgo">
+    <End Type="CoomuceModel.SeguimientoProgramasIntervencionRiesgo" Role="SeguimientoProgramasIntervencionRiesgo" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SeguimientoProgramasIntervencionRiesgo">
+        <PropertyRef Name="idSeguimientoProgramasIntervencionRiesgo" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idSeguimientoProgramasIntervencionRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_TipoVisitaDomiciliaria">
+    <End Type="CoomuceModel.TipoVisitaDomiciliaria" Role="TipoVisitaDomiciliaria" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoVisitaDomiciliaria">
+        <PropertyRef Name="idTipoVisitaDomiciliaria" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idTipoVisitaDomiciliaria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Unidad">
+    <End Type="CoomuceModel.Unidad" Role="Unidad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidad">
+        <PropertyRef Name="idUnidad" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purisu_Unidad1">
+    <End Type="CoomuceModel.Unidad" Role="Unidad" Multiplicity="0..1" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidad">
+        <PropertyRef Name="idUnidad" />
+      </Principal>
+      <Dependent Role="Purisu">
+        <PropertyRef Name="idUnidad1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalPreguntasSubFactorRiesgo_CicloVital">
+    <End Type="CoomuceModel.CicloVital" Role="CicloVital" Multiplicity="1" />
+    <End Type="CoomuceModel.CicloVitalPreguntasSubFactorRiesgo" Role="CicloVitalPreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CicloVital">
+        <PropertyRef Name="idCicloVital" />
+      </Principal>
+      <Dependent Role="CicloVitalPreguntasSubFactorRiesgo">
+        <PropertyRef Name="idCicloVital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalGestante_PreguntasSubFactorRiesgo">
+    <End Type="CoomuceModel.PreguntasSubFactorRiesgo" Role="PreguntasSubFactorRiesgo" Multiplicity="1" />
+    <End Type="CoomuceModel.CicloVitalGestante" Role="CicloVitalGestante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="CicloVitalGestante">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalPreguntasSubFactorRiesgo_PreguntasSubFactorRiesgo">
+    <End Type="CoomuceModel.PreguntasSubFactorRiesgo" Role="PreguntasSubFactorRiesgo" Multiplicity="1" />
+    <End Type="CoomuceModel.CicloVitalPreguntasSubFactorRiesgo" Role="CicloVitalPreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="CicloVitalPreguntasSubFactorRiesgo">
+        <PropertyRef Name="idPreguntasSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CicloVitalPreguntasSubFactorRiesgo_TipoSexo">
+    <End Type="CoomuceModel.TipoSexo" Role="TipoSexo" Multiplicity="1" />
+    <End Type="CoomuceModel.CicloVitalPreguntasSubFactorRiesgo" Role="CicloVitalPreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSexo">
+        <PropertyRef Name="idTipoSexo" />
+      </Principal>
+      <Dependent Role="CicloVitalPreguntasSubFactorRiesgo">
+        <PropertyRef Name="idTipoSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unidad_Eje">
+    <End Type="CoomuceModel.Eje" Role="Eje" Multiplicity="1" />
+    <End Type="CoomuceModel.Unidad" Role="Unidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eje">
+        <PropertyRef Name="idEje" />
+      </Principal>
+      <Dependent Role="Unidad">
+        <PropertyRef Name="idEje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubFactorRiesgo_FactorRiesgo">
+    <End Type="CoomuceModel.FactorRiesgo" Role="FactorRiesgo" Multiplicity="1" />
+    <End Type="CoomuceModel.SubFactorRiesgo" Role="SubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FactorRiesgo">
+        <PropertyRef Name="idFactorRiesgo" />
+      </Principal>
+      <Dependent Role="SubFactorRiesgo">
+        <PropertyRef Name="idFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ips_TipoIdentificacion">
+    <End Type="CoomuceModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="1" />
+    <End Type="CoomuceModel.Ips" Role="Ips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Ips">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modulo_Unidad">
+    <End Type="CoomuceModel.Unidad" Role="Unidad" Multiplicity="1" />
+    <End Type="CoomuceModel.Modulo" Role="Modulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidad">
+        <PropertyRef Name="idUnidad" />
+      </Principal>
+      <Dependent Role="Modulo">
+        <PropertyRef Name="idUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreguntasSubFactorRiesgo_SubFactorRiesgo">
+    <End Type="CoomuceModel.SubFactorRiesgo" Role="SubFactorRiesgo" Multiplicity="1" />
+    <End Type="CoomuceModel.PreguntasSubFactorRiesgo" Role="PreguntasSubFactorRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubFactorRiesgo">
+        <PropertyRef Name="idSubFactorRiesgo" />
+      </Principal>
+      <Dependent Role="PreguntasSubFactorRiesgo">
+        <PropertyRef Name="idSubFactorRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_TipoIdentificacion">
+    <End Type="CoomuceModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="1" />
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Rol">
+    <End Type="CoomuceModel.Rol" Role="Rol" Multiplicity="1" />
+    <End Type="CoomuceModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PurisuMotivoConsulta">
+    <End Type="CoomuceModel.MotivoConsulta" Role="MotivoConsulta" Multiplicity="*" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+  </Association>
+  <Association Name="PurisuMotivoContacto">
+    <End Type="CoomuceModel.MotivoContacto" Role="MotivoContacto" Multiplicity="*" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+  </Association>
+  <Association Name="PurisuPiezasInformativas">
+    <End Type="CoomuceModel.PiezasInformativas" Role="PiezasInformativas" Multiplicity="*" />
+    <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
+  </Association>
+</Schema>

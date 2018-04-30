@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B68715F9-5BA5-47AE-AE03-32EC6BA551FA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Coomuce.DirectorServicios</RootNamespace>
+    <AssemblyName>Coomuce.DirectorServicios</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Connected Services\Historia\Coomuce.DirectorServicios.Historia.ResultadoFicha_028EL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\Historia\Coomuce.DirectorServicios.Historia.VerificaFicha_028EL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\Historia\Ficha_028.disco" />
+    <None Include="Connected Services\Historia\configuration91.svcinfo" />
+    <None Include="Connected Services\Historia\configuration.svcinfo" />
+    <None Include="Connected Services\Historia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\ServiceReference\Coomuce.DirectorServicios.ServiceReference.ResultadoFicha_042EL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference\Coomuce.DirectorServicios.ServiceReference.VerificaFicha_042EL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\Historia\Ficha_028.wsdl" />
+    <None Include="Connected Services\Historia\Ficha_028.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Historia\Ficha_0281.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Historia\Ficha_0282.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\Ficha_042.disco" />
+    <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="CoomuceAdministracion.svc" />
+    <Content Include="CoomuceFunciones.svc" />
+    <Content Include="CoomuceParametros.svc" />
+    <Content Include="CoomuceSeguridad.svc" />
+    <Content Include="Entidad\Coomuce.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Coomuce.Context.cs</LastGenOutput>
+      <DependentUpon>Coomuce.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entidad\Coomuce.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Coomuce.edmx</DependentUpon>
+      <LastGenOutput>Coomuce.cs</LastGenOutput>
+    </Content>
+    <Content Include="PromocionPrevencion\ServicioFicha042.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\ConstruirMenu.cs" />
+    <Compile Include="Clases\Generales.cs" />
+    <Compile Include="Connected Services\Historia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CoomuceAdministracion.svc.cs">
+      <DependentUpon>CoomuceAdministracion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CoomuceFunciones.svc.cs">
+      <DependentUpon>CoomuceFunciones.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CoomuceParametros.svc.cs">
+      <DependentUpon>CoomuceParametros.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CoomuceSeguridad.svc.cs">
+      <DependentUpon>CoomuceSeguridad.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\AsistenciaGeneral.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CicloVital.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CicloVitalGestante.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CicloVitalPreguntasSubFactorRiesgo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Ciudad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CondicionDiscapacidad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\CondicionVivienda.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\ConfiguracionCuerpoCorreo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\ConfiguracionGeneral.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Coomuce.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Coomuce.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Coomuce.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Coomuce.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Coomuce.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\DeclaracionAutorizacion.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Departamento.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\DisposicionBasura.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\DisposicionExcreta.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Eje.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaCategoria.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaEps.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaEpsRespLiteral.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaEpsRespPregunta.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaIps.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaIpsRespLiteral.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaIpsRespPregunta.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaLiteral.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\EncuestaPregunta.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FactorRiesgo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Fuan.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanAfiliado.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanAnexos.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanBeneficiariosAfiliado.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanDeclaracionAutorizacion.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanEmpleadorAfiliado.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanEntidadTerritorial.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanIpsPrimariaAfiliado.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanReporteNovedad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\FuanTipoNovedad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\GrupoInteres.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\GrupoPoblacional.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\GruposFocales.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\HistorialUltimosFormatos.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\IfppirRespuestaFactor.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\InfoHfdfr.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\InfoIfppir.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\InfoPurisu.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Ips.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\ListaAsistenciaGeneral.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Menu.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Modulo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\MotivoConsulta.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\MotivoContacto.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\MotivoTraslado.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\NivelEducativo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\PiezasInformativas.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\PreguntasSubFactorRiesgo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Procedencia.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\ProgramaResolucion412.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Purisu.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Rol.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\RolMenu.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\SeguimientoProgramasIntervencionRiesgo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\SubFactorRiesgo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Tenencia.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoAfiliacion.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoAfiliado.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoAnimal.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoCombustible.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoCotizante.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoDiscapacidad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoEtnia.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoIdentificacion.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoNovedad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoParentesco.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoRegimen.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoSexo.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoTramite.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoVisitaDomiciliaria.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoVivienda.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TipoZona.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\TratamientoAgua.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Unidad.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Usuario.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\Vista.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\AfiliadoModel.cs" />
+    <Compile Include="Modelos\EncuestaEpsModel.cs" />
+    <Compile Include="Modelos\AsistenciaGeneralModel.cs" />
+    <Compile Include="Modelos\FuanAfiliadoModel.cs" />
+    <Compile Include="Modelos\FuanEntidadTerritorialModel.cs" />
+    <Compile Include="Modelos\FuanModel.cs" />
+    <Compile Include="Modelos\historiaModel.cs" />
+    <Compile Include="Modelos\InfoHfdfrModel.cs" />
+    <Compile Include="Modelos\fichaModel.cs" />
+    <Compile Include="Modelos\InfoPurisuModel.cs" />
+    <Compile Include="Modelos\ReporteNovedadModel.cs" />
+    <Compile Include="Modelos\TipoAnimalModel.cs" />
+    <Compile Include="Modelos\NivelEducativoModel.cs" />
+    <Compile Include="Modelos\EncuestaIpsModel.cs" />
+    <Compile Include="Modelos\FunDeclaracionAutorizacionModel.cs" />
+    <Compile Include="Modelos\InfoIfppirModel.cs" />
+    <Compile Include="Modelos\PreguntasFactorModel.cs" />
+    <Compile Include="Modelos\FunTipoNovedadModel.cs" />
+    <Compile Include="Modelos\PurisuModel.cs" />
+    <Compile Include="Modelos\DatosSeguridad.cs" />
+    <Compile Include="PromocionPrevencion\ServicioFicha042.svc.cs">
+      <DependentUpon>ServicioFicha042.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\Mensajes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensajes.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Entidad\Coomuce.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Coomuce.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entidad\Coomuce.edmx.diagram">
+      <DependentUpon>Coomuce.edmx</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Connected Services\ServiceReference\Ficha_042.wsdl" />
+    <None Include="Connected Services\ServiceReference\Ficha_042.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\Ficha_0421.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\Ficha_0422.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\CoomuceServicios.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos\Mensajes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Historia\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60871</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60871/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

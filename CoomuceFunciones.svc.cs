@@ -199,6 +199,16 @@ namespace Coomuce.DirectorServicios
         [WebInvoke(
             BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarFirma")]
         string FunParSocImportarFirma();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarDocumento")]
+        string FunParSocImportarDocumento();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarIncapacidadPermanente")]
+        string FunParSocImportarIncapacidadPermanente();
         #endregion
     }
 
@@ -1825,6 +1835,52 @@ namespace Coomuce.DirectorServicios
                 var filePath = path + file.FileName;
                 var extension = Path.GetExtension(filePath);
                 var filename = "Firma_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarDocumento()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Documento_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarIncapacidadPermanente()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Incapacidad_Permanente_" + Guid.NewGuid() + extension;
                 path = path + filename;
 
                 file.SaveAs(path);

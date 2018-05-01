@@ -186,6 +186,7 @@
     <Property Name="idTipoCotizante" Type="tinyint" Nullable="false" />
     <Property Name="codigoCotizanteFuan" Type="varchar" MaxLength="20" />
     <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="firmaAfiliado" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="FuanAfiliado">
     <Key>

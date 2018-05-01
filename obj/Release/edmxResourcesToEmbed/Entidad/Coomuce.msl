@@ -189,6 +189,7 @@
     <EntitySetMapping Name="Fuan">
       <EntityTypeMapping TypeName="CoomuceModel.Fuan">
         <MappingFragment StoreEntitySet="Fuan">
+          <ScalarProperty Name="firmaAfiliado" ColumnName="firmaAfiliado" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="codigoCotizanteFuan" ColumnName="codigoCotizanteFuan" />
           <ScalarProperty Name="idTipoCotizante" ColumnName="idTipoCotizante" />

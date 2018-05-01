@@ -191,6 +191,7 @@
           <Property Name="idTipoCotizante" Type="tinyint" Nullable="false" />
           <Property Name="codigoCotizanteFuan" Type="varchar" MaxLength="20" />
           <Property Name="idUsuario" Type="int" Nullable="false" />
+          <Property Name="firmaAfiliado" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="FuanAfiliado">
           <Key>
@@ -3475,6 +3476,7 @@
           <NavigationProperty Name="FuanAnexos" Relationship="CoomuceModel.FK_FuanAnexos_Fuan" FromRole="Fuan" ToRole="FuanAnexos" />
           <NavigationProperty Name="FuanDeclaracionAutorizacion" Relationship="CoomuceModel.FK_FuanDeclaracionAutorizacion_Fuan" FromRole="Fuan" ToRole="FuanDeclaracionAutorizacion" />
           <NavigationProperty Name="FuanEntidadTerritorial" Relationship="CoomuceModel.FK_FuanEntidadTerritorial_Fuan" FromRole="Fuan" ToRole="FuanEntidadTerritorial" />
+          <Property Name="firmaAfiliado" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="FuanAfiliado">
           <Key>
@@ -5742,6 +5744,7 @@
           <EntitySetMapping Name="Fuan">
             <EntityTypeMapping TypeName="CoomuceModel.Fuan">
               <MappingFragment StoreEntitySet="Fuan">
+                <ScalarProperty Name="firmaAfiliado" ColumnName="firmaAfiliado" />
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
                 <ScalarProperty Name="codigoCotizanteFuan" ColumnName="codigoCotizanteFuan" />
                 <ScalarProperty Name="idTipoCotizante" ColumnName="idTipoCotizante" />

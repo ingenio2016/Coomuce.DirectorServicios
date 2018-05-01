@@ -30,6 +30,7 @@ namespace Coomuce.DirectorServicios.Entidad
         public byte idTipoCotizante { get; set; }
         public string codigoCotizanteFuan { get; set; }
         public int idUsuario { get; set; }
+        public string firmaAfiliado { get; set; }
     
         public virtual TipoAfiliacion TipoAfiliacion { get; set; }
         public virtual TipoAfiliado TipoAfiliado { get; set; }

@@ -231,30 +231,31 @@
     <Property Name="firmaFuanAfiliado" Type="varchar" MaxLength="100" />
     <Property Name="cabezafamilia" Type="int" />
     <Property Name="grupofamiliar" Type="int" />
+    <Property Name="identificacionAnexo" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="FuanAnexos">
     <Key>
       <PropertyRef Name="idFuan" />
     </Key>
     <Property Name="idFuan" Type="int" Nullable="false" />
-    <Property Name="anexo56FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo56CNFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56RCFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56TIFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56CCFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56PAFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56CEFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56CDFuanAnexos" Type="tinyint" />
-    <Property Name="anexo56CSFuanAnexos" Type="tinyint" />
-    <Property Name="anexo57FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo58FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo59FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo60FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo61FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo62FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo63FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo64FuanAnexos" Type="bit" Nullable="false" />
-    <Property Name="anexo65FuanAnexos" Type="bit" Nullable="false" />
+    <Property Name="totalAnexo56FuanAnexos" Type="int" Nullable="false" />
+    <Property Name="totalAnexo56CNFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56RCFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56TIFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56CCFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56PAFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56CEFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56CDFuanAnexos" Type="int" />
+    <Property Name="totalAnexo56CSFuanAnexos" Type="int" />
+    <Property Name="anexo57" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo58" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo59" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo60" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo61" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo62" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo63" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo64" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="anexo65" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <EntityType Name="FuanBeneficiariosAfiliado">
     <Key>
@@ -505,6 +506,25 @@
     <Property Name="idInfoPurisu" Type="int" Nullable="false" />
     <Property Name="idPurisu" Type="int" Nullable="false" />
     <Property Name="idPiezasInformativas" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="afp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="nvarchar" MaxLength="50" />
+    <Property Name="nit" Type="nvarchar" MaxLength="50" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="arl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="nvarchar" MaxLength="50" />
+    <Property Name="nit" Type="nvarchar" MaxLength="50" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="500" />
+    <Property Name="nombreCompleto" Type="nvarchar" MaxLength="600" />
   </EntityType>
   <EntityType Name="CicloVital">
     <Key>
@@ -2242,6 +2262,8 @@
     <EntitySet Name="PurisuMotivoConsulta" EntityType="Self.PurisuMotivoConsulta" Schema="FUN" store:Type="Tables" />
     <EntitySet Name="PurisuMotivoContacto" EntityType="Self.PurisuMotivoContacto" Schema="FUN" store:Type="Tables" />
     <EntitySet Name="PurisuPiezasInformativas" EntityType="Self.PurisuPiezasInformativas" Schema="FUN" store:Type="Tables" />
+    <EntitySet Name="afp" EntityType="Self.afp" Schema="PAR" store:Type="Tables" />
+    <EntitySet Name="arl" EntityType="Self.arl" Schema="PAR" store:Type="Tables" />
     <EntitySet Name="CicloVital" EntityType="Self.CicloVital" Schema="PAR" store:Type="Tables" />
     <EntitySet Name="CicloVitalGestante" EntityType="Self.CicloVitalGestante" Schema="PAR" store:Type="Tables" />
     <EntitySet Name="CicloVitalPreguntasSubFactorRiesgo" EntityType="Self.CicloVitalPreguntasSubFactorRiesgo" Schema="PAR" store:Type="Tables" />

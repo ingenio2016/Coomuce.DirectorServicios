@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="774ed2db873944c992491441585daa53" Name="Diagram1" ZoomLevel="90">
+      <Diagram DiagramId="774ed2db873944c992491441585daa53" Name="Diagram1" ZoomLevel="142">
         <EntityTypeShape EntityType="CoomuceModel.Ciudad" Width="1.5" PointX="6.75" PointY="30.5" />
         <EntityTypeShape EntityType="CoomuceModel.ConfiguracionCuerpoCorreo" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="CoomuceModel.ConfiguracionGeneral" Width="1.5" PointX="2.75" PointY="4.75" />
@@ -24,7 +24,7 @@
         <EntityTypeShape EntityType="CoomuceModel.EncuestaPregunta" Width="1.5" PointX="12" PointY="22" />
         <EntityTypeShape EntityType="CoomuceModel.Fuan" Width="1.5" PointX="11.25" PointY="34.125" />
         <EntityTypeShape EntityType="CoomuceModel.FuanAfiliado" Width="1.5" PointX="9" PointY="39.25" />
-        <EntityTypeShape EntityType="CoomuceModel.FuanAnexos" Width="1.5" PointX="13.5" PointY="31" />
+        <EntityTypeShape EntityType="CoomuceModel.FuanAnexos" Width="2.875" PointX="13.5" PointY="31" />
         <EntityTypeShape EntityType="CoomuceModel.FuanBeneficiariosAfiliado" Width="1.5" PointX="14.25" PointY="50.375" />
         <EntityTypeShape EntityType="CoomuceModel.FuanDeclaracionAutorizacion" Width="1.5" PointX="16.5" PointY="32.5" />
         <EntityTypeShape EntityType="CoomuceModel.FuanEmpleadorAfiliado" Width="1.5" PointX="17.25" PointY="38.625" />
@@ -190,6 +190,8 @@
         <AssociationConnector Association="CoomuceModel.PurisuMotivoConsulta" />
         <AssociationConnector Association="CoomuceModel.PurisuMotivoContacto" />
         <AssociationConnector Association="CoomuceModel.PurisuPiezasInformativas" />
+        <EntityTypeShape EntityType="CoomuceModel.afp" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="CoomuceModel.arl" Width="1.5" PointX="9.375" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -205,6 +205,7 @@
     <EntitySetMapping Name="FuanAfiliado">
       <EntityTypeMapping TypeName="CoomuceModel.FuanAfiliado">
         <MappingFragment StoreEntitySet="FuanAfiliado">
+          <ScalarProperty Name="identificacionAnexo" ColumnName="identificacionAnexo" />
           <ScalarProperty Name="grupofamiliar" ColumnName="grupofamiliar" />
           <ScalarProperty Name="cabezafamilia" ColumnName="cabezafamilia" />
           <ScalarProperty Name="firmaFuanAfiliado" ColumnName="firmaFuanAfiliado" />
@@ -250,24 +251,24 @@
     <EntitySetMapping Name="FuanAnexos">
       <EntityTypeMapping TypeName="CoomuceModel.FuanAnexos">
         <MappingFragment StoreEntitySet="FuanAnexos">
-          <ScalarProperty Name="anexo65FuanAnexos" ColumnName="anexo65FuanAnexos" />
-          <ScalarProperty Name="anexo64FuanAnexos" ColumnName="anexo64FuanAnexos" />
-          <ScalarProperty Name="anexo63FuanAnexos" ColumnName="anexo63FuanAnexos" />
-          <ScalarProperty Name="anexo62FuanAnexos" ColumnName="anexo62FuanAnexos" />
-          <ScalarProperty Name="anexo61FuanAnexos" ColumnName="anexo61FuanAnexos" />
-          <ScalarProperty Name="anexo60FuanAnexos" ColumnName="anexo60FuanAnexos" />
-          <ScalarProperty Name="anexo59FuanAnexos" ColumnName="anexo59FuanAnexos" />
-          <ScalarProperty Name="anexo58FuanAnexos" ColumnName="anexo58FuanAnexos" />
-          <ScalarProperty Name="anexo57FuanAnexos" ColumnName="anexo57FuanAnexos" />
-          <ScalarProperty Name="anexo56CSFuanAnexos" ColumnName="anexo56CSFuanAnexos" />
-          <ScalarProperty Name="anexo56CDFuanAnexos" ColumnName="anexo56CDFuanAnexos" />
-          <ScalarProperty Name="anexo56CEFuanAnexos" ColumnName="anexo56CEFuanAnexos" />
-          <ScalarProperty Name="anexo56PAFuanAnexos" ColumnName="anexo56PAFuanAnexos" />
-          <ScalarProperty Name="anexo56CCFuanAnexos" ColumnName="anexo56CCFuanAnexos" />
-          <ScalarProperty Name="anexo56TIFuanAnexos" ColumnName="anexo56TIFuanAnexos" />
-          <ScalarProperty Name="anexo56RCFuanAnexos" ColumnName="anexo56RCFuanAnexos" />
-          <ScalarProperty Name="anexo56CNFuanAnexos" ColumnName="anexo56CNFuanAnexos" />
-          <ScalarProperty Name="anexo56FuanAnexos" ColumnName="anexo56FuanAnexos" />
+          <ScalarProperty Name="anexo65" ColumnName="anexo65" />
+          <ScalarProperty Name="anexo64" ColumnName="anexo64" />
+          <ScalarProperty Name="anexo63" ColumnName="anexo63" />
+          <ScalarProperty Name="anexo62" ColumnName="anexo62" />
+          <ScalarProperty Name="anexo61" ColumnName="anexo61" />
+          <ScalarProperty Name="anexo60" ColumnName="anexo60" />
+          <ScalarProperty Name="anexo59" ColumnName="anexo59" />
+          <ScalarProperty Name="anexo58" ColumnName="anexo58" />
+          <ScalarProperty Name="anexo57" ColumnName="anexo57" />
+          <ScalarProperty Name="totalAnexo56CSFuanAnexos" ColumnName="totalAnexo56CSFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56CDFuanAnexos" ColumnName="totalAnexo56CDFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56CEFuanAnexos" ColumnName="totalAnexo56CEFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56PAFuanAnexos" ColumnName="totalAnexo56PAFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56CCFuanAnexos" ColumnName="totalAnexo56CCFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56TIFuanAnexos" ColumnName="totalAnexo56TIFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56RCFuanAnexos" ColumnName="totalAnexo56RCFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56CNFuanAnexos" ColumnName="totalAnexo56CNFuanAnexos" />
+          <ScalarProperty Name="totalAnexo56FuanAnexos" ColumnName="totalAnexo56FuanAnexos" />
           <ScalarProperty Name="idFuan" ColumnName="idFuan" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -965,5 +966,26 @@
         <ScalarProperty Name="idPiezasInformativas" ColumnName="idPiezasInformativas" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="afp">
+      <EntityTypeMapping TypeName="CoomuceModel.afp">
+        <MappingFragment StoreEntitySet="afp">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arl">
+      <EntityTypeMapping TypeName="CoomuceModel.arl">
+        <MappingFragment StoreEntitySet="arl">
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

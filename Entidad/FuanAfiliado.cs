@@ -68,6 +68,7 @@ namespace Coomuce.DirectorServicios.Entidad
         public string firmaFuanAfiliado { get; set; }
         public Nullable<int> cabezafamilia { get; set; }
         public Nullable<int> grupofamiliar { get; set; }
+        public string identificacionAnexo { get; set; }
     
         public virtual Ciudad Ciudad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -15,24 +15,24 @@ namespace Coomuce.DirectorServicios.Entidad
     public partial class FuanAnexos
     {
         public int idFuan { get; set; }
-        public bool anexo56FuanAnexos { get; set; }
-        public Nullable<byte> anexo56CNFuanAnexos { get; set; }
-        public Nullable<byte> anexo56RCFuanAnexos { get; set; }
-        public Nullable<byte> anexo56TIFuanAnexos { get; set; }
-        public Nullable<byte> anexo56CCFuanAnexos { get; set; }
-        public Nullable<byte> anexo56PAFuanAnexos { get; set; }
-        public Nullable<byte> anexo56CEFuanAnexos { get; set; }
-        public Nullable<byte> anexo56CDFuanAnexos { get; set; }
-        public Nullable<byte> anexo56CSFuanAnexos { get; set; }
-        public bool anexo57FuanAnexos { get; set; }
-        public bool anexo58FuanAnexos { get; set; }
-        public bool anexo59FuanAnexos { get; set; }
-        public bool anexo60FuanAnexos { get; set; }
-        public bool anexo61FuanAnexos { get; set; }
-        public bool anexo62FuanAnexos { get; set; }
-        public bool anexo63FuanAnexos { get; set; }
-        public bool anexo64FuanAnexos { get; set; }
-        public bool anexo65FuanAnexos { get; set; }
+        public int totalAnexo56FuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56CNFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56RCFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56TIFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56CCFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56PAFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56CEFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56CDFuanAnexos { get; set; }
+        public Nullable<int> totalAnexo56CSFuanAnexos { get; set; }
+        public string anexo57 { get; set; }
+        public string anexo58 { get; set; }
+        public string anexo59 { get; set; }
+        public string anexo60 { get; set; }
+        public string anexo61 { get; set; }
+        public string anexo62 { get; set; }
+        public string anexo63 { get; set; }
+        public string anexo64 { get; set; }
+        public string anexo65 { get; set; }
     
         public virtual Fuan Fuan { get; set; }
     }

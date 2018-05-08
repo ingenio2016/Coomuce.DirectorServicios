@@ -501,6 +501,8 @@
       <End Role="PiezasInformativas" EntitySet="PiezasInformativas" />
       <End Role="Purisu" EntitySet="Purisu" />
     </AssociationSet>
+    <EntitySet Name="afp" EntityType="CoomuceModel.afp" />
+    <EntitySet Name="arl" EntityType="CoomuceModel.arl" />
   </EntityContainer>
   <EntityType Name="Ciudad">
     <Key>
@@ -813,31 +815,32 @@
     <NavigationProperty Name="Purisu" Relationship="CoomuceModel.FK_Purisu_FuanAfiliado" FromRole="FuanAfiliado" ToRole="Purisu" />
     <Property Name="cabezafamilia" Type="Int32" />
     <Property Name="grupofamiliar" Type="Int32" />
+    <Property Name="identificacionAnexo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="FuanAnexos">
     <Key>
       <PropertyRef Name="idFuan" />
     </Key>
     <Property Name="idFuan" Type="Int32" Nullable="false" />
-    <Property Name="anexo56FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo56CNFuanAnexos" Type="Byte" />
-    <Property Name="anexo56RCFuanAnexos" Type="Byte" />
-    <Property Name="anexo56TIFuanAnexos" Type="Byte" />
-    <Property Name="anexo56CCFuanAnexos" Type="Byte" />
-    <Property Name="anexo56PAFuanAnexos" Type="Byte" />
-    <Property Name="anexo56CEFuanAnexos" Type="Byte" />
-    <Property Name="anexo56CDFuanAnexos" Type="Byte" />
-    <Property Name="anexo56CSFuanAnexos" Type="Byte" />
-    <Property Name="anexo57FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo58FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo59FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo60FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo61FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo62FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo63FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo64FuanAnexos" Type="Boolean" Nullable="false" />
-    <Property Name="anexo65FuanAnexos" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Fuan" Relationship="CoomuceModel.FK_FuanAnexos_Fuan" FromRole="FuanAnexos" ToRole="Fuan" />
+    <Property Name="totalAnexo56FuanAnexos" Type="Int32" Nullable="false" />
+    <Property Name="totalAnexo56CNFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56RCFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56TIFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56CCFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56PAFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56CEFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56CDFuanAnexos" Type="Int32" />
+    <Property Name="totalAnexo56CSFuanAnexos" Type="Int32" />
+    <Property Name="anexo57" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo58" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo59" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo60" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo61" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo62" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo63" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo64" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anexo65" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="FuanBeneficiariosAfiliado">
     <Key>
@@ -2820,4 +2823,23 @@
     <End Type="CoomuceModel.PiezasInformativas" Role="PiezasInformativas" Multiplicity="*" />
     <End Type="CoomuceModel.Purisu" Role="Purisu" Multiplicity="*" />
   </Association>
+  <EntityType Name="afp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nombreCompleto" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

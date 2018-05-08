@@ -175,6 +175,14 @@ namespace Coomuce.DirectorServicios
         Stream GetFunIpsAll();
 
         [OperationContract]
+        [WebGet(UriTemplate = "GetArlAll")]
+        Stream GetFunArlAll();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "GetAfpAll")]
+        Stream GetFunAfpAll();
+
+        [OperationContract]
         [WebInvoke(
             BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "EncuestaIpsGuardar")]
         Stream FunEncuestaIpsGuardar(EncuestaIpsModel encuestaIps, List<EncuestaIpsRespPregunta> respPregunta, List<EncuestaIpsRespLiteral> respLiteral);
@@ -209,6 +217,46 @@ namespace Coomuce.DirectorServicios
         [WebInvoke(
             BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarIncapacidadPermanente")]
         string FunParSocImportarIncapacidadPermanente();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarEscrituraPublica")]
+        string FunParSocImportarEscrituraPublica();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarCertificadoAdopcion")]
+        string FunParSocImportarCertificadoAdopcion();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarOrdenJudicial")]
+        string FunParSocImportarOrdenJudicial();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarPerdidaPP")]
+        string FunParSocImportarPerdidaPP();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarAuthTraslado")]
+        string FunParSocImportarAutorizacionTraslado();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarCertificadoVinculacion")]
+        string FunParSocImportarCertificadoVinculacion();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarRegistroCivil")]
+        string FunParSocImportarRegistroCivil();
+
+        [OperationContract]
+        [WebInvoke(
+            BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "ImportarActoAdministrativo")]
+        string FunParSocImportarActoAdministrativo();
         #endregion
     }
 
@@ -1607,6 +1655,56 @@ namespace Coomuce.DirectorServicios
             }
         }
 
+        public Stream GetFunArlAll()
+        {
+            try
+            {
+                var db = new CoomuceEntities();
+
+                var res = db.arl
+                    .Select(r => new
+                    {
+                        r.Id,
+                        r.codigo,
+                        r.nit,
+                        r.nombre,
+                        nombreCompleto = "(" + r.codigo + ") - " + r.nombre
+                    })
+                    .ToList();
+
+                return gen.EscribirJson(new { data = res, total = res.Count, success = true });
+            }
+            catch (Exception ex)
+            {
+                return gen.EscribirJson(new { message = string.Format(Mensajes.Error, ex.Message), success = false });
+            }
+        }
+
+        public Stream GetFunAfpAll()
+        {
+            try
+            {
+                var db = new CoomuceEntities();
+
+                var res = db.afp
+                    .Select(r => new
+                    {
+                        r.Id,
+                        r.codigo,
+                        r.nit,
+                        r.nombre,
+                        nombreCompleto = "(" + r.codigo + ") - " + r.nombre
+                    })
+                    .ToList();
+
+                return gen.EscribirJson(new { data = res, total = res.Count, success = true });
+            }
+            catch (Exception ex)
+            {
+                return gen.EscribirJson(new { message = string.Format(Mensajes.Error, ex.Message), success = false });
+            }
+        }
+
         public Stream FunEncuestaIpsGuardar(EncuestaIpsModel encuestaIps, List<EncuestaIpsRespPregunta> respPregunta, List<EncuestaIpsRespLiteral> respLiteral)
         {
             var db = new CoomuceEntities();
@@ -1881,6 +1979,190 @@ namespace Coomuce.DirectorServicios
                 var filePath = path + file.FileName;
                 var extension = Path.GetExtension(filePath);
                 var filename = "Afiliacion_Incapacidad_Permanente_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarEscrituraPublica()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Escritura_Publica_Marital_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarCertificadoAdopcion()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Certificado_Adopcion_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarOrdenJudicial()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Orden_Judicial_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarPerdidaPP()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Perdida_Patria_Potestad_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarAutorizacionTraslado()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Autorizacion_Traslado_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarCertificadoVinculacion()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Certificado_Vinculacion_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarRegistroCivil()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Registro_Civil_" + Guid.NewGuid() + extension;
+                path = path + filename;
+
+                file.SaveAs(path);
+
+                return filename;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string FunParSocImportarActoAdministrativo()
+        {
+            try
+            {
+                var file = gen.ObtenerArchivo();
+
+                var path = gen.ObtenerRutaArchivos();
+
+                var filePath = path + file.FileName;
+                var extension = Path.GetExtension(filePath);
+                var filename = "Afiliacion_Acto_Administrativo_" + Guid.NewGuid() + extension;
                 path = path + filename;
 
                 file.SaveAs(path);

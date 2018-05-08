@@ -159,6 +159,12 @@
     <Compile Include="CoomuceSeguridad.svc.cs">
       <DependentUpon>CoomuceSeguridad.svc</DependentUpon>
     </Compile>
+    <Compile Include="Entidad\afp.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidad\arl.cs">
+      <DependentUpon>Coomuce.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entidad\AsistenciaGeneral.cs">
       <DependentUpon>Coomuce.tt</DependentUpon>
     </Compile>

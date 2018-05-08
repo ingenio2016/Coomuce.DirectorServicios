@@ -105,5 +105,7 @@ namespace Coomuce.DirectorServicios.Entidad
         public virtual DbSet<Unidad> Unidad { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<afp> afp { get; set; }
+        public virtual DbSet<arl> arl { get; set; }
     }
 }

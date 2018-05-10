@@ -211,12 +211,12 @@
           <Property Name="idTipoEtnia" Type="tinyint" Nullable="false" />
           <Property Name="idTipoDiscapacidad" Type="tinyint" />
           <Property Name="idCondicionDiscapacidad" Type="tinyint" />
-          <Property Name="puntajeSisbenFuanAfiliado" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="puntajeSisbenFuanAfiliado" Type="nvarchar" MaxLength="500" />
           <Property Name="numCarnetFuanAfiliado" Type="varchar" MaxLength="50" />
           <Property Name="idGrupoPoblacional" Type="tinyint" />
           <Property Name="arlFuanAfiliado" Type="varchar" MaxLength="50" />
           <Property Name="pensionFuanAfiliado" Type="varchar" MaxLength="50" />
-          <Property Name="ibcFuanAfiliado" Type="money" />
+          <Property Name="ibcFuanAfiliado" Type="nvarchar" MaxLength="100" />
           <Property Name="direccionFuanAfiliado" Type="varchar" MaxLength="100" />
           <Property Name="telefonoFuanAfiliado" Type="varchar" MaxLength="50" />
           <Property Name="celularFuanAfiliado" Type="varchar" MaxLength="50" />
@@ -3520,12 +3520,10 @@
           <Property Name="idTipoEtnia" Type="Byte" Nullable="false" />
           <Property Name="idTipoDiscapacidad" Type="Byte" />
           <Property Name="idCondicionDiscapacidad" Type="Byte" />
-          <Property Name="puntajeSisbenFuanAfiliado" Type="Decimal" Precision="4" Scale="2" />
           <Property Name="numCarnetFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="idGrupoPoblacional" Type="Byte" />
           <Property Name="arlFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="pensionFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ibcFuanAfiliado" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="direccionFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="telefonoFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="celularFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -3568,6 +3566,8 @@
           <Property Name="cabezafamilia" Type="Int32" />
           <Property Name="grupofamiliar" Type="Int32" />
           <Property Name="identificacionAnexo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ibcFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="puntajeSisbenFuanAfiliado" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="FuanAnexos">
           <Key>
@@ -5804,6 +5804,8 @@
           <EntitySetMapping Name="FuanAfiliado">
             <EntityTypeMapping TypeName="CoomuceModel.FuanAfiliado">
               <MappingFragment StoreEntitySet="FuanAfiliado">
+                <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
+                <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
                 <ScalarProperty Name="identificacionAnexo" ColumnName="identificacionAnexo" />
                 <ScalarProperty Name="grupofamiliar" ColumnName="grupofamiliar" />
                 <ScalarProperty Name="cabezafamilia" ColumnName="cabezafamilia" />
@@ -5824,12 +5826,10 @@
                 <ScalarProperty Name="celularFuanAfiliado" ColumnName="celularFuanAfiliado" />
                 <ScalarProperty Name="telefonoFuanAfiliado" ColumnName="telefonoFuanAfiliado" />
                 <ScalarProperty Name="direccionFuanAfiliado" ColumnName="direccionFuanAfiliado" />
-                <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
                 <ScalarProperty Name="pensionFuanAfiliado" ColumnName="pensionFuanAfiliado" />
                 <ScalarProperty Name="arlFuanAfiliado" ColumnName="arlFuanAfiliado" />
                 <ScalarProperty Name="idGrupoPoblacional" ColumnName="idGrupoPoblacional" />
                 <ScalarProperty Name="numCarnetFuanAfiliado" ColumnName="numCarnetFuanAfiliado" />
-                <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
                 <ScalarProperty Name="idCondicionDiscapacidad" ColumnName="idCondicionDiscapacidad" />
                 <ScalarProperty Name="idTipoDiscapacidad" ColumnName="idTipoDiscapacidad" />
                 <ScalarProperty Name="idTipoEtnia" ColumnName="idTipoEtnia" />

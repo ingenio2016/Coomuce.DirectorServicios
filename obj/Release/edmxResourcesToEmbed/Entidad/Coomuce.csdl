@@ -768,12 +768,10 @@
     <Property Name="idTipoEtnia" Type="Byte" Nullable="false" />
     <Property Name="idTipoDiscapacidad" Type="Byte" />
     <Property Name="idCondicionDiscapacidad" Type="Byte" />
-    <Property Name="puntajeSisbenFuanAfiliado" Type="Decimal" Precision="4" Scale="2" />
     <Property Name="numCarnetFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="idGrupoPoblacional" Type="Byte" />
     <Property Name="arlFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="pensionFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ibcFuanAfiliado" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="direccionFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="telefonoFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="celularFuanAfiliado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -816,6 +814,8 @@
     <Property Name="cabezafamilia" Type="Int32" />
     <Property Name="grupofamiliar" Type="Int32" />
     <Property Name="identificacionAnexo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ibcFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="puntajeSisbenFuanAfiliado" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="FuanAnexos">
     <Key>

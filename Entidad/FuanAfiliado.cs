@@ -43,12 +43,10 @@ namespace Coomuce.DirectorServicios.Entidad
         public byte idTipoEtnia { get; set; }
         public Nullable<byte> idTipoDiscapacidad { get; set; }
         public Nullable<byte> idCondicionDiscapacidad { get; set; }
-        public Nullable<decimal> puntajeSisbenFuanAfiliado { get; set; }
         public string numCarnetFuanAfiliado { get; set; }
         public Nullable<byte> idGrupoPoblacional { get; set; }
         public string arlFuanAfiliado { get; set; }
         public string pensionFuanAfiliado { get; set; }
-        public Nullable<decimal> ibcFuanAfiliado { get; set; }
         public string direccionFuanAfiliado { get; set; }
         public string telefonoFuanAfiliado { get; set; }
         public string celularFuanAfiliado { get; set; }
@@ -69,6 +67,8 @@ namespace Coomuce.DirectorServicios.Entidad
         public Nullable<int> cabezafamilia { get; set; }
         public Nullable<int> grupofamiliar { get; set; }
         public string identificacionAnexo { get; set; }
+        public string ibcFuanAfiliado { get; set; }
+        public string puntajeSisbenFuanAfiliado { get; set; }
     
         public virtual Ciudad Ciudad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

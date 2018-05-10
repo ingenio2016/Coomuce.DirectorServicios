@@ -21,12 +21,12 @@ namespace Coomuce.DirectorServicios.Modelos
         public byte idTipoEtnia { get; set; }
         public Nullable<byte> idTipoDiscapacidad { get; set; }
         public Nullable<byte> idCondicionDiscapacidad { get; set; }
-        public decimal puntajeSisbenFuanAfiliado { get; set; }
+        public string puntajeSisbenFuanAfiliado { get; set; }
         public string numCarnetFuanAfiliado { get; set; }
         public Nullable<byte> idGrupoPoblacional { get; set; }
         public string arlFuanAfiliado { get; set; }
         public string pensionFuanAfiliado { get; set; }
-        public Nullable<decimal> ibcFuanAfiliado { get; set; }
+        public string ibcFuanAfiliado { get; set; }
         public string direccionFuanAfiliado { get; set; }
         public string telefonoFuanAfiliado { get; set; }
         public string celularFuanAfiliado { get; set; }

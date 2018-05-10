@@ -205,6 +205,8 @@
     <EntitySetMapping Name="FuanAfiliado">
       <EntityTypeMapping TypeName="CoomuceModel.FuanAfiliado">
         <MappingFragment StoreEntitySet="FuanAfiliado">
+          <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
+          <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
           <ScalarProperty Name="identificacionAnexo" ColumnName="identificacionAnexo" />
           <ScalarProperty Name="grupofamiliar" ColumnName="grupofamiliar" />
           <ScalarProperty Name="cabezafamilia" ColumnName="cabezafamilia" />
@@ -225,12 +227,10 @@
           <ScalarProperty Name="celularFuanAfiliado" ColumnName="celularFuanAfiliado" />
           <ScalarProperty Name="telefonoFuanAfiliado" ColumnName="telefonoFuanAfiliado" />
           <ScalarProperty Name="direccionFuanAfiliado" ColumnName="direccionFuanAfiliado" />
-          <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
           <ScalarProperty Name="pensionFuanAfiliado" ColumnName="pensionFuanAfiliado" />
           <ScalarProperty Name="arlFuanAfiliado" ColumnName="arlFuanAfiliado" />
           <ScalarProperty Name="idGrupoPoblacional" ColumnName="idGrupoPoblacional" />
           <ScalarProperty Name="numCarnetFuanAfiliado" ColumnName="numCarnetFuanAfiliado" />
-          <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
           <ScalarProperty Name="idCondicionDiscapacidad" ColumnName="idCondicionDiscapacidad" />
           <ScalarProperty Name="idTipoDiscapacidad" ColumnName="idTipoDiscapacidad" />
           <ScalarProperty Name="idTipoEtnia" ColumnName="idTipoEtnia" />

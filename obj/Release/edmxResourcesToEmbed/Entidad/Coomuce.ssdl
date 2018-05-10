@@ -206,12 +206,12 @@
     <Property Name="idTipoEtnia" Type="tinyint" Nullable="false" />
     <Property Name="idTipoDiscapacidad" Type="tinyint" />
     <Property Name="idCondicionDiscapacidad" Type="tinyint" />
-    <Property Name="puntajeSisbenFuanAfiliado" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="puntajeSisbenFuanAfiliado" Type="nvarchar" MaxLength="500" />
     <Property Name="numCarnetFuanAfiliado" Type="varchar" MaxLength="50" />
     <Property Name="idGrupoPoblacional" Type="tinyint" />
     <Property Name="arlFuanAfiliado" Type="varchar" MaxLength="50" />
     <Property Name="pensionFuanAfiliado" Type="varchar" MaxLength="50" />
-    <Property Name="ibcFuanAfiliado" Type="money" />
+    <Property Name="ibcFuanAfiliado" Type="nvarchar" MaxLength="100" />
     <Property Name="direccionFuanAfiliado" Type="varchar" MaxLength="100" />
     <Property Name="telefonoFuanAfiliado" Type="varchar" MaxLength="50" />
     <Property Name="celularFuanAfiliado" Type="varchar" MaxLength="50" />

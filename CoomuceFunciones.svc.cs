@@ -50,7 +50,7 @@ namespace Coomuce.DirectorServicios
         [OperationContract]
         [WebInvoke(
             BodyStyle = WebMessageBodyStyle.WrappedRequest, ResponseFormat = WebMessageFormat.Json, UriTemplate = "AfiliacionGuardar")]
-        Stream FunFuanAfiliacionGuardar(FuanModel infoFuan, List<AfiliadoModel> afiliado, List<FuanIpsPrimariaAfiliado> ips, List<FuanDeclaracionAutorizacion> declaracion, FuanEmpleadorAfiliado empleador);
+        Stream FunFuanAfiliacionGuardar(FuanModel infoFuan, List<AfiliadoModel> afiliado, List<FuanIpsPrimariaAfiliado> ips, List<FuanDeclaracionAutorizacion> declaracion, FuanAnexos anexos, FuanEmpleadorAfiliado empleador);
 
         [OperationContract]
         [WebInvoke(
@@ -418,7 +418,7 @@ namespace Coomuce.DirectorServicios
             }
         }
 
-        public Stream FunFuanAfiliacionGuardar(FuanModel infoFuan, List<AfiliadoModel> afiliado, List<FuanIpsPrimariaAfiliado> ips, List<FuanDeclaracionAutorizacion> declaracion, FuanEmpleadorAfiliado empleador)
+        public Stream FunFuanAfiliacionGuardar(FuanModel infoFuan, List<AfiliadoModel> afiliado, List<FuanIpsPrimariaAfiliado> ips, List<FuanDeclaracionAutorizacion> declaracion, FuanAnexos anexos, FuanEmpleadorAfiliado empleador)
         {
             var db = new CoomuceEntities();
             var transaction = db.Database.BeginTransaction();
@@ -440,6 +440,7 @@ namespace Coomuce.DirectorServicios
                     codigoCotizanteFuan = infoFuan.codigoCotizanteFuan,
                     idUsuario = infoFuan.idUsuario
                 };
+                db.Fuan.Add(fuan);
 
                 var totalAfiliados = afiliado.Count;
                 var idFuanAfiliado = db.FuanAfiliado.Max(r => (int?)r.idFuanAfiliado);
@@ -490,46 +491,43 @@ namespace Coomuce.DirectorServicios
 
                     idFuanAfiliado += 1;
                 });
-
-                var idIps = db.FuanIpsPrimariaAfiliado.Max(r => (int?)r.idFuanIpsPrimariaAfiliado);
-                idIps = (idIps == null ? 1 : idIps + 1);
-                ips.ForEach(r =>
-                {
-                    r.idFuanIpsPrimariaAfiliado = Convert.ToInt32(idIps);
-                    r.idFuanAfiliado = idAfiliado;
-
-                    idIps += 1;
-                });
-
-                declaracion.ForEach(r =>
-                {
-                    r.idFuan = infoFuan.idFuan;
-                });
-
-                //var infoEntidadTerritorial = new FuanEntidadTerritorial()
-                //{
-                //    idFuan = infoFuan.idFuan,
-                //    idCiudad = entidadTerritorial.idCiudad,
-                //    numFichaSisbenFuanEntidadTerritorial = entidadTerritorial.numFichaSisbenFuanEntidadTerritorial,
-                //    puntajeSisbenFuanEntidadTerritorial = entidadTerritorial.puntajeSisbenFuanEntidadTerritorial,
-                //    nivelSisbenFuanEntidadTerritorial = entidadTerritorial.nivelSisbenFuanEntidadTerritorial,
-                //    fechaRadicacionFuanEntidadTerritorial = Convert.ToDateTime(entidadTerritorial.fechaRadicacionFuanEntidadTerritorial),
-                //    fechaValidacionFuanEntidadTerritorial = Convert.ToDateTime(entidadTerritorial.fechaValidacionFuanEntidadTerritorial),
-                //    idUsuario = entidadTerritorial.idUsuario,
-                //    observacionFuanEntidadTerritorial = entidadTerritorial.observacionFuanEntidadTerritorial
-                //};
-
-                var idEmpleador = db.FuanEmpleadorAfiliado.Max(r => (int?)r.idFuanEmpleadorAfiliado);
-                idEmpleador = (idEmpleador == null ? 1 : idEmpleador + 1);
-                empleador.idFuanEmpleadorAfiliado = Convert.ToInt32(idEmpleador);
-                empleador.idFuanAfiliado = Convert.ToInt32(idAfiliado);
-
-                db.Fuan.Add(fuan);
                 db.FuanAfiliado.AddRange(infoAfiliado);
-                db.FuanIpsPrimariaAfiliado.AddRange(ips);
-                db.FuanDeclaracionAutorizacion.AddRange(declaracion);
-                //db.FuanEntidadTerritorial.Add(infoEntidadTerritorial);
-                db.FuanEmpleadorAfiliado.Add(empleador);
+
+                if(ips.Count > 0)
+                {
+                    var idIps = db.FuanIpsPrimariaAfiliado.Max(r => (int?)r.idFuanIpsPrimariaAfiliado);
+                    idIps = (idIps == null ? 1 : idIps + 1);
+                    ips.ForEach(r =>
+                    {
+                        r.idFuanIpsPrimariaAfiliado = Convert.ToInt32(idIps);
+                        r.idFuanAfiliado = idAfiliado;
+
+                        idIps += 1;
+                    });
+                    db.FuanIpsPrimariaAfiliado.AddRange(ips);
+                }                
+
+                if(declaracion.Count > 0)
+                {
+                    declaracion.ForEach(r =>
+                    {
+                        r.idFuan = Convert.ToInt32(idFuan);
+                    });
+                    db.FuanDeclaracionAutorizacion.AddRange(declaracion);
+                }
+                
+                anexos.idFuan = Convert.ToInt32(idFuan);
+                db.FuanAnexos.Add(anexos);
+
+                if(empleador.identificacionFuanEmpleadorAfiliado != "")
+                {
+                    var idEmpleador = db.FuanEmpleadorAfiliado.Max(r => (int?)r.idFuanEmpleadorAfiliado);
+                    idEmpleador = (idEmpleador == null ? 1 : idEmpleador + 1);
+                    empleador.idFuanEmpleadorAfiliado = Convert.ToInt32(idEmpleador);
+                    empleador.idFuanAfiliado = Convert.ToInt32(idAfiliado);
+                    db.FuanEmpleadorAfiliado.Add(empleador);
+                }
+                          
 
                 db.SaveChanges();
                 transaction.Commit();
@@ -749,12 +747,12 @@ namespace Coomuce.DirectorServicios
                         idTipoEtnia = idTipoEtnia,
                         idTipoDiscapacidad = idTipoDiscapacidad,
                         idCondicionDiscapacidad = idCondicionDiscapacidad,
-                        puntajeSisbenFuanAfiliado = puntajeSisbenFuanAfiliado,
+                        puntajeSisbenFuanAfiliado = puntajeSisbenFuanAfiliado.ToString(),
                         numCarnetFuanAfiliado = Carnet,
                         idGrupoPoblacional = idGrupoPoblacional,
                         arlFuanAfiliado = arlFuanAfiliado,
                         pensionFuanAfiliado = pensionFuanAfiliado,
-                        ibcFuanAfiliado = ibcFuanAfiliado,
+                        ibcFuanAfiliado = ibcFuanAfiliado.ToString(),
                         direccionFuanAfiliado = direccionFuanAfiliado,
                         telefonoFuanAfiliado = telefonoFuanAfiliado,
                         celularFuanAfiliado = celularFuanAfiliado,

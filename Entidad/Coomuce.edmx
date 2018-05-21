@@ -237,6 +237,7 @@
           <Property Name="cabezafamilia" Type="int" />
           <Property Name="grupofamiliar" Type="int" />
           <Property Name="identificacionAnexo" Type="nvarchar" MaxLength="500" />
+          <Property Name="idTipoParentesco" Type="tinyint" />
         </EntityType>
         <EntityType Name="FuanAnexos">
           <Key>
@@ -1395,6 +1396,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_FuanAfiliado_TipoParentesco">
+          <End Role="TipoParentesco" Type="Self.TipoParentesco" Multiplicity="0..1" />
+          <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoParentesco">
+              <PropertyRef Name="idTipoParentesco" />
+            </Principal>
+            <Dependent Role="FuanAfiliado">
+              <PropertyRef Name="idTipoParentesco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_FuanAfiliado_TipoSexo">
           <End Role="TipoSexo" Type="Self.TipoSexo" Multiplicity="1" />
           <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
@@ -2471,6 +2484,10 @@
             <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
             <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
           </AssociationSet>
+          <AssociationSet Name="FK_FuanAfiliado_TipoParentesco" Association="Self.FK_FuanAfiliado_TipoParentesco">
+            <End Role="TipoParentesco" EntitySet="TipoParentesco" />
+            <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+          </AssociationSet>
           <AssociationSet Name="FK_FuanAfiliado_TipoSexo" Association="Self.FK_FuanAfiliado_TipoSexo">
             <End Role="TipoSexo" EntitySet="TipoSexo" />
             <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
@@ -3255,6 +3272,10 @@
           </AssociationSet>
           <EntitySet Name="afp" EntityType="CoomuceModel.afp" />
           <EntitySet Name="arl" EntityType="CoomuceModel.arl" />
+          <AssociationSet Name="FK_FuanAfiliado_TipoParentesco" Association="CoomuceModel.FK_FuanAfiliado_TipoParentesco">
+            <End Role="TipoParentesco" EntitySet="TipoParentesco" />
+            <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Ciudad">
           <Key>
@@ -3568,6 +3589,8 @@
           <Property Name="identificacionAnexo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="ibcFuanAfiliado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="puntajeSisbenFuanAfiliado" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="idTipoParentesco" Type="Byte" />
+          <NavigationProperty Name="TipoParentesco" Relationship="CoomuceModel.FK_FuanAfiliado_TipoParentesco" FromRole="FuanAfiliado" ToRole="TipoParentesco" />
         </EntityType>
         <EntityType Name="FuanAnexos">
           <Key>
@@ -4219,6 +4242,7 @@
           <Property Name="nombreTipoParentesco" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="descripcionTipoParentesco" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="FuanBeneficiariosAfiliado" Relationship="CoomuceModel.FK_FuanBeneficiariosAfiliado_TipoParentesco" FromRole="TipoParentesco" ToRole="FuanBeneficiariosAfiliado" />
+          <NavigationProperty Name="FuanAfiliado" Relationship="CoomuceModel.FK_FuanAfiliado_TipoParentesco" FromRole="TipoParentesco" ToRole="FuanAfiliado" />
         </EntityType>
         <EntityType Name="TipoRegimen">
           <Key>
@@ -5594,6 +5618,18 @@
           <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="nombreCompleto" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
         </EntityType>
+        <Association Name="FK_FuanAfiliado_TipoParentesco">
+          <End Type="CoomuceModel.TipoParentesco" Role="TipoParentesco" Multiplicity="0..1" />
+          <End Type="CoomuceModel.FuanAfiliado" Role="FuanAfiliado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoParentesco">
+              <PropertyRef Name="idTipoParentesco" />
+            </Principal>
+            <Dependent Role="FuanAfiliado">
+              <PropertyRef Name="idTipoParentesco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5804,6 +5840,7 @@
           <EntitySetMapping Name="FuanAfiliado">
             <EntityTypeMapping TypeName="CoomuceModel.FuanAfiliado">
               <MappingFragment StoreEntitySet="FuanAfiliado">
+                <ScalarProperty Name="idTipoParentesco" ColumnName="idTipoParentesco" />
                 <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
                 <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
                 <ScalarProperty Name="identificacionAnexo" ColumnName="identificacionAnexo" />

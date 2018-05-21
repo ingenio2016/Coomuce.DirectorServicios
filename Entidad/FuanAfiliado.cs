@@ -69,6 +69,7 @@ namespace Coomuce.DirectorServicios.Entidad
         public string identificacionAnexo { get; set; }
         public string ibcFuanAfiliado { get; set; }
         public string puntajeSisbenFuanAfiliado { get; set; }
+        public Nullable<byte> idTipoParentesco { get; set; }
     
         public virtual Ciudad Ciudad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -102,5 +103,6 @@ namespace Coomuce.DirectorServicios.Entidad
         public virtual ICollection<ListaAsistenciaGeneral> ListaAsistenciaGeneral { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Purisu> Purisu { get; set; }
+        public virtual TipoParentesco TipoParentesco { get; set; }
     }
 }

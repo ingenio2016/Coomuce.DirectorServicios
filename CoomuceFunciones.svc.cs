@@ -423,122 +423,135 @@ namespace Coomuce.DirectorServicios
             var db = new CoomuceEntities();
             var transaction = db.Database.BeginTransaction();
 
-            try
-            {
-                var idFuan = db.Fuan.Select(r => (int?)r.idFuan).Max();
-                idFuan = (idFuan == null ? 1 : idFuan + 1);
+            var idFuan = db.Fuan.Select(r => (int?)r.idFuan).Max();
+            idFuan = (idFuan == null ? 1 : idFuan + 1);
 
-                var fuan = new Fuan()
+            var fuan = new Fuan()
+            {
+                idFuan = Convert.ToInt32(idFuan),
+                fechaRadicacionFuan = DateTime.Now,
+                idTipoTramite = infoFuan.idTipoTramite,
+                idTipoAfiliacion = infoFuan.idTipoAfiliacion,
+                idTipoRegimen = infoFuan.idTipoRegimen,
+                idTipoAfiliado = infoFuan.idTipoAfiliado,
+                idTipoCotizante = infoFuan.idTipoCotizante,
+                codigoCotizanteFuan = infoFuan.codigoCotizanteFuan,
+                idUsuario = infoFuan.idUsuario
+            };
+            db.Fuan.Add(fuan);
+            db.SaveChanges();
+
+
+            var totalAfiliados = afiliado.Count;
+            var idFuanAfiliado = db.FuanAfiliado.Max(r => (int?)r.idFuanAfiliado);
+            idFuanAfiliado = (idFuanAfiliado == null ? 1 : idFuanAfiliado + 1);
+            var idAfiliado = Convert.ToInt32(idFuanAfiliado);
+            var infoAfiliado = new List<FuanAfiliado>();
+            afiliado.ForEach(r =>
+            {
+                infoAfiliado.Add(new FuanAfiliado()
                 {
                     idFuan = Convert.ToInt32(idFuan),
-                    fechaRadicacionFuan = DateTime.Now,
-                    idTipoTramite = infoFuan.idTipoTramite,
-                    idTipoAfiliacion = infoFuan.idTipoAfiliacion,
-                    idTipoRegimen = infoFuan.idTipoRegimen,
-                    idTipoAfiliado = infoFuan.idTipoAfiliado,
-                    idTipoCotizante = infoFuan.idTipoCotizante,
-                    codigoCotizanteFuan = infoFuan.codigoCotizanteFuan,
-                    idUsuario = infoFuan.idUsuario
-                };
-                db.Fuan.Add(fuan);
-
-                var totalAfiliados = afiliado.Count;
-                var idFuanAfiliado = db.FuanAfiliado.Max(r => (int?)r.idFuanAfiliado);
-                idFuanAfiliado = (idFuanAfiliado == null ? 1 : idFuanAfiliado + 1);
-                var idAfiliado = Convert.ToInt32(idFuanAfiliado);
-                var infoAfiliado = new List<FuanAfiliado>();
-                afiliado.ForEach(r =>
-                {
-                    infoAfiliado.Add(new FuanAfiliado()
-                    {
-                        idFuan = Convert.ToInt32(idFuan),
-                        idFuanAfiliado = Convert.ToInt32(idFuanAfiliado),
-                        tipoFuanAfiliado = r.tipoFuanAfiliado,
-                        primerApellidoFuanAfiliado = r.primerApellidoFuanAfiliado,
-                        segundoApellidoFuanAfiliado = r.segundoApellidoFuanAfiliado,
-                        primerNombreFuanAfiliado = r.primerNombreFuanAfiliado,
-                        segundoNombreFuanAfiliado = r.segundoNombreFuanAfiliado,
-                        idTipoIdentificacion = r.idTipoIdentificacion,
-                        identificacionFuanAfiliado = r.identificacionFuanAfiliado,
-                        idTipoSexo = r.idTipoSexo,
-                        fechaNacimientoFuanAfiliado = Convert.ToDateTime(r.fechaNacimientoFuanAfiliado),
-                        idTipoEtnia = r.idTipoEtnia,
-                        idTipoDiscapacidad = r.idTipoDiscapacidad,
-                        idCondicionDiscapacidad = r.idCondicionDiscapacidad,
-                        puntajeSisbenFuanAfiliado = r.puntajeSisbenFuanAfiliado,
-                        numCarnetFuanAfiliado = r.numCarnetFuanAfiliado,
-                        idGrupoPoblacional = r.idGrupoPoblacional,
-                        arlFuanAfiliado = r.arlFuanAfiliado,
-                        pensionFuanAfiliado = r.pensionFuanAfiliado,
-                        ibcFuanAfiliado = r.ibcFuanAfiliado,
-                        direccionFuanAfiliado = r.direccionFuanAfiliado,
-                        telefonoFuanAfiliado = r.telefonoFuanAfiliado,
-                        celularFuanAfiliado = r.celularFuanAfiliado,
-                        emailFuanAfiliado = r.emailFuanAfiliado,
-                        idCiudad = r.idCiudad,
-                        idTipoZona = r.idTipoZona,
-                        barrioFuanAfiliado = r.barrioFuanAfiliado,
-                        primerApellidoConyugueFuanAfiliado = r.primerApellidoConyugueFuanAfiliado,
-                        segundoApellidoConyugueFuanAfiliado = r.segundoApellidoConyugueFuanAfiliado,
-                        primerNombreConyugueFuanAfiliado = r.primerNombreConyugueFuanAfiliado,
-                        segundoNombreConyugueFuanAfiliado = r.segundoNombreConyugueFuanAfiliado,
-                        idTipoIdentificacionConyugue = r.idTipoIdentificacionConyugue,
-                        identificacionConyugueFuanAfiliado = r.identificacionConyugueFuanAfiliado,
-                        idTipoSexoConyugue = r.idTipoSexoConyugue,
-                        fechaNacimientoConyugueFuanAfiliado = (string.IsNullOrEmpty(r.fechaNacimientoConyugueFuanAfiliado) ? DateTime.Now: Convert.ToDateTime(r.fechaNacimientoConyugueFuanAfiliado)),
-                        upcFuanAfiliado = r.upcFuanAfiliado
-                    });
-
-                    idFuanAfiliado += 1;
+                    idFuanAfiliado = Convert.ToInt32(idFuanAfiliado),
+                    tipoFuanAfiliado = r.tipoFuanAfiliado,
+                    primerApellidoFuanAfiliado = r.primerApellidoFuanAfiliado,
+                    segundoApellidoFuanAfiliado = r.segundoApellidoFuanAfiliado,
+                    primerNombreFuanAfiliado = r.primerNombreFuanAfiliado,
+                    segundoNombreFuanAfiliado = r.segundoNombreFuanAfiliado,
+                    idTipoIdentificacion = r.idTipoIdentificacion,
+                    identificacionFuanAfiliado = r.identificacionFuanAfiliado,
+                    idTipoSexo = r.idTipoSexo,
+                    fechaNacimientoFuanAfiliado = Convert.ToDateTime(r.fechaNacimientoFuanAfiliado),
+                    idTipoEtnia = r.idTipoEtnia,
+                    idTipoDiscapacidad = r.idTipoDiscapacidad,
+                    idCondicionDiscapacidad = r.idCondicionDiscapacidad,
+                    puntajeSisbenFuanAfiliado = r.puntajeSisbenFuanAfiliado,
+                    numCarnetFuanAfiliado = r.numCarnetFuanAfiliado,
+                    idGrupoPoblacional = r.idGrupoPoblacional,
+                    arlFuanAfiliado = r.arlFuanAfiliado,
+                    pensionFuanAfiliado = r.pensionFuanAfiliado,
+                    ibcFuanAfiliado = r.ibcFuanAfiliado,
+                    direccionFuanAfiliado = r.direccionFuanAfiliado,
+                    telefonoFuanAfiliado = r.telefonoFuanAfiliado,
+                    celularFuanAfiliado = r.celularFuanAfiliado,
+                    emailFuanAfiliado = r.emailFuanAfiliado,
+                    idCiudad = r.idCiudad,
+                    idTipoZona = r.idTipoZona,
+                    barrioFuanAfiliado = r.barrioFuanAfiliado,
+                    primerApellidoConyugueFuanAfiliado = r.primerApellidoConyugueFuanAfiliado,
+                    segundoApellidoConyugueFuanAfiliado = r.segundoApellidoConyugueFuanAfiliado,
+                    primerNombreConyugueFuanAfiliado = r.primerNombreConyugueFuanAfiliado,
+                    segundoNombreConyugueFuanAfiliado = r.segundoNombreConyugueFuanAfiliado,
+                    idTipoIdentificacionConyugue = r.idTipoIdentificacionConyugue,
+                    identificacionConyugueFuanAfiliado = r.identificacionConyugueFuanAfiliado,
+                    idTipoSexoConyugue = r.idTipoSexoConyugue,
+                    fechaNacimientoConyugueFuanAfiliado = (string.IsNullOrEmpty(r.fechaNacimientoConyugueFuanAfiliado) ? DateTime.Now : Convert.ToDateTime(r.fechaNacimientoConyugueFuanAfiliado)),
+                    upcFuanAfiliado = r.upcFuanAfiliado
                 });
-                db.FuanAfiliado.AddRange(infoAfiliado);
 
-                if(ips.Count > 0)
+                idFuanAfiliado += 1;
+            });
+            db.FuanAfiliado.AddRange(infoAfiliado);
+            db.SaveChanges();
+
+
+            if (ips.Count > 0)
+            {
+                var idIps = db.FuanIpsPrimariaAfiliado.Max(r => (int?)r.idFuanIpsPrimariaAfiliado);
+                idIps = (idIps == null ? 1 : idIps + 1);
+                ips.ForEach(r =>
                 {
-                    var idIps = db.FuanIpsPrimariaAfiliado.Max(r => (int?)r.idFuanIpsPrimariaAfiliado);
-                    idIps = (idIps == null ? 1 : idIps + 1);
-                    ips.ForEach(r =>
-                    {
-                        r.idFuanIpsPrimariaAfiliado = Convert.ToInt32(idIps);
-                        r.idFuanAfiliado = idAfiliado;
+                    r.idFuanIpsPrimariaAfiliado = Convert.ToInt32(idIps);
+                    r.idFuanAfiliado = idAfiliado;
 
-                        idIps += 1;
-                    });
-                    db.FuanIpsPrimariaAfiliado.AddRange(ips);
-                }                
+                    idIps += 1;
+                });
+                db.FuanIpsPrimariaAfiliado.AddRange(ips);
+                db.SaveChanges();
 
-                if(declaracion.Count > 0)
+            }
+
+            if (declaracion.Count > 0)
+            {
+                declaracion.ForEach(r =>
                 {
-                    declaracion.ForEach(r =>
-                    {
-                        r.idFuan = Convert.ToInt32(idFuan);
-                    });
-                    db.FuanDeclaracionAutorizacion.AddRange(declaracion);
-                }
-                
+                    r.idFuan = Convert.ToInt32(idFuan);
+                });
+                db.FuanDeclaracionAutorizacion.AddRange(declaracion);
+                db.SaveChanges();
+
+            }
+
+            if (anexos.totalAnexo56FuanAnexos != 0)
+            {
                 anexos.idFuan = Convert.ToInt32(idFuan);
                 db.FuanAnexos.Add(anexos);
+                db.SaveChanges();
 
-                if(empleador.identificacionFuanEmpleadorAfiliado != "")
-                {
-                    var idEmpleador = db.FuanEmpleadorAfiliado.Max(r => (int?)r.idFuanEmpleadorAfiliado);
-                    idEmpleador = (idEmpleador == null ? 1 : idEmpleador + 1);
-                    empleador.idFuanEmpleadorAfiliado = Convert.ToInt32(idEmpleador);
-                    empleador.idFuanAfiliado = Convert.ToInt32(idAfiliado);
-                    db.FuanEmpleadorAfiliado.Add(empleador);
-                }
-                          
+            }
 
+
+            if (empleador.identificacionFuanEmpleadorAfiliado != "")
+            {
+                var idEmpleador = db.FuanEmpleadorAfiliado.Max(r => (int?)r.idFuanEmpleadorAfiliado);
+                idEmpleador = (idEmpleador == null ? 1 : idEmpleador + 1);
+                empleador.idFuanEmpleadorAfiliado = Convert.ToInt32(idEmpleador);
+                empleador.idFuanAfiliado = Convert.ToInt32(idAfiliado);
+                db.FuanEmpleadorAfiliado.Add(empleador);
+                db.SaveChanges();
+
+            }
+
+            try
+            {        
                 db.SaveChanges();
                 transaction.Commit();
-
                 return gen.EscribirJson(new { message = Mensajes.Guardar, success = true });
             }
             catch (Exception ex)
             {
                 transaction.Rollback();
-
-                return gen.EscribirJson(new { message = string.Format(Mensajes.Error, ex.Message), success = false });
+                return gen.EscribirJson(new { message = ex.Message, success = false });
             }
         }
 

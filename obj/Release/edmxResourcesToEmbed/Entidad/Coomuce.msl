@@ -205,6 +205,7 @@
     <EntitySetMapping Name="FuanAfiliado">
       <EntityTypeMapping TypeName="CoomuceModel.FuanAfiliado">
         <MappingFragment StoreEntitySet="FuanAfiliado">
+          <ScalarProperty Name="idTipoParentesco" ColumnName="idTipoParentesco" />
           <ScalarProperty Name="puntajeSisbenFuanAfiliado" ColumnName="puntajeSisbenFuanAfiliado" />
           <ScalarProperty Name="ibcFuanAfiliado" ColumnName="ibcFuanAfiliado" />
           <ScalarProperty Name="identificacionAnexo" ColumnName="identificacionAnexo" />

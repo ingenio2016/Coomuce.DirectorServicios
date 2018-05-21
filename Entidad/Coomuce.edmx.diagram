@@ -192,6 +192,7 @@
         <AssociationConnector Association="CoomuceModel.PurisuPiezasInformativas" />
         <EntityTypeShape EntityType="CoomuceModel.afp" Width="1.5" PointX="7.375" PointY="9.75" />
         <EntityTypeShape EntityType="CoomuceModel.arl" Width="1.5" PointX="9.375" PointY="9.75" />
+        <AssociationConnector Association="CoomuceModel.FK_FuanAfiliado_TipoParentesco" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

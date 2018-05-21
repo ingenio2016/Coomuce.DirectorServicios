@@ -232,6 +232,7 @@
     <Property Name="cabezafamilia" Type="int" />
     <Property Name="grupofamiliar" Type="int" />
     <Property Name="identificacionAnexo" Type="nvarchar" MaxLength="500" />
+    <Property Name="idTipoParentesco" Type="tinyint" />
   </EntityType>
   <EntityType Name="FuanAnexos">
     <Key>
@@ -1390,6 +1391,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_FuanAfiliado_TipoParentesco">
+    <End Role="TipoParentesco" Type="Self.TipoParentesco" Multiplicity="0..1" />
+    <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParentesco">
+        <PropertyRef Name="idTipoParentesco" />
+      </Principal>
+      <Dependent Role="FuanAfiliado">
+        <PropertyRef Name="idTipoParentesco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_FuanAfiliado_TipoSexo">
     <End Role="TipoSexo" Type="Self.TipoSexo" Multiplicity="1" />
     <End Role="FuanAfiliado" Type="Self.FuanAfiliado" Multiplicity="*" />
@@ -2464,6 +2477,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_FuanAfiliado_TipoIdentificacion1" Association="Self.FK_FuanAfiliado_TipoIdentificacion1">
       <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuanAfiliado_TipoParentesco" Association="Self.FK_FuanAfiliado_TipoParentesco">
+      <End Role="TipoParentesco" EntitySet="TipoParentesco" />
       <End Role="FuanAfiliado" EntitySet="FuanAfiliado" />
     </AssociationSet>
     <AssociationSet Name="FK_FuanAfiliado_TipoSexo" Association="Self.FK_FuanAfiliado_TipoSexo">

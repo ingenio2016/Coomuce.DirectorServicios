@@ -43,5 +43,6 @@ namespace Coomuce.DirectorServicios.Modelos
         public Nullable<byte> idTipoSexoConyugue { get; set; }
         public string fechaNacimientoConyugueFuanAfiliado { get; set; }
         public Nullable<decimal> upcFuanAfiliado { get; set; }
+        public Nullable<byte> idTipoParentesco { get; set; }
     }
 }

@@ -18,6 +18,7 @@ namespace Coomuce.DirectorServicios.Entidad
         public TipoParentesco()
         {
             this.FuanBeneficiariosAfiliado = new HashSet<FuanBeneficiariosAfiliado>();
+            this.FuanAfiliado = new HashSet<FuanAfiliado>();
         }
     
         public byte idTipoParentesco { get; set; }
@@ -27,5 +28,7 @@ namespace Coomuce.DirectorServicios.Entidad
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FuanBeneficiariosAfiliado> FuanBeneficiariosAfiliado { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FuanAfiliado> FuanAfiliado { get; set; }
     }
 }
